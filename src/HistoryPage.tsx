@@ -38,11 +38,17 @@ interface Chapter {
     paragraphs: string[]
     record: Array<{ year: string; text: string }>
     aside?: { title: string; text: string }
+    image?: { src: string; alt: string; caption: string }
 }
 
 const chapters: Chapter[] = [
     {
         id: 'manor',
+        image: {
+            src: '/history/manor-1866.jpg',
+            alt: 'Nineteenth-century engraving of the manor Søllestedgård with its tower and gardens',
+            caption: 'Søllestedgård itself, drawn in 1866',
+        },
         numeral: 'I',
         years: '1462–1550',
         place: 'Søllestedgård, Lolland, Denmark',
@@ -70,6 +76,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'pulpit',
+        image: {
+            src: '/history/skaarup-kirke.jpg',
+            alt: 'The whitewashed medieval church of Skårup on Funen with its red tile roof',
+            caption: 'Skårup church — the family throne for 80 years',
+        },
         numeral: 'II',
         years: '1591–1670',
         place: 'Skårup & Tved, Funen',
@@ -89,6 +100,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'broker',
+        image: {
+            src: '/history/budolfi-aalborg.jpg',
+            alt: 'The white tower of Budolfi Church rising over an Aalborg street',
+            caption: 'Budolfi Church, Aalborg — where the broker was baptised',
+        },
         numeral: 'III',
         years: '1666–1775',
         place: 'Aalborg, Jutland',
@@ -121,6 +137,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'crossing',
+        image: {
+            src: '/history/christiania-1800.jpg',
+            alt: 'Hand-coloured view of the city of Christiania and its fjord, painted around 1800',
+            caption: 'Christiania, painted around 1800 — the city they bet on',
+        },
         numeral: 'IV',
         years: '1826–1859',
         place: 'Christiania, Norway',
@@ -143,6 +164,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'cotton',
+        image: {
+            src: '/history/knud-graah.jpg',
+            alt: 'Oil portrait of Knud Graah, white-haired with medals on his black coat',
+            caption: 'Knud Graah — shop boy, cotton king',
+        },
         numeral: 'V',
         years: '1844–1859',
         place: 'Manchester → the Akerselva',
@@ -162,6 +188,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'ashes',
+        image: {
+            src: '/history/graah-mill.jpg',
+            alt: 'The brick buildings of Knud Graah’s mill beside the waterfall on the Akerselva',
+            caption: 'The rebuilt mill and its waterfall on the Akerselva',
+        },
         numeral: 'VI',
         years: '1860–1909',
         place: 'Kristiania',
@@ -188,6 +219,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'voice',
+        image: {
+            src: '/history/white-buses-1945.jpg',
+            alt: 'Freed prisoners crowd a ferry deck between white Red Cross buses, spring 1945',
+            caption: 'The White Buses bring them home, spring 1945',
+        },
         numeral: 'VII',
         years: '1908–2001',
         place: 'Oslo — Grini — Ravensbrück — NRK',
@@ -212,6 +248,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'hyphen',
+        image: {
+            src: '/history/malmo-1859.jpg',
+            alt: 'Engraving of Malmö’s great square with strollers and the town hall, 1859',
+            caption: 'Malmö’s Stortorget, 1859 — the family’s next stage',
+        },
         numeral: 'VIII',
         years: '1892–1982',
         place: 'Malmö · Helsingborg · Stockholm',
@@ -234,6 +275,11 @@ const chapters: Chapter[] = [
     },
     {
         id: 'wallet',
+        image: {
+            src: '/history/oresund-bridge.jpg',
+            alt: 'Aerial view of the Öresund bridge running out to sea from the Swedish coast',
+            caption: 'The bridge out of Skåne — cross the border and build',
+        },
         numeral: 'IX',
         years: '1982–now',
         place: 'Lund → the internet',
@@ -270,12 +316,17 @@ const nameForms = [
 const bearers = [
     {
         Icon: Snowflake,
+        img: {
+            src: '/history/wa-graah.jpg',
+            alt: 'Engraved oval portrait of captain Wilhelm August Graah with his signature',
+        },
         name: 'Wilhelm August Graah',
         years: '1793–1863',
         deed: 'Sent by the Danish king to find the lost Norse colony of Greenland’s east coast. Travelled 1828–31 in Greenlandic umiaks with Greenlandic crews, wintered in the ice, nearly starved — and proved the myth wrong, redrawing the map on the way.',
     },
     {
         Icon: Radio,
+        img: undefined,
         name: 'Jutta Graae — “Storhertuginden”',
         years: '1906–1997',
         deed: 'The Grand Duchess of the Danish resistance. Moved money and microfilm for the underground intelligence networks, fled to Sweden in 1943, and worked from London with the British SOE until liberation.',
@@ -348,10 +399,17 @@ function Reveal({
     )
 }
 
-function ChapterSection({ chapter }: { chapter: Chapter }) {
+function ChapterSection({
+    chapter,
+    index,
+}: {
+    chapter: Chapter
+    index: number
+}) {
     const dark = chapter.theme === 'ink'
     const borderColor = dark ? 'border-paper' : 'border-ink'
     const shadow = dark ? 'shadow-paper' : 'shadow-hard'
+    const tilt = index % 2 === 0 ? 'rotate-1' : '-rotate-1'
     return (
         <section
             className={`border-b-2 border-ink px-4 py-16 sm:px-6 sm:py-24 lg:px-8 ${themeStyles[chapter.theme]}`}
@@ -396,6 +454,23 @@ function ChapterSection({ chapter }: { chapter: Chapter }) {
                         </div>
                     </Reveal>
                     <Reveal>
+                        {chapter.image ? (
+                            <figure
+                                className={`mb-6 border-2 ${borderColor} ${shadow} ${
+                                    dark ? 'bg-ink' : 'bg-paper'
+                                } p-2 ${tilt}`}
+                            >
+                                <img
+                                    alt={chapter.image.alt}
+                                    className={`w-full border-2 ${borderColor} object-cover`}
+                                    loading="lazy"
+                                    src={chapter.image.src}
+                                />
+                                <figcaption className="px-1 pb-1 pt-2 font-mono text-xs font-bold uppercase tracking-normal">
+                                    {chapter.image.caption}
+                                </figcaption>
+                            </figure>
+                        ) : null}
                         <div
                             className={`border-2 ${borderColor} ${shadow} ${
                                 dark ? 'bg-ink' : 'bg-paper'
@@ -582,14 +657,22 @@ export function HistoryPage() {
 
                 <NameTicker />
 
-                {chapters.slice(0, 5).map((chapter) => (
-                    <ChapterSection chapter={chapter} key={chapter.id} />
+                {chapters.slice(0, 5).map((chapter, index) => (
+                    <ChapterSection
+                        chapter={chapter}
+                        index={index}
+                        key={chapter.id}
+                    />
                 ))}
 
                 <FireInterstitial />
 
-                {chapters.slice(5).map((chapter) => (
-                    <ChapterSection chapter={chapter} key={chapter.id} />
+                {chapters.slice(5).map((chapter, index) => (
+                    <ChapterSection
+                        chapter={chapter}
+                        index={index + 5}
+                        key={chapter.id}
+                    />
                 ))}
 
                 <section className="border-b-2 border-ink bg-ink py-16 text-paper sm:py-24">
@@ -607,21 +690,44 @@ export function HistoryPage() {
                                 enemy lines.
                             </p>
                         </Reveal>
-                        <div className="mt-10 grid gap-4 md:grid-cols-2">
-                            {bearers.map(({ Icon, deed, name, years }) => (
+                        <Reveal>
+                            <figure className="mt-10 -rotate-1 border-2 border-paper bg-paper p-2 text-ink shadow-paper">
+                                <img
+                                    alt="Engraving of an umiak rowed through heavy seas by its Greenlandic crew"
+                                    className="w-full border-2 border-ink object-cover"
+                                    loading="lazy"
+                                    src="/history/umiak-graah.jpg"
+                                />
+                                <figcaption className="px-1 pb-1 pt-2 font-mono text-xs font-bold uppercase tracking-normal">
+                                    An umiak in open water off East Greenland —
+                                    drawn by captain W.A. Graah himself
+                                </figcaption>
+                            </figure>
+                        </Reveal>
+                        <div className="mt-6 grid gap-4 md:grid-cols-2">
+                            {bearers.map(({ Icon, deed, img, name, years }) => (
                                 <Reveal key={name}>
                                     <div className="h-full border-2 border-paper bg-paper p-6 text-ink shadow-paper">
                                         <div className="flex items-center justify-between">
                                             <span className="font-mono text-sm font-bold uppercase tracking-normal">
                                                 {years}
                                             </span>
-                                            <span className="grid size-11 place-items-center border-2 border-ink bg-blue">
-                                                <Icon
-                                                    aria-hidden="true"
-                                                    size={22}
-                                                    strokeWidth={2.4}
+                                            {img ? (
+                                                <img
+                                                    alt={img.alt}
+                                                    className="w-20 border-2 border-ink object-cover"
+                                                    loading="lazy"
+                                                    src={img.src}
                                                 />
-                                            </span>
+                                            ) : (
+                                                <span className="grid size-11 place-items-center border-2 border-ink bg-blue">
+                                                    <Icon
+                                                        aria-hidden="true"
+                                                        size={22}
+                                                        strokeWidth={2.4}
+                                                    />
+                                                </span>
+                                            )}
                                         </div>
                                         <h3 className="mt-5 font-display text-2xl font-black leading-8 tracking-normal">
                                             {name}
@@ -702,6 +808,10 @@ export function HistoryPage() {
                                 parts kept in, the dull parts left out, and the
                                 dates as true as we can make them. The archives
                                 are still coughing up surprises. Check back.
+                                Pictures via Wikimedia Commons:
+                                Nasjonalbiblioteket, Nasjonalmuseet and Oslo
+                                Museum (Norway), News Øresund (CC BY), Hideko
+                                Bondesen and Liberaler Humanist (CC BY-SA).
                             </p>
                         </Reveal>
                     </div>
