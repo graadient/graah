@@ -545,9 +545,9 @@ export function HistoryPage() {
                 <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                     <Link className="flex items-center gap-3 text-ink" href="/">
                         <img
-                            alt="The Graah family crest: a tower over waves, crowned by flame"
+                            alt="The Graah coat of arms: three red stars on a silver shield beneath a horned helm"
                             className="h-11 w-auto"
-                            src="/graah-crest.svg"
+                            src="/graah-coa.png"
                         />
                         <span className="font-display text-xl font-black tracking-normal">
                             GRAAH
