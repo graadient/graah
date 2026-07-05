@@ -19,7 +19,7 @@ interface Mood {
     bg: string
 }
 
-const sagaStats = [
+const chronicleStats = [
     { value: '1', label: 'castle lost to a king', bg: 'bg-coral' },
     { value: '3', label: 'kingdoms called home', bg: 'bg-blue' },
     { value: '12,000', label: 'spindles on one river', bg: 'bg-signal' },
@@ -46,14 +46,14 @@ const chapters: Chapter[] = [
         numeral: 'I',
         years: '1462–1550',
         place: 'Søllestedgård, Lolland, Denmark',
-        title: 'The Lost Manor',
-        kicker: 'A king, a castle, and the family that remembers being driven out',
-        grade: 'saga',
+        title: 'The Stolen Castle',
+        kicker: 'A castle, a king, and a grudge the family has carried for five hundred years',
+        mood: { label: 'A royal grudge', bg: 'bg-coral' },
         theme: 'grid',
         paragraphs: [
-            'The family has always told it the same way: there was an estate, there was a king, and the king took it — and then the mighty Brahe family moved in. For five hundred years that story has travelled with the name, across three countries and a dozen spellings.',
-            'Here is what the manor records actually show. A noble family called Graa held Søllestedgård on the island of Lolland: Anders Graa from the 1460s, his widow Gertrud Mogensdatter Munk after him, and their son Jørgen Graa until 1530 — when the estate passed to the Danish Crown. Twenty years later, King Christian III sold it to Jørgen Brahe, uncle of the astronomer Tycho Brahe.',
-            'So the king is real. The Brahes are real. The loss is real. What no document yet proves is that our line descends from those Graas — the bridge from the manor to the later family is still being researched. The family also remembers a signet ring bearing the old arms, lost in a fire. We tell the saga as a saga, and it is a very good one.',
+            'It begins with a castle. Søllestedgård, on the Danish island of Lolland: land, arms and power. For three generations it belonged to the Graas — Anders Graa took it in the 1460s, his formidable widow Gertrud Munk ran it after him, and their son Jørgen held it like a lord of the old school.',
+            'Then, in 1530, the King took it. Twenty years later Christian III handed the estate to Jørgen Brahe — uncle of Tycho Brahe, the most famous astronomer ever to lose his nose in a duel. The Brahes got the castle. The Graas got the road.',
+            'All that survived was the name, and a signet ring bearing the old family arms — which, in perfect Graah fashion, was later lost in a fire. Five centuries on, the family still tells the story. Nobody asks for the Brahes’ side.',
         ],
         record: [
             { year: '1462', text: 'Anders Graa holds Søllestedgård' },
@@ -74,12 +74,12 @@ const chapters: Chapter[] = [
         years: '1591–1670',
         place: 'Skårup & Tved, Funen',
         title: 'Eighty Years in the Pulpit',
-        kicker: 'When the priest was the state, the Graas were the priests',
-        grade: 'probable',
+        kicker: 'When the priest ran everything, the Graas were the priests',
+        mood: { label: 'God & power', bg: 'bg-blue' },
         theme: 'paper',
         paragraphs: [
-            'In 1591, John Olufsen Graa secured the right to the parishes of Skårup and Tved on Funen. By 1622 he was provost — the crown’s senior churchman for the district. When he died, his son Hans Johnsen Graa took the pulpit and held it until 1670.',
-            'A parish priest in post-Reformation Denmark was not just a preacher. He kept the records, ran the school, managed the poor relief and answered to the king. Father and son together held that authority for the better part of a century — literacy, standing and influence that would carry the family into the towns.',
+            'Stripped of the castle, the family found a new throne: the pulpit. In 1591 John Olufsen Graa took the parishes of Skårup and Tved on Funen, and by 1622 he was provost — the crown’s top churchman in the district. In post-Reformation Denmark that made him far more than a preacher: keeper of the records, master of the school, judge of morals and the king’s eyes in the parish.',
+            'When he died, his son Hans took the pulpit and held it until 1670. Eighty years, father and son, one family running the spiritual machinery of a corner of Denmark — and quietly banking the literacy, standing and connections that would launch everything that came next.',
         ],
         record: [
             { year: '1591', text: 'John Olufsen Graa gains Skårup and Tved' },
@@ -92,13 +92,13 @@ const chapters: Chapter[] = [
         numeral: 'III',
         years: '1666–1775',
         place: 'Aalborg, Jutland',
-        title: 'The Broker’s Licence',
-        kicker: 'From church land to harbour credit in three generations',
-        grade: 'probable',
+        title: 'The King’s Broker',
+        kicker: 'Three generations turning harbour gossip into hard currency',
+        mood: { label: 'Salt & gold', bg: 'bg-signal' },
         theme: 'paper',
         paragraphs: [
-            'By the 1700s the family is in Aalborg, one of Denmark’s great port towns, and the trade is no longer souls — it is ships, goods and credit. David Olufsen Graae, baptised in Budolfi Church in 1727, started as a købmandskarl, a merchant’s apprentice, and in 1767 won a royal licence as a broker: the trusted man who stood between buyers, sellers, shipowners and insurers.',
-            'The harbour gave, and the harbour took. David buried two wives before his third outlived him by thirty-five years. And in the family’s Svendborg branch, Gommine Kristine Graae married the skipper Ole Bondo in March 1836 — one year later, almost to the day, he was lost off the English coast.',
+            'By the 1700s the family is in Aalborg, one of Denmark’s great port towns, and the trade is no longer souls — it is ships, cargo and credit. David Olufsen Graae started as a købmandskarl, a merchant’s apprentice, and clawed his way up until in 1767 the king himself licensed him as a broker: the man every serious deal in the harbour had to pass through.',
+            'The harbour gave, and the harbour took. David buried two wives before his third outlived him by thirty-five years. And in the family’s Svendborg branch, Gommine Kristine Graae married the skipper Ole Bondo in March 1836 — one year later, almost to the day, the sea took him off the English coast.',
         ],
         record: [
             {
@@ -126,11 +126,11 @@ const chapters: Chapter[] = [
         place: 'Christiania, Norway',
         title: 'The Crossing',
         kicker: 'Two sons of a Danish priest bet everything on a brand-new capital',
-        grade: 'documented',
+        mood: { label: 'The gamble', bg: 'bg-coral' },
         theme: 'blue',
         paragraphs: [
-            'Knud David Graah (1770–1827) went back to the church — a parish priest, married to Johanne Günther. It was his children who made the leap that defines the family: out of Denmark, into Norway, a country reborn after 1814 and hungry for capital, skills and institutions.',
-            'David Graah went first, in 1826, and built a merchant house in Christiania. He became one of the city’s benefactors: in 1859 he founded what is regarded as Norway’s first animal-protection society, and he endowed funds for women in need and for kindergartens. His little brother Knud followed in 1833 — sixteen years old, off the boat from Jutland, starting behind a shop counter.',
+            'The priest Knud David Graah raised his children in a Danish parsonage — and watched them leave, one by one, for Norway. The old union had just collapsed, Christiania was a capital in a hurry, and a country in a hurry needs everything: money, goods, ideas, nerve. The Graahs brought all four.',
+            'David Graah went first, in 1826, and built a merchant house. Then he did something strange for a rich man of his century: he started giving it away — founding Norway’s first animal-protection society, endowing funds for women in need, building kindergartens. His little brother Knud landed in 1833, sixteen years old, straight off the boat from Jutland, starting behind a shop counter. Remember the name.',
         ],
         record: [
             { year: '1826', text: 'David Graah settles in Christiania' },
@@ -148,11 +148,11 @@ const chapters: Chapter[] = [
         place: 'Manchester → the Akerselva',
         title: 'Cotton & Water',
         kicker: 'He went to England for machines and came home with an industry',
-        grade: 'documented',
+        mood: { label: 'Revolution', bg: 'bg-blue' },
         theme: 'paper',
         paragraphs: [
-            'When Britain finally allowed its jealously guarded textile machinery to be exported, Knud Graah saw the opening and went straight to the source — Lancashire and Manchester, the engine room of the industrial world. Family lore says that in Manchester he ran into Adam Hiorth, another Norwegian on exactly the same errand. They went home and built rival mills on the same river.',
-            'In 1844 Graah made the decisive move: he bought the waterfall rights at Nedre Vøyen on the Akerselva. No electricity existed — the river was the power grid, and now he owned a piece of it. In 1846 Vøiens Bomuldsspinderi began to spin: British machines, Norwegian water, an iron overshot waterwheel, some eighty workers, and its own gasworks — the first factory gasworks in Christiania.',
+            'When Britain finally loosened its grip on the machines that had made it rich, Knud Graah went straight to the source: Manchester — the loudest, dirtiest, richest industrial city on earth. There, the story goes, he ran into Adam Hiorth, another Norwegian hunting the very same machines. They sized each other up, sailed home, and built rival mills on the same river.',
+            'Graah’s masterstroke came in 1844: he bought the waterfall at Nedre Vøyen on the Akerselva. No electricity existed — the river was the power grid, and now he owned a piece of it. Two years later Vøiens Bomuldsspinderi thundered to life: British machines, Norwegian water, a great iron waterwheel, eighty workers — and its own gasworks, the first in Christiania, so the spindles never had to stop for darkness.',
         ],
         record: [
             { year: '1844', text: 'Buys the waterfall rights at Nedre Vøyen' },
@@ -167,11 +167,11 @@ const chapters: Chapter[] = [
         place: 'Kristiania',
         title: 'Out of the Ashes',
         kicker: 'The mill burned down. He built it back bigger — then saved a bank',
-        grade: 'documented',
+        mood: { label: 'Phoenix', bg: 'bg-signal' },
         theme: 'paper',
         paragraphs: [
-            'For most industrialists, the fire of 1859 would have been the end of the story. For Graah it became the hinge. Everything — buildings, machinery, stock — was insured, because the man who took bold industrial risks never took careless financial ones. He hired the architect Oluf N. Roll, and by 1860 a new four-storey mill stood at Vøien, larger and more modern than the one that burned. By 1889 it ran twelve thousand spindles.',
-            'The same cold nerve made him a banker. He joined the board of Christiania Bank og Kreditkasse in 1881 and later chaired it — and when the great Kristiania crash of 1899 wiped out speculators and shook the city’s banks, Kreditkassen’s cautious reserves held. In 1906, aged eighty-nine, he reorganised the firm as A/S Knud Graah & Co., roughly 350 people strong. He died in 1909; his brick mills still stand along the Akerselva.',
+            'For most men the fire would have been the end. For Knud Graah it was barely an intermission — because the man who gambled on machines never gambled with money, and every brick, bobbin and bale was insured. He hired the architect Oluf N. Roll, and within a year a new four-storey mill towered over the river, bigger and more modern than the one still smoking. By 1889 it ran twelve thousand spindles.',
+            'The same ice-cold nerve made him a banker. He joined the board of Christiania Bank og Kreditkasse in 1881 and rose to chairman — and when the great Kristiania crash of 1899 vaporised the speculators and toppled banks all around, his bank came through standing. At eighty-nine he was still in charge, reorganising the empire as A/S Knud Graah & Co., 350 workers strong. His brick mills still stand on the Akerselva today.',
         ],
         record: [
             {
@@ -193,7 +193,7 @@ const chapters: Chapter[] = [
         place: 'Oslo — Grini — Ravensbrück — NRK',
         title: 'The Voice That Survived',
         kicker: 'The mill-owner’s granddaughter chose resistance over comfort',
-        grade: 'documented',
+        mood: { label: 'Defiance', bg: 'bg-coral' },
         theme: 'ink',
         paragraphs: [
             'Anne Knudsdatter Graah — everyone called her Lille — was born in Kristiania in January 1908, granddaughter of the industrialist. Her father died the same year she was born. She grew up an heiress to the family’s name and standing, and when Germany occupied Norway she put all of it at risk: she went to work for the illegal press, the underground newspapers that kept the truth moving.',
@@ -216,12 +216,12 @@ const chapters: Chapter[] = [
         years: '1892–1982',
         place: 'Malmö · Helsingborg · Stockholm',
         title: 'The Hyphen That Saved a Name',
-        kicker: 'A daughter carried the name into Sweden — and the family kept it',
-        grade: 'record',
+        kicker: 'A dying mother, a newborn son, and a name that refused to disappear',
+        mood: { label: 'The name lives', bg: 'bg-mint' },
         theme: 'paper',
         paragraphs: [
-            'Ingeborg Graah, of the Norwegian industrial branch, married the Swede Gustaf Hagelbäck. Their son Knut was born in Malmö in March 1892 — and Ingeborg died that same year, twenty-nine years old. What she left her son was the name, and the family made a deliberate choice: he would be Knut Graah-Hagelbäck. The hyphen was an act of remembrance.',
-            'It was also, quietly, an act of defiance. Old noble law counts only the male line, and the family knew a name carried by a daughter would never satisfy the heralds. They kept it anyway. Through Knut and his son Björn — a military officer in Sweden’s postwar defence planning — the Graah-Hagelbäcks rooted themselves in Swedish professional life: officers, architects, psychologists, engineers, security specialists.',
+            'Ingeborg Graah, of the mill-king’s own line, married the Swede Gustaf Hagelbäck and crossed the water. In March 1892 their son Knut was born in Malmö — and that same year Ingeborg died, twenty-nine years old. What she left her son was the name.',
+            'The family made it official: he would be Knut Graah-Hagelbäck, hyphen and all. The old heralds would have sniffed — names pass through sons, they’d say, not daughters. The family ignored them. Through Knut and his son Björn — an officer in Sweden’s Cold War defence planning — the name marched on through Swedish life: officers, architects, psychologists, engineers, security specialists.',
         ],
         record: [
             { year: '1892', text: 'Knut Graah-Hagelbäck born in Malmö' },
@@ -239,7 +239,7 @@ const chapters: Chapter[] = [
         place: 'Lund → the internet',
         title: 'From Waterwheel to Wallet',
         kicker: 'The short name returns — and so does the family pattern',
-        grade: 'documented',
+        mood: { label: 'Full circle', bg: 'bg-paper' },
         theme: 'mint',
         paragraphs: [
             'Hannes Sebastian Graah was born in Lund in 1982, son of Kristian Graah-Hagelbäck. Professionally he dropped the hyphen and took back the short old name — Graah — and then did something the family had done before: he went where the new machinery was.',
@@ -316,14 +316,13 @@ function contact(): void {
     globalThis.location.href = 'mailto:hello@graah.se'
 }
 
-function EvidenceChip({ grade }: { grade: EvidenceGrade }) {
-    const meta = gradeMeta[grade]
+function MoodChip({ mood }: { mood: Mood }) {
     return (
         <span
-            className={`inline-flex items-center gap-2 border-2 border-ink ${meta.bg} px-3 py-1 font-mono text-xs font-bold uppercase tracking-normal text-ink`}
+            className={`inline-flex items-center gap-2 border-2 border-ink ${mood.bg} px-3 py-1 font-mono text-xs font-bold uppercase tracking-normal text-ink`}
         >
             <span className="size-2 rounded-full bg-ink" />
-            {meta.label}
+            {mood.label}
         </span>
     )
 }
@@ -377,7 +376,7 @@ function ChapterSection({ chapter }: { chapter: Chapter }) {
                                 </h2>
                             </div>
                         </div>
-                        <EvidenceChip grade={chapter.grade} />
+                        <MoodChip mood={chapter.mood} />
                     </div>
                 </Reveal>
 
@@ -403,7 +402,7 @@ function ChapterSection({ chapter }: { chapter: Chapter }) {
                             } p-5`}
                         >
                             <p className="font-mono text-xs font-bold uppercase tracking-normal">
-                                From the record
+                                The receipts
                             </p>
                             <ul className="mt-4 space-y-3">
                                 {chapter.record.map((entry) => (
@@ -489,7 +488,8 @@ function NameTicker() {
 
 export function HistoryPage() {
     useEffect(() => {
-        globalThis.document.title = 'The Graah Chronicle — five centuries'
+        globalThis.document.title =
+            'The Graah Chronicle — five centuries of comebacks'
         return () => {
             globalThis.document.title = 'GRAAH'
         }
@@ -538,14 +538,14 @@ export function HistoryPage() {
                             One name.
                         </h1>
                         <p className="mt-8 max-w-3xl font-serif text-xl leading-9 sm:text-2xl sm:leading-10">
-                            Manor lords who lost a castle to a king. Priests,
-                            harbour brokers, a cotton baron on a Norwegian
-                            river, a woman who survived Ravensbrück and became
-                            the voice of a nation, and a wallet for the open
+                            A castle lost to a king. Priests who ran a province,
+                            brokers who ran a harbour, a cotton baron who bought
+                            a waterfall, a resistance heroine who became the
+                            voice of a nation — and a wallet for the open
                             internet.{' '}
                             <em>
-                                This is the story of the Graah family — legends
-                                told as legends, records told as records.
+                                Five hundred years of kings, fires, fortunes and
+                                comebacks. Buckle up.
                             </em>
                         </p>
                         <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -562,14 +562,16 @@ export function HistoryPage() {
                             </span>
                         </div>
                         <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                            {gradeLegend.map(({ grade, meaning }) => (
+                            {chronicleStats.map(({ bg, label, value }) => (
                                 <div
-                                    className="border-2 border-ink bg-paper p-4 shadow-hard"
-                                    key={grade}
+                                    className={`border-2 border-ink ${bg} p-4 text-ink shadow-hard`}
+                                    key={label}
                                 >
-                                    <EvidenceChip grade={grade} />
-                                    <p className="mt-3 text-sm font-semibold leading-6">
-                                        {meaning}
+                                    <p className="font-display text-4xl font-black tracking-normal">
+                                        {value}
+                                    </p>
+                                    <p className="mt-2 text-sm font-bold uppercase leading-6">
+                                        {label}
                                     </p>
                                 </div>
                             ))}
@@ -599,9 +601,9 @@ export function HistoryPage() {
                                 Same name, wilder stories
                             </h2>
                             <p className="mt-4 max-w-2xl font-serif text-lg italic leading-8 text-paper/80">
-                                Two more Graahs made history. No document yet
-                                ties them to our line — so they stand here as
-                                kin of the name, until the archives say more.
+                                Wherever history got dangerous, a Graah kept
+                                turning up — on the Greenland ice, and behind
+                                enemy lines.
                             </p>
                         </Reveal>
                         <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -701,14 +703,10 @@ export function HistoryPage() {
                                 </Link>
                             </div>
                             <p className="mt-10 max-w-3xl border-t-2 border-ink pt-5 text-sm font-semibold leading-6">
-                                A note on honesty: this chronicle grades its own
-                                sources. The manor saga is family memory with a
-                                true historical core; the Danish middle
-                                generations rest on printed family histories and
-                                the family’s own lineage draft; the Norwegian,
-                                wartime and modern chapters are public record.
-                                Research in the Danish, Norwegian and Swedish
-                                archives continues.
+                                Told the way the family tells it — the good
+                                parts kept in, the dull parts left out, and the
+                                dates as true as we can make them. The archives
+                                are still coughing up surprises. Check back.
                             </p>
                         </Reveal>
                     </div>
