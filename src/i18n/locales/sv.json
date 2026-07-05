@@ -250,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Handkolorerat kopparstick av en ensam nordisk kyrkoruin på en gräsklädd sluttning vid havet",
+                "caption": "Allt som fanns kvar av den ”försvunna kolonin” — graverat efter Graahs egen skiss"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "Grönlands östkust",
+            "title": "Glaciären man inte fick nämna",
+            "kicker": "En kungs order, en försvunnen koloni och en öppen skinnbåt mot hela Ishavet",
+            "mood": {
+                "label": "Mot isen",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "På 1820-talet berättade Europa fortfarande en spökhistoria för sig självt: att de nordbor som koloniserat Grönland under medeltiden — tysta sedan 1400-talet — levde kvar bakom packisens mur på öns östkust och brukade sina gårdar i ett dolt rike dit inget skepp nådde. År 1828 bestämde sig kung Frederik VI för att ta reda på sanningen och gav uppdraget till familjens mästerkartograf: sjökaptenen Wilhelm August Graah. En familj som förlorat en borg skickades nu ut för att hitta en försvunnen civilisation.",
+                "Där britterna kastade örlogsfartyg mot Arktis och såg isen knäcka dem gjorde Graah tvärtom: en öppen skinnbåt rodd av grönländska kvinnor, kajaker som spanade i förväg, ingen livlina hem. Nålsögat hette Puissortoq — ”den som skjuter upp” — en glaciär som utan förvarning slungar isblock stora som hus upp från havsbotten. Besättningen var övertygad om att blotta namnet kunde väcka den. När de flesta vägrade fortsätta skickade Graah hem forskarna och fortsatte med en enda båt, två kvinnor från Nanortalik och en östgrönländsk familj. Det tog tre dagar av tystnad att smyga förbi glaciären.",
+                "Den 8 augusti 1829 slog packisen igen vid en kal klippa som han döpte till Dannebrogsön, och Graah vände om för att övervintra i en koja av jord och sten, fyra gånger två meter. Svältvintern som följde är som hämtad ur en saga: de åt slädhundarna, kokade gamla sälskinn, kämpade mot skörbjugg — och Graah satt i mörkret och ritade kartor. På våren gjorde han arton nya försök norrut, satt fast på drivisen i femton dagar och erkände till slut det Arktis sagt hela tiden. Han nådde Nanortalik på dagen ett år efter sin nordligaste punkt.",
+                "Hem kom han med 550 kilometer nykartlagd kust, beviset för att ingen dold koloni någonsin odlat bakom isen — ruinerna i sydväst var den försvunna bygden — ett riddarkors och en bok som Charles Darwin skulle citera. Och titta på en karta över Grönland i dag: Graah-bergen, Graahfjorden och Kap Graah ligger kvar. Familjen som förlorade en borg fick en bergskedja i stället."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Seglar från Köpenhamn för att hitta den försvunna Österbygden"
+                },
+                {
+                    "year": "1829",
+                    "text": "Tre tysta dygn förbi Puissortoq; nordligast den 8 augusti"
+                },
+                {
+                    "year": "1830",
+                    "text": "Svältvintern över — arton nya försök, sedan reträtten"
+                },
+                {
+                    "year": "1832",
+                    "text": "Reseskildringen publiceras; Darwin citerar den senare"
+                },
+                {
+                    "year": "—",
+                    "text": "Graah-bergen, Graahfjorden och Kap Graah — kvar på kartan"
+                }
+            ],
+            "aside": {
+                "title": "Citerad av Darwin",
+                "text": "Graahs anteckningar om isen som sköt upp ur havsbotten vid Puissortoq hamnade i Darwins Resan med Beagle. Inte illa för en man som samtidigt åt upp sina slädhundar."
+            },
+            "sources": [
+                {
+                    "label": "Graahs egen reseskildring (engelska, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Handkolorerad vy över Christiania och fjorden, målad omkring 1800",
                 "caption": "Christiania, målad omkring 1800 — staden de satsade på"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norge",
             "title": "Överfarten",
@@ -306,7 +370,7 @@
                 "alt": "Oljeporträtt av Knud Graah, vithårig med medaljer på svart rock",
                 "caption": "Knud Graah — butiksbiträde, bomullskung"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → Akerselva",
             "title": "Bomull och vatten",
@@ -360,7 +424,7 @@
                 "alt": "Tegelbyggnaderna i Knud Graahs spinneri bredvid vattenfallet vid Akerselva",
                 "caption": "Det återuppbyggda spinneriet och vattenfallet vid Akerselva"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Ur askan",
@@ -414,7 +478,7 @@
                 "alt": "Befriade fångar trängs på ett färjedäck mellan vita Röda kors-bussar, våren 1945",
                 "caption": "De vita bussarna för dem hem, våren 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "Rösten som överlevde",
@@ -469,7 +533,7 @@
                 "alt": "Gravyr av Stortorget i Malmö med flanörer och rådhuset, 1859",
                 "caption": "Stortorget i Malmö, 1859 — familjens nästa scen"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "Bindestrecket som räddade ett namn",
@@ -551,7 +615,7 @@
                 },
                 "name": "Wilhelm August Graah",
                 "years": "1793–1863",
-                "deed": "Utsänd av danske kungen för att finna nordbornas försvunna koloni på Grönlands östkust. Färdades 1828–31 i grönländska umiaker med grönländsk besättning, övervintrade i isen, var nära att svälta ihjäl — och bevisade att myten var fel, och ritade om kartan på köpet.",
+                "deed": "Polarhjälten i kapitel IV — mannen som var envisare än Grönlandsisen. Belöningen ligger kvar på kartan: Graah-bergen, Graahfjorden och Kap Graah bär fortfarande familjens namn.",
                 "source": {
                     "label": "Dansk Biografisk Leksikon",
                     "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
@@ -596,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah seglar till Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah kartlägger Grönlands östkust"
             },
             {
                 "year": "1833",

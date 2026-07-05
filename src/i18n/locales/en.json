@@ -249,13 +249,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Hand-coloured engraving of a ruined Norse stone church standing alone on a grassy slope by the sea",
+                "caption": "All that was left of the “lost colony” — engraved from Graah’s own sketch"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "The east coast of Greenland",
+            "title": "The Glacier You Must Not Name",
+            "kicker": "A king’s orders, a lost colony and one open skin boat against the entire Arctic",
+            "mood": {
+                "label": "Into the ice",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "By the 1820s, Europe still told itself a ghost story: that the Norse settlers of medieval Greenland — silent since the 1400s — were alive behind the wall of pack ice on the island’s east coast, farming on in a hidden kingdom no ship could reach. In 1828 King Frederik VI decided to find out, and handed the mission to the family’s master mapmaker: naval captain Wilhelm August Graah. A family that had lost a castle was now sent to find a lost civilization.",
+                "Where the British hurled warships at the Arctic and watched the ice crack them open, Graah went the other way: an open skin boat rowed by Greenlandic women, kayaks scouting ahead, no lifeline home. The gauntlet was Puissortoq — “the one that shoots up” — a glacier that hurls blocks of ice the size of houses from the seabed without warning. His crew believed that saying its name out loud could wake it. When most of them refused to go on, Graah sent the scientists home and kept going with a single boat, two women from Nanortalik and one East Greenlandic family. It took three days of silence to slip past the glacier.",
+                "On 8 August 1829 the pack ice slammed shut at a bare rock he named Dannebrog Island, and Graah turned back to overwinter in a hut of earth and stone, four metres by two. The famine winter that followed belongs in a saga: they ate the sled dogs, boiled old sealskins, fought off scurvy — and Graah sat in the dark, drawing maps. In spring he launched again eighteen separate times, spent fifteen days trapped on drifting ice, and finally admitted what the Arctic had been saying all along. He reached Nanortalik one year to the day after his farthest north.",
+                "He came home with 550 kilometres of newly charted coast, proof that no hidden colony had ever farmed behind the ice — the ruins in the southwest were the lost settlement — a knighthood, and a book Charles Darwin would quote. And look at a map of Greenland today: the Graah Mountains, Graah Fjord and Cape Graah are still there. The family that lost a castle got a mountain range instead."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Sails from Copenhagen to find the lost Eastern Settlement"
+                },
+                {
+                    "year": "1829",
+                    "text": "Three silent days past Puissortoq; farthest north on 8 August"
+                },
+                {
+                    "year": "1830",
+                    "text": "Starvation winter over — eighteen more tries, then the retreat"
+                },
+                {
+                    "year": "1832",
+                    "text": "Publishes the expedition account; Darwin later cites it"
+                },
+                {
+                    "year": "—",
+                    "text": "Graah Mountains, Graah Fjord, Cape Graah — still on the map"
+                }
+            ],
+            "aside": {
+                "title": "Quoted by Darwin",
+                "text": "Graah’s notes on ice bursting up from the seabed at Puissortoq made it into The Voyage of the Beagle. Not bad for a man who was eating his sled dogs at the time."
+            },
+            "sources": [
+                {
+                    "label": "Graah’s own narrative (English, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Hand-coloured view of the city of Christiania and its fjord, painted around 1800",
                 "caption": "Christiania, painted around 1800 — the city they bet on"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norway",
             "title": "The Crossing",
@@ -305,7 +369,7 @@
                 "alt": "Oil portrait of Knud Graah, white-haired with medals on his black coat",
                 "caption": "Knud Graah — shop boy, cotton king"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → the Akerselva",
             "title": "Cotton & Water",
@@ -359,7 +423,7 @@
                 "alt": "The brick buildings of Knud Graah’s mill beside the waterfall on the Akerselva",
                 "caption": "The rebuilt mill and its waterfall on the Akerselva"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Out of the Ashes",
@@ -413,7 +477,7 @@
                 "alt": "Freed prisoners crowd a ferry deck between white Red Cross buses, spring 1945",
                 "caption": "The White Buses bring them home, spring 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "The Voice That Survived",
@@ -468,7 +532,7 @@
                 "alt": "Engraving of Malmö’s great square with strollers and the town hall, 1859",
                 "caption": "Malmö’s Stortorget, 1859 — the family’s next stage"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "The Hyphen That Saved a Name",
@@ -550,7 +614,7 @@
                 },
                 "name": "Wilhelm August Graah",
                 "years": "1793–1863",
-                "deed": "Sent by the Danish king to find the lost Norse colony of Greenland’s east coast. Travelled 1828–31 in Greenlandic umiaks with Greenlandic crews, wintered in the ice, nearly starved — and proved the myth wrong, redrawing the map on the way.",
+                "deed": "The polar hero of chapter IV — the man who out-stubborned the Greenland ice. His reward is still on the map: the Graah Mountains, Graah Fjord and Cape Graah all carry the family name.",
                 "source": {
                     "label": "Dansk Biografisk Leksikon",
                     "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
@@ -595,6 +659,10 @@
             {
                 "year": "1826",
                 "text": "David Graah crosses to Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah charts Greenland’s east coast"
             },
             {
                 "year": "1833",
