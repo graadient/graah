@@ -1,9 +1,16 @@
 import type { ReactNode } from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Button, Chip, Link } from '@heroui/react'
 
-import { getHistoryContent } from './i18n'
+import type { Locale } from './i18n'
+import {
+    getHistoryContent,
+    getLocaleOption,
+    localeOptions,
+    resolveInitialLocale,
+    storeLocale,
+} from './i18n'
 import type { Bearer, Chapter, HistoryContent, Mood } from './i18n/types'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
@@ -30,6 +37,46 @@ const bearerIcons = {
 
 function contact(): void {
     globalThis.location.href = 'mailto:hello@graah.se'
+}
+
+function LocaleSwitcher({
+    locale,
+    onLocaleChange,
+}: {
+    locale: Locale
+    onLocaleChange: (locale: Locale) => void
+}) {
+    return (
+        <fieldset className="flex shrink-0 overflow-hidden rounded-md border-2 border-ink bg-paper shadow-hard">
+            <legend className="sr-only">Language</legend>
+            {localeOptions.map((option) => {
+                const selected = option.locale === locale
+                return (
+                    <button
+                        aria-label={option.ariaLabel}
+                        aria-pressed={selected}
+                        className={`flex h-9 items-center gap-1.5 border-l-2 border-ink px-2.5 font-mono text-xs font-bold uppercase tracking-normal first:border-l-0 sm:px-3 ${
+                            selected
+                                ? 'bg-ink text-paper'
+                                : 'bg-paper text-ink hover:bg-mint'
+                        }`}
+                        key={option.locale}
+                        onClick={() => {
+                            onLocaleChange(option.locale)
+                        }}
+                        type="button"
+                    >
+                        <span aria-hidden="true">{option.flag}</span>
+                        <span
+                            className={selected ? 'inline' : 'hidden sm:inline'}
+                        >
+                            {option.label}
+                        </span>
+                    </button>
+                )
+            })}
+        </fieldset>
+    )
 }
 
 function MoodChip({ mood }: { mood: Mood }) {
@@ -271,14 +318,22 @@ function NameTicker({ nameForms }: { nameForms: string[] }) {
 }
 
 export function HistoryPage() {
-    const content = getHistoryContent()
+    const [locale, setLocale] = useState<Locale>(resolveInitialLocale)
+    const content = getHistoryContent(locale)
+
+    function handleLocaleChange(nextLocale: Locale): void {
+        setLocale(nextLocale)
+        storeLocale(nextLocale)
+    }
 
     useEffect(() => {
+        const localeOption = getLocaleOption(locale)
+        globalThis.document.documentElement.lang = localeOption.htmlLang
         globalThis.document.title = content.meta.htmlTitle
         return () => {
             globalThis.document.title = content.meta.defaultTitle
         }
-    }, [content.meta.defaultTitle, content.meta.htmlTitle])
+    }, [content.meta.defaultTitle, content.meta.htmlTitle, locale])
 
     return (
         <div className="min-h-screen bg-paper text-ink">
@@ -294,6 +349,10 @@ export function HistoryPage() {
                             {content.nav.brand}
                         </span>
                     </Link>
+                    <LocaleSwitcher
+                        locale={locale}
+                        onLocaleChange={handleLocaleChange}
+                    />
                 </nav>
             </header>
 
