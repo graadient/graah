@@ -1,0 +1,447 @@
+{
+    "meta": {
+        "htmlTitle": "Graah-annállinn — fimm aldir af endurkomum",
+        "defaultTitle": "GRAAH",
+        "description": "Annáll Graah-fjölskyldunnar — fimm aldir af konungum, eldsvoðum, auði og endurkomum, frá stolnum dönskum kastala til raddar þjóðar.",
+        "ogTitle": "Graah-annállinn",
+        "ogDescription": "Fimm aldir af konungum, eldsvoðum, auði og endurkomum. Eitt nafn."
+    },
+    "languageSwitcher": {
+        "legend": "Tungumál",
+        "options": {
+            "da": { "label": "Dansk", "ariaLabel": "Skipta yfir í dönsku" },
+            "sv": { "label": "Svenska", "ariaLabel": "Skipta yfir í sænsku" },
+            "nb": { "label": "Norsk", "ariaLabel": "Skipta yfir í norsku" },
+            "fi": { "label": "Suomi", "ariaLabel": "Skipta yfir í finnsku" },
+            "is": {
+                "label": "Íslenska",
+                "ariaLabel": "Skipta yfir í íslensku"
+            },
+            "fo": {
+                "label": "Føroyskt",
+                "ariaLabel": "Skipta yfir í færeysku"
+            },
+            "en": { "label": "English", "ariaLabel": "Skipta yfir í ensku" }
+        }
+    },
+    "nav": {
+        "logoAlt": "Skjaldarmerki Graah: þrjár rauðar stjörnur og blátt-gull-rautt band á silfurlitum skildi",
+        "brand": "GRAAH"
+    },
+    "hero": {
+        "crestAlt": "",
+        "chip": "Fjölskylduannállinn",
+        "titleLines": ["Fimm aldir.", "Eitt nafn."],
+        "intro": "Kastali tapaðist til konungs. Prestar stjórnuðu sóknum, miðlarar stjórnuðu höfn, bómullarbarón keypti foss — og andspyrnuhetja varð rödd þjóðar.",
+        "introEmphasis": "Fimm hundruð ár af konungum, eldsvoðum, auði og endurkomum. Haltu þér fast.",
+        "startYear": "1462",
+        "endYear": "1982"
+    },
+    "chronicleStats": [
+        {
+            "value": "1",
+            "label": "kastali tapaður til konungs",
+            "bg": "bg-coral"
+        },
+        { "value": "3", "label": "konungsríki kölluð heim", "bg": "bg-blue" },
+        {
+            "value": "12,000",
+            "label": "snældur knúnar af einni á",
+            "bg": "bg-signal"
+        },
+        { "value": "7", "label": "rithættir eins nafns", "bg": "bg-mint" }
+    ],
+    "nameForms": [
+        "GROH",
+        "GRAA",
+        "GRÅ",
+        "GRAAE",
+        "GRAAH",
+        "GRAAH-HAGELBÄCK",
+        "GRAAH"
+    ],
+    "chapterRecordHeading": "Sönnunargögnin",
+    "chapterSourcesHeading": "Lestu sjálfur",
+    "chapters": [
+        {
+            "id": "manor",
+            "image": {
+                "src": "/history/manor-1866.jpg",
+                "alt": "Nítjándu aldar koparstunga af herragarðinum Søllestedgård með turni og görðum",
+                "caption": "Søllestedgård sjálfur, teiknaður árið 1866"
+            },
+            "numeral": "I",
+            "years": "1462–1550",
+            "place": "Søllestedgård, Lolland, Danmörk",
+            "title": "Stolni kastalinn",
+            "kicker": "Kastali, konungur og gremja sem fjölskyldan hefur borið í fimm hundruð ár",
+            "mood": { "label": "Konungleg gremja", "bg": "bg-coral" },
+            "theme": "grid",
+            "paragraphs": [
+                "Sagan hefst með kastala. Søllestedgård á Lollandi var land, vopn og vald. Í þrjár kynslóðir tilheyrði hann Graa-ættinni.",
+                "Árið 1530 tók konungurinn hann. Brahe-ættin fékk kastalann; Graa-ættin hélt nafninu, veginum áfram og sögunni."
+            ],
+            "record": [
+                { "year": "1462", "text": "Anders Graa heldur Søllestedgård" },
+                { "year": "1530", "text": "Jörðin fer til dönsku krúnunnar" },
+                {
+                    "year": "1550",
+                    "text": "Christian III selur hana Jørgen Brahe, frænda Tycho"
+                },
+                {
+                    "year": "—",
+                    "text": "Innsigli með ættarmerkinu glatast í eldsvoða"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Danske Herregårde — Søllestedgaard",
+                    "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
+                },
+                {
+                    "label": "Wikipedia — Søllestedgård",
+                    "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
+                }
+            ]
+        },
+        {
+            "id": "pulpit",
+            "image": {
+                "src": "/history/skaarup-kirke.jpg",
+                "alt": "Hvítkalkaða miðaldakirkjan í Skårup á Fjóni með rauðu þaki",
+                "caption": "Skårup-kirkja — hásæti fjölskyldunnar í 80 ár"
+            },
+            "numeral": "II",
+            "years": "1591–1670",
+            "place": "Skårup og Tved, Fjón",
+            "title": "Áttatíu ár í prédikunarstólnum",
+            "kicker": "Þegar presturinn stjórnaði öllu voru Graa-menn prestarnir",
+            "mood": { "label": "Guð og vald", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Eftir kastalann fann fjölskyldan nýtt hásæti: prédikunarstólinn. John Olufsen Graa fékk sóknirnar Skårup og Tved árið 1591.",
+                "Sonurinn Hans hélt embættinu til 1670. Þar varð til læsi, staða og tengslanetið sem næstu kynslóðir byggðu á."
+            ],
+            "record": [
+                {
+                    "year": "1591",
+                    "text": "John Olufsen Graa fær Skårup og Tved"
+                },
+                { "year": "1622", "text": "Skipaður prófastur" },
+                {
+                    "year": "1670",
+                    "text": "Hans Johnsen Graa deyr; prestaveldinu lýkur"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                }
+            ]
+        },
+        {
+            "id": "broker",
+            "image": {
+                "src": "/history/budolfi-aalborg.jpg",
+                "alt": "Hvítur turn Budolfi-kirkju rís yfir götu í Álaborg",
+                "caption": "Budolfi-kirkja, Álaborg — þar sem miðlarinn var skírður"
+            },
+            "numeral": "III",
+            "years": "1666–1775",
+            "place": "Álaborg, Jótland",
+            "title": "Miðlari konungsins",
+            "kicker": "Þrjár kynslóðir breyttu hafnarslúðri í harðan gjaldeyri",
+            "mood": { "label": "Salt og gull", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "Á 18. öld var fjölskyldan í Álaborg. Viðskiptin snerust um skip, farm og lánstraust; David Olufsen Graae fékk konunglegt leyfi sem miðlari.",
+                "Höfnin gaf og höfnin tók. Gommine Kristine Graae giftist skipstjóranum Ole Bondo árið 1836; ári síðar tók hafið hann."
+            ],
+            "record": [
+                {
+                    "year": "1727",
+                    "text": "David Olufsen Graae skírður í Budolfi-kirkju"
+                },
+                { "year": "1767", "text": "Konunglegt leyfi sem miðlari" },
+                {
+                    "year": "1837",
+                    "text": "Skipstjórinn Ole Bondo hverfur við strendur Englands"
+                }
+            ],
+            "aside": {
+                "title": "Giftur í mars, drukknaði í mars",
+                "text": "Gommine Kristine Graae giftist Ole Bondo 8. mars 1836. Hann fórst við England 11. mars 1837. Í kaupmannsfjölskyldu var hafið bæði auðurinn og áhættan."
+            },
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "href": "https://biografiskleksikon.lex.dk/Graae"
+                }
+            ]
+        },
+        {
+            "id": "crossing",
+            "image": {
+                "src": "/history/christiania-1800.jpg",
+                "alt": "Handlituð sýn yfir Christiania og fjörðinn, máluð um 1800",
+                "caption": "Christiania um 1800 — borgin sem þau veðjuðu á"
+            },
+            "numeral": "IV",
+            "years": "1826–1859",
+            "place": "Christiania, Noregur",
+            "title": "Yfirferðin",
+            "kicker": "Tveir synir dansks prests lögðu allt undir í nýrri höfuðborg",
+            "mood": { "label": "Veðmálið", "bg": "bg-coral" },
+            "theme": "blue",
+            "paragraphs": [
+                "Christiania var höfuðborg á hraðferð og þurfti fé, vörur, hugmyndir og kjark. Graah-bræðurnir komu með allt þetta.",
+                "David kom árið 1826 og byggði verslunarhús. Knud kom sextán ára árið 1833 og hóf leiðina frá verslunarborði til iðnaðar."
+            ],
+            "record": [
+                { "year": "1826", "text": "David Graah sest að í Christiania" },
+                { "year": "1833", "text": "Knud Graah kemur, sextán ára" },
+                {
+                    "year": "1859",
+                    "text": "David stofnar fyrsta dýraverndarfélag Noregs"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Store norske leksikon — David Graah",
+                    "href": "https://snl.no/David_Graah"
+                }
+            ]
+        },
+        {
+            "id": "cotton",
+            "image": {
+                "src": "/history/knud-graah.jpg",
+                "alt": "Olíumálverk af Knud Graah, hvíthærðum með medalíur á svörtum frakka",
+                "caption": "Knud Graah — verslunardrengur, bómullarkóngur"
+            },
+            "numeral": "V",
+            "years": "1844–1859",
+            "place": "Manchester → Akerselva",
+            "title": "Bómull og vatn",
+            "kicker": "Hann fór til Englands eftir vélum og kom heim með iðnað",
+            "mood": { "label": "Bylting", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Knud Graah fór til Manchester eftir þekkingunni sem breytti iðnaðinum. Hann kom heim að Akerselvu með vélarnar í huganum.",
+                "Árið 1844 keypti hann fossréttinn við Nedre Vøyen. Tveimur árum síðar hóf bómullarspinnverkið starfsemi með norskri vatnsorku og breskum vélum."
+            ],
+            "record": [
+                {
+                    "year": "1844",
+                    "text": "Kaupir fossréttindin við Nedre Vøyen"
+                },
+                { "year": "1846", "text": "Vøiens Bomuldsspinderi opnar" },
+                { "year": "1854", "text": "Kaupir út félaga sinn og mág" }
+            ],
+            "sources": [
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "ashes",
+            "image": {
+                "src": "/history/graah-mill.jpg",
+                "alt": "Múrsteinsbyggingar spinnverks Knud Graah við fossinn á Akerselvu",
+                "caption": "Endurbyggða spinnverkið og fossinn á Akerselvu"
+            },
+            "numeral": "VI",
+            "years": "1860–1909",
+            "place": "Kristiania",
+            "title": "Úr öskunni",
+            "kicker": "Spinnverkið brann. Hann byggði það stærra — og bjargaði svo banka",
+            "mood": { "label": "Fönix", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "Eldsvoðinn hefði stöðvað flesta. Fyrir Knud Graah var hann hlé, því allt var tryggt. Innan árs reis nýtt fjögurra hæða spinnverk.",
+                "Sama yfirvegun gerði hann að bankamanni. Kreditkassen komst í gegnum Kristiania-hrunið 1899 meðan aðrir féllu."
+            ],
+            "record": [
+                {
+                    "year": "1860",
+                    "text": "Nýtt fjögurra hæða spinnverk eftir Oluf N. Roll"
+                },
+                { "year": "1889", "text": "12,000 snældur í gangi við Vøien" },
+                {
+                    "year": "1899",
+                    "text": "Kreditkassen lifir af Kristiania-hrunið"
+                },
+                {
+                    "year": "1906",
+                    "text": "A/S Knud Graah & Co. — um 350 starfsmenn"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "voice",
+            "image": {
+                "src": "/history/white-buses-1945.jpg",
+                "alt": "Frelsaðir fangar á ferjuþilfari milli hvítra Rauða kross rútna vorið 1945",
+                "caption": "Hvítu rúturnar flytja þau heim, vorið 1945"
+            },
+            "numeral": "VII",
+            "years": "1908–2001",
+            "place": "Osló — Grini — Ravensbrück — NRK",
+            "title": "Röddin sem lifði af",
+            "kicker": "Barnabarn verksmiðjueigandans valdi andspyrnu fram yfir þægindi",
+            "mood": { "label": "Þvermóðska", "bg": "bg-coral" },
+            "theme": "ink",
+            "paragraphs": [
+                "Anne Knudsdatter Graah, Lille, lagði nafn og stöðu að veði í ólöglegu pressunni þegar Noregur var hernuminn.",
+                "Hún lifði af Grini, Ravensbrück og heimferðina með Hvítu rútunum. Eftir stríð varð hún ein þekktasta útvarpsrödd NRK."
+            ],
+            "record": [
+                {
+                    "year": "1942",
+                    "text": "Handtekin af Gestapo; fangelsuð í Grini"
+                },
+                { "year": "1943", "text": "Flutt til Ravensbrück" },
+                { "year": "1945", "text": "Kemur heim með Hvítu rútunum" },
+                { "year": "1977", "text": "Hlýtur St. Hallvard-orðu Oslóar" }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
+                },
+                {
+                    "label": "Store norske leksikon — De hvite bussene",
+                    "href": "https://snl.no/hvite_busser"
+                }
+            ]
+        },
+        {
+            "id": "hyphen",
+            "image": {
+                "src": "/history/malmo-1859.jpg",
+                "alt": "Koparstunga af Stortorget í Malmö með gangandi fólki og ráðhúsinu, 1859",
+                "caption": "Stortorget í Malmö, 1859 — næsta svið fjölskyldunnar"
+            },
+            "numeral": "VIII",
+            "years": "1892–1982",
+            "place": "Malmö · Helsingborg · Stokkhólmur",
+            "title": "Bandstrikið sem bjargaði nafni",
+            "kicker": "Deyjandi móðir, nýfæddur sonur og nafn sem neitaði að hverfa",
+            "mood": { "label": "Nafnið lifir", "bg": "bg-mint" },
+            "theme": "paper",
+            "paragraphs": [
+                "Ingeborg Graah giftist Svíanum Gustaf Hagelbäck. Sonurinn Knut fæddist í Malmö árið 1892, sama ár og hún dó.",
+                "Nafnið varð Graah-Hagelbäck og hélt áfram í sænsku lífi í gegnum Knut, Björn og næstu kynslóðir."
+            ],
+            "record": [
+                {
+                    "year": "1892",
+                    "text": "Knut Graah-Hagelbäck fæddist í Malmö"
+                },
+                {
+                    "year": "1892",
+                    "text": "Ingeborg Graah deyr, tuttugu og níu ára"
+                },
+                {
+                    "year": "1921",
+                    "text": "Björn Graah-Hagelbäck, síðar varnaráætlunarmaður"
+                }
+            ],
+            "sources": [
+                { "label": "Ættarskrár fjölskyldunnar (Anlängd, 2012)" }
+            ]
+        }
+    ],
+    "fireInterstitial": {
+        "label": "Þriðjudagur 20. desember 1859 · um 23:00",
+        "titlePrefix": "Spinnverkið",
+        "titleEmphasis": "brennur",
+        "body": "Bómullarryk, timburgólf, olía og gasljós — í myrkri jólavikunnar fór þrettán ára vinna upp í reyk á einni nóttu. Næsta skref Knud Graah segir allt: hann hafði tryggt allt."
+    },
+    "bearersSection": {
+        "eyebrow": "Berendur nafnsins",
+        "title": "Sama nafn, villtari sögur",
+        "intro": "Þar sem sagan varð hættuleg birtist Graah — á Grænlandsísnum og bak við óvinalínur.",
+        "figure": {
+            "src": "/history/umiak-graah.jpg",
+            "alt": "Koparstunga af umiak sem grænlensk áhöfn rær í þungum sjó",
+            "caption": "Umiak á opnu hafi við Austur-Grænland — teiknað af W.A. Graah sjálfum"
+        },
+        "bearers": [
+            {
+                "icon": "snowflake",
+                "img": {
+                    "src": "/history/wa-graah.jpg",
+                    "alt": "Grafið portrett af Wilhelm August Graah með undirskrift hans"
+                },
+                "name": "Wilhelm August Graah",
+                "years": "1793–1863",
+                "deed": "Sendur af danska konunginum til að finna týndu norrænu nýlenduna á austurströnd Grænlands. Hann ferðaðist í grænlenskum umiak-bátum og endurteiknaði kortið.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
+                }
+            },
+            {
+                "icon": "radio",
+                "name": "Jutta Graae — “Storhertuginden”",
+                "years": "1906–1997",
+                "deed": "Stórhertogaynja dönsku andspyrnunnar. Hún flutti peninga og míkrófilmur, flúði til Svíþjóðar árið 1943 og vann frá London með bresku SOE.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/Jutta_Graae"
+                }
+            }
+        ]
+    },
+    "timelineSection": {
+        "eyebrow": "Langi boginn",
+        "title": "1462 → 1982",
+        "stops": [
+            { "year": "1462", "text": "Anders Graa á Søllestedgård" },
+            { "year": "1530", "text": "Krúnan tekur herragarðinn" },
+            { "year": "1550", "text": "Selt Jørgen Brahe" },
+            { "year": "1591", "text": "Graa-prestar taka Skårup og Tved" },
+            { "year": "1767", "text": "Konunglegt miðlaraleyfi í Álaborg" },
+            { "year": "1826", "text": "David Graah fer til Christiania" },
+            { "year": "1833", "text": "Knud Graah fylgir, 16 ára" },
+            { "year": "1844", "text": "Knud kaupir fossinn" },
+            { "year": "1846", "text": "Bómullarspinnverkið fer af stað" },
+            { "year": "1859", "text": "Eldsvoði eyðir spinnverkinu fyrir jól" },
+            {
+                "year": "1860",
+                "text": "Endurbyggt — fjórar hæðir, nútímalegra"
+            },
+            { "year": "1881", "text": "Knud fer í stjórn Kreditkassen" },
+            { "year": "1892", "text": "Nafnið fer til Svíþjóðar" },
+            { "year": "1899", "text": "Bankinn lifir af mikla hrunið" },
+            { "year": "1942", "text": "Lille Graah handtekin af Gestapo" },
+            { "year": "1945", "text": "Heim með Hvítu rútunum" },
+            { "year": "1977", "text": "St. Hallvard-orðan til Lille" }
+        ]
+    },
+    "closing": {
+        "eyebrow": "Hvað þetta verður allt að",
+        "title": "Fjölskylda sem endurbyggði verkfæri síns tíma",
+        "body": "Land, síðan prédikunarstólar. Prédikunarstólar, síðan hafnir. Hafnir, síðan fossar og snældur. Bankar, ólögleg blöð, útvarpshljóðnemi. Mynstrið breyttist ekki: finndu nýja innviði tímans, farðu yfir landamærin og byggðu.",
+        "cta": "Skrifaðu fjölskyldunni",
+        "note": "Sagt eins og fjölskyldan segir það — góðu hlutarnir haldnir inni, leiðinlegu hlutarnir skildir eftir og dagsetningarnar eins sannar og við getum gert þær. Skjalasöfnin hósta enn upp óvæntum hlutum. Komdu aftur. Myndir í gegnum Wikimedia Commons: Nasjonalbiblioteket, Nasjonalmuseet og Oslo Museum (Noregur), News Øresund (CC BY), Hideko Bondesen og Liberaler Humanist (CC BY-SA)."
+    }
+}

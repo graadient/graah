@@ -1,0 +1,457 @@
+{
+    "meta": {
+        "htmlTitle": "Graahin kronikka — viisi vuosisataa paluuta",
+        "defaultTitle": "GRAAH",
+        "description": "Graahin suvun kronikka — viisi vuosisataa kuninkaita, tulipaloja, omaisuuksia ja paluita, varastetusta tanskalaisesta linnasta kansakunnan ääneen.",
+        "ogTitle": "Graahin kronikka",
+        "ogDescription": "Viisi vuosisataa kuninkaita, tulipaloja, omaisuuksia ja paluita. Yksi nimi."
+    },
+    "languageSwitcher": {
+        "legend": "Kieli",
+        "options": {
+            "da": { "label": "Dansk", "ariaLabel": "Vaihda tanskaksi" },
+            "sv": { "label": "Svenska", "ariaLabel": "Vaihda ruotsiksi" },
+            "nb": { "label": "Norsk", "ariaLabel": "Vaihda norjaksi" },
+            "fi": { "label": "Suomi", "ariaLabel": "Vaihda suomeksi" },
+            "is": { "label": "Íslenska", "ariaLabel": "Vaihda islanniksi" },
+            "fo": { "label": "Føroyskt", "ariaLabel": "Vaihda färsaareksi" },
+            "en": { "label": "English", "ariaLabel": "Vaihda englanniksi" }
+        }
+    },
+    "nav": {
+        "logoAlt": "Graahin vaakuna: kolme punaista tähteä ja sini-kulta-punainen nauha hopeisella kilvellä",
+        "brand": "GRAAH"
+    },
+    "hero": {
+        "crestAlt": "",
+        "chip": "Sukukronikka",
+        "titleLines": ["500 vuotta.", "Yksi nimi."],
+        "intro": "Linna menetettiin kuninkaalle. Papit johtivat seurakuntia, välittäjät satamaa, puuvillaparoni osti kosken — ja vastarintasankari nousi kansakunnan ääneksi.",
+        "introEmphasis": "Viisisataa vuotta kuninkaita, tulipaloja, omaisuuksia ja paluita. Pidä kiinni.",
+        "startYear": "1462",
+        "endYear": "1982"
+    },
+    "chronicleStats": [
+        {
+            "value": "1",
+            "label": "linna menetetty kuninkaalle",
+            "bg": "bg-coral"
+        },
+        {
+            "value": "3",
+            "label": "kotimaaksi kutsuttua kuningaskuntaa",
+            "bg": "bg-blue"
+        },
+        {
+            "value": "12,000",
+            "label": "kehräyskaraa yhden joen voimalla",
+            "bg": "bg-signal"
+        },
+        { "value": "7", "label": "yhden nimen kirjoitusasua", "bg": "bg-mint" }
+    ],
+    "nameForms": [
+        "GROH",
+        "GRAA",
+        "GRÅ",
+        "GRAAE",
+        "GRAAH",
+        "GRAAH-HAGELBÄCK",
+        "GRAAH"
+    ],
+    "chapterRecordHeading": "Todisteet",
+    "chapterSourcesHeading": "Lue itse",
+    "chapters": [
+        {
+            "id": "manor",
+            "image": {
+                "src": "/history/manor-1866.jpg",
+                "alt": "1800-luvun kaiverrus Søllestedgårdin kartanosta torneineen ja puutarhoineen",
+                "caption": "Søllestedgård itse, piirrettynä vuonna 1866"
+            },
+            "numeral": "I",
+            "years": "1462–1550",
+            "place": "Søllestedgård, Lolland, Tanska",
+            "title": "Varastettu linna",
+            "kicker": "Linna, kuningas ja kauna, jota suku on kantanut viisisataa vuotta",
+            "mood": { "label": "Kuninkaallinen kauna", "bg": "bg-coral" },
+            "theme": "grid",
+            "paragraphs": [
+                "Tarina alkaa linnasta. Søllestedgård Lollandin saarella oli maata, aseita ja valtaa. Kolmen sukupolven ajan se kuului Graa-suvulle: Anders Graa otti sen 1460-luvulla, Gertrud Munk hallitsi sitä hänen jälkeensä ja poika Jørgen piti siitä kiinni vanhan ajan herran tavoin.",
+                "Vuonna 1530 kuningas otti sen. Christian III luovutti tilan myöhemmin Jørgen Brahelle, Tycho Brahen sedälle. Brahet saivat linnan; Graa-suvulle jäi tie eteenpäin, nimi ja kertomus."
+            ],
+            "record": [
+                { "year": "1462", "text": "Anders Graa pitää Søllestedgårdia" },
+                { "year": "1530", "text": "Tila siirtyy Tanskan kruunulle" },
+                {
+                    "year": "1550",
+                    "text": "Christian III myy sen Jørgen Brahelle, Tychon sedälle"
+                },
+                {
+                    "year": "—",
+                    "text": "Suvun vaakunasinetti menetetään tulipalossa"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Danske Herregårde — Søllestedgaard",
+                    "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
+                },
+                {
+                    "label": "Wikipedia — Søllestedgård",
+                    "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
+                }
+            ]
+        },
+        {
+            "id": "pulpit",
+            "image": {
+                "src": "/history/skaarup-kirke.jpg",
+                "alt": "Skårupin valkoiseksi kalkittu keskiaikainen kirkko punaisine tiilikattoineen",
+                "caption": "Skårupin kirkko — suvun valtaistuin 80 vuoden ajan"
+            },
+            "numeral": "II",
+            "years": "1591–1670",
+            "place": "Skårup ja Tved, Fyn",
+            "title": "Kahdeksankymmentä vuotta saarnastuolissa",
+            "kicker": "Kun pappi johti kaikkea, Graat olivat pappeja",
+            "mood": { "label": "Jumala ja valta", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Linnan menettämisen jälkeen suku löysi uuden valtaistuimen: saarnastuolin. John Olufsen Graa sai Skårupin ja Tvedin seurakunnat vuonna 1591 ja nousi provastiksi 1622.",
+                "Hänen poikansa Hans jatkoi virassa vuoteen 1670. Isä ja poika antoivat suvulle lukutaidon, aseman ja verkostot, joista seuraavat vaiheet kasvoivat."
+            ],
+            "record": [
+                {
+                    "year": "1591",
+                    "text": "John Olufsen Graa saa Skårupin ja Tvedin"
+                },
+                { "year": "1622", "text": "Nimitetään provastiksi" },
+                {
+                    "year": "1670",
+                    "text": "Hans Johnsen Graa kuolee; papiston dynastia päättyy"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                }
+            ]
+        },
+        {
+            "id": "broker",
+            "image": {
+                "src": "/history/budolfi-aalborg.jpg",
+                "alt": "Budolfin kirkon valkoinen torni kohoaa Aalborgin kadun ylle",
+                "caption": "Budolfin kirkko Aalborgissa — välittäjän kastepaikka"
+            },
+            "numeral": "III",
+            "years": "1666–1775",
+            "place": "Aalborg, Jyllanti",
+            "title": "Kuninkaan välittäjä",
+            "kicker": "Kolme sukupolvea muutti satamahuhut kovaksi valuutaksi",
+            "mood": { "label": "Suola ja kulta", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "1700-luvulla suku oli Aalborgissa, suuressa satamakaupungissa. Kauppa ei enää koskenut sieluja vaan aluksia, lastia ja luottoa. David Olufsen Graae aloitti kauppiaan apulaisena ja sai vuonna 1767 kuninkaallisen luvan toimia välittäjänä.",
+                "Satama antoi ja satama otti. Svendborgin haarassa Gommine Kristine Graae avioitui kippari Ole Bondon kanssa maaliskuussa 1836. Vuotta myöhemmin meri vei hänet Englannin rannikolla."
+            ],
+            "record": [
+                {
+                    "year": "1727",
+                    "text": "David Olufsen Graae kastetaan Budolfin kirkossa"
+                },
+                { "year": "1767", "text": "Kuninkaallinen välittäjän lupa" },
+                {
+                    "year": "1837",
+                    "text": "Kippari Ole Bondo katoaa Englannin rannikolla"
+                }
+            ],
+            "aside": {
+                "title": "Naimisiin maaliskuussa, hukkui maaliskuussa",
+                "text": "Gommine Kristine Graae ja Ole Bondo vihittiin 8. maaliskuuta 1836. Hän upposi Englannin edustalla 11. maaliskuuta 1837. Kauppiassuvulle meri oli sekä onni että riski."
+            },
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "href": "https://biografiskleksikon.lex.dk/Graae"
+                }
+            ]
+        },
+        {
+            "id": "crossing",
+            "image": {
+                "src": "/history/christiania-1800.jpg",
+                "alt": "Käsin väritetty näkymä Christianiaan ja vuonolle noin vuodelta 1800",
+                "caption": "Christiania noin vuonna 1800 — kaupunki, johon he panostivat"
+            },
+            "numeral": "IV",
+            "years": "1826–1859",
+            "place": "Christiania, Norja",
+            "title": "Ylitys",
+            "kicker": "Kaksi tanskalaisen papin poikaa panosti kaiken uuteen pääkaupunkiin",
+            "mood": { "label": "Uhkapeli", "bg": "bg-coral" },
+            "theme": "blue",
+            "paragraphs": [
+                "Knud David Graah kasvatti lapsensa tanskalaisessa pappilassa ja näki heidän lähtevän Norjaan. Christiania oli kiireinen pääkaupunki, ja se tarvitsi rahaa, tavaraa, ideoita ja rohkeutta.",
+                "David tuli ensin vuonna 1826 ja rakensi kauppahuoneen. Knud seurasi vuonna 1833 kuusitoistavuotiaana. Myymälän tiskin takaa alkoi tie teollisuuden rakentajaksi."
+            ],
+            "record": [
+                { "year": "1826", "text": "David Graah asettuu Christianiaan" },
+                {
+                    "year": "1833",
+                    "text": "Knud Graah saapuu, kuusitoistavuotiaana"
+                },
+                {
+                    "year": "1859",
+                    "text": "David perustaa Norjan ensimmäisen eläinsuojeluyhdistyksen"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Store norske leksikon — David Graah",
+                    "href": "https://snl.no/David_Graah"
+                }
+            ]
+        },
+        {
+            "id": "cotton",
+            "image": {
+                "src": "/history/knud-graah.jpg",
+                "alt": "Öljymuotokuva Knud Graahista, valkohiuksisena ja mitalit mustassa takissa",
+                "caption": "Knud Graah — kauppa-apulainen, puuvillakuningas"
+            },
+            "numeral": "V",
+            "years": "1844–1859",
+            "place": "Manchester → Akerselva",
+            "title": "Puuvilla ja vesi",
+            "kicker": "Hän matkusti Englantiin koneiden perässä ja palasi teollisuuden kanssa",
+            "mood": { "label": "Vallankumous", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Kun Britannia hellitti otettaan teollisuuskoneista, Knud Graah meni Manchesteriin. Sieltä hän toi kotiin osaamista, joka muuttaisi Akerselvan.",
+                "Vuonna 1844 hän osti Nedre Vøyenin koskioikeudet. Kaksi vuotta myöhemmin Vøiens Bomuldsspinderi käynnistyi: brittiläiset koneet, norjalainen vesivoima, kahdeksankymmentä työntekijää ja oma kaasulaitos."
+            ],
+            "record": [
+                { "year": "1844", "text": "Ostaa Nedre Vøyenin koskioikeudet" },
+                { "year": "1846", "text": "Vøiens Bomuldsspinderi avautuu" },
+                { "year": "1854", "text": "Ostaa ulos kumppaninsa ja lankonsa" }
+            ],
+            "sources": [
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "ashes",
+            "image": {
+                "src": "/history/graah-mill.jpg",
+                "alt": "Knud Graahin kehräämön tiilirakennukset Akerselvan kosken vieressä",
+                "caption": "Uudelleen rakennettu kehräämö ja sen koski Akerselvalla"
+            },
+            "numeral": "VI",
+            "years": "1860–1909",
+            "place": "Kristiania",
+            "title": "Tuhkasta",
+            "kicker": "Kehräämö paloi. Hän rakensi sen suuremmaksi — ja pelasti sitten pankin",
+            "mood": { "label": "Feeniks", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "Useimmille palo olisi ollut loppu. Knud Graahille se oli väliaika, sillä kaikki oli vakuutettu. Vuoden sisällä uusi nelikerroksinen kehräämö nousi joen varteen.",
+                "Sama kylmähermoisuus vei hänet pankkimaailmaan. Christiania Bank og Kreditkasse selvisi vuoden 1899 Kristianian romahduksesta hänen johdollaan."
+            ],
+            "record": [
+                {
+                    "year": "1860",
+                    "text": "Uusi nelikerroksinen kehräämö, arkkitehti Oluf N. Roll"
+                },
+                {
+                    "year": "1889",
+                    "text": "12,000 kehräyskaraa käytössä Vøienissa"
+                },
+                {
+                    "year": "1899",
+                    "text": "Kreditkassen selviää Kristianian romahduksesta"
+                },
+                {
+                    "year": "1906",
+                    "text": "A/S Knud Graah & Co. — noin 350 työntekijää"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "voice",
+            "image": {
+                "src": "/history/white-buses-1945.jpg",
+                "alt": "Vapautetut vangit tungoksessa lautan kannella valkoisten Punaisen Ristin bussien välissä keväällä 1945",
+                "caption": "Valkoiset bussit tuovat heidät kotiin, keväällä 1945"
+            },
+            "numeral": "VII",
+            "years": "1908–2001",
+            "place": "Oslo — Grini — Ravensbrück — NRK",
+            "title": "Ääni joka selvisi",
+            "kicker": "Tehtaanomistajan pojantytär valitsi vastarinnan mukavuuden sijaan",
+            "mood": { "label": "Uhmakkuus", "bg": "bg-coral" },
+            "theme": "ink",
+            "paragraphs": [
+                "Anne Knudsdatter Graah, Lille, syntyi Kristianiaan vuonna 1908. Kun Saksa miehitti Norjan, hän riskeerasi nimensä ja asemansa työskennellessään laittomalle lehdistölle.",
+                "Gestapo pidätti hänet 1942. Hän selvisi Grinistä, Ravensbrückistä ja palasi kotiin Valkoisilla busseilla. Sodan jälkeen hänestä tuli yksi NRK:n tunnetuimmista radioäänistä."
+            ],
+            "record": [
+                {
+                    "year": "1942",
+                    "text": "Gestapo pidättää; vangitaan Grinissä"
+                },
+                { "year": "1943", "text": "Karkotetaan Ravensbrückiin" },
+                {
+                    "year": "1945",
+                    "text": "Palaa kotiin Valkoisilla busseilla"
+                },
+                { "year": "1977", "text": "Saa Oslon St. Hallvard -mitalin" }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
+                },
+                {
+                    "label": "Store norske leksikon — De hvite bussene",
+                    "href": "https://snl.no/hvite_busser"
+                }
+            ]
+        },
+        {
+            "id": "hyphen",
+            "image": {
+                "src": "/history/malmo-1859.jpg",
+                "alt": "Kaiverrus Malmön Stortorgetilta, kulkijoita ja raatihuone vuonna 1859",
+                "caption": "Malmön Stortorget, 1859 — suvun seuraava näyttämö"
+            },
+            "numeral": "VIII",
+            "years": "1892–1982",
+            "place": "Malmö · Helsingborg · Tukholma",
+            "title": "Yhdysmerkki joka pelasti nimen",
+            "kicker": "Kuoleva äiti, vastasyntynyt poika ja nimi, joka ei suostunut katoamaan",
+            "mood": { "label": "Nimi elää", "bg": "bg-mint" },
+            "theme": "paper",
+            "paragraphs": [
+                "Ingeborg Graah avioitui ruotsalaisen Gustaf Hagelbäckin kanssa ja muutti veden yli. Heidän poikansa Knut syntyi Malmössä vuonna 1892, samana vuonna kun Ingeborg kuoli 29-vuotiaana.",
+                "Suku teki nimestä virallisen: Knut Graah-Hagelbäck. Hänen ja poikansa Björnin kautta nimi jatkoi matkaansa ruotsalaisessa elämässä."
+            ],
+            "record": [
+                {
+                    "year": "1892",
+                    "text": "Knut Graah-Hagelbäck syntyy Malmössä"
+                },
+                {
+                    "year": "1892",
+                    "text": "Ingeborg Graah kuolee 29-vuotiaana"
+                },
+                {
+                    "year": "1921",
+                    "text": "Björn Graah-Hagelbäck, myöhemmin puolustussuunnittelija"
+                }
+            ],
+            "sources": [
+                { "label": "Suvun omat sukulinjamerkinnät (Anlängd, 2012)" }
+            ]
+        }
+    ],
+    "fireInterstitial": {
+        "label": "Tiistai 20. joulukuuta 1859 · noin 23:00",
+        "titlePrefix": "Kehräämö",
+        "titleEmphasis": "palaa",
+        "body": "Puuvillapöly, puulattiat, öljy ja kaasuvalo — joulunalusviikon pimeydessä kolmentoista vuoden työ paloi yhtenä yönä. Knud Graahin seuraava siirto kertoo kaiken: hän oli vakuuttanut kaiken."
+    },
+    "bearersSection": {
+        "eyebrow": "Nimen kantajat",
+        "title": "Sama nimi, hurjemmat tarinat",
+        "intro": "Aina kun historia muuttui vaaralliseksi, Graah ilmestyi paikalle — Grönlannin jäällä ja vihollislinjojen takana.",
+        "figure": {
+            "src": "/history/umiak-graah.jpg",
+            "alt": "Kaiverrus umiakista, jota grönlantilainen miehistö soutaa kovassa merenkäynnissä",
+            "caption": "Umiak avovedessä Itä-Grönlannin edustalla — kapteeni W.A. Graahin oma piirros"
+        },
+        "bearers": [
+            {
+                "icon": "snowflake",
+                "img": {
+                    "src": "/history/wa-graah.jpg",
+                    "alt": "Kaiverrettu soikea muotokuva kapteeni Wilhelm August Graahista allekirjoituksineen"
+                },
+                "name": "Wilhelm August Graah",
+                "years": "1793–1863",
+                "deed": "Tanskan kuningas lähetti hänet etsimään kadonnutta norjalaista siirtokuntaa Grönlannin itärannikolta. Hän matkasi grönlantilaisissa umiakeissa, talvehti jäässä ja piirsi karttaa uudelleen.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
+                }
+            },
+            {
+                "icon": "radio",
+                "name": "Jutta Graae — “Storhertuginden”",
+                "years": "1906–1997",
+                "deed": "Tanskan vastarintaliikkeen suurherttuatar. Hän kuljetti rahaa ja mikrofilmejä, pakeni Ruotsiin 1943 ja työskenteli Lontoosta brittiläisen SOE:n kanssa vapautukseen asti.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/Jutta_Graae"
+                }
+            }
+        ]
+    },
+    "timelineSection": {
+        "eyebrow": "Pitkä kaari",
+        "title": "1462 → 1982",
+        "stops": [
+            { "year": "1462", "text": "Anders Graa Søllestedgårdissa" },
+            { "year": "1530", "text": "Kruunu ottaa kartanon" },
+            { "year": "1550", "text": "Myydään Jørgen Brahelle" },
+            { "year": "1591", "text": "Graa-papit saavat Skårupin ja Tvedin" },
+            {
+                "year": "1767",
+                "text": "Kuninkaallinen välittäjän lupa Aalborgissa"
+            },
+            { "year": "1826", "text": "David Graah siirtyy Christianiaan" },
+            { "year": "1833", "text": "Knud Graah seuraa, 16-vuotiaana" },
+            { "year": "1844", "text": "Knud ostaa kosken" },
+            { "year": "1846", "text": "Puuvillakehräämö käynnistyy" },
+            { "year": "1859", "text": "Tulipalo tuhoaa kehräämön joulun alla" },
+            {
+                "year": "1860",
+                "text": "Uudelleen rakennettu — neljä kerrosta, modernimpi"
+            },
+            { "year": "1881", "text": "Knud liittyy Kreditkassenin johtoon" },
+            { "year": "1892", "text": "Nimi siirtyy Ruotsiin" },
+            { "year": "1899", "text": "Pankki selviää suuresta romahduksesta" },
+            {
+                "year": "1942",
+                "text": "Lille Graah pidätetään Gestapon toimesta"
+            },
+            { "year": "1945", "text": "Kotiin Valkoisilla busseilla" },
+            { "year": "1977", "text": "St. Hallvard -mitali Lillelle" }
+        ]
+    },
+    "closing": {
+        "eyebrow": "Mitä siitä syntyy",
+        "title": "Suku, joka rakensi aina uudelleen aikansa työkalut",
+        "body": "Maa, sitten saarnastuolit. Saarnastuolit, sitten satamat. Satamat, sitten kosket ja kehräyskarat. Pankit, laittomat lehdet, radiomikrofoni. Kaava ei muuttunut: löydä aikakauden uusi infrastruktuuri, ylitä raja ja rakenna.",
+        "cta": "Kirjoita suvulle",
+        "note": "Kerrottu niin kuin suku sen kertoo — hyvät osat säilyttäen, tylsät jättäen pois ja päivämäärät niin todeksi kuin osaamme. Arkistot tuovat yhä yllätyksiä. Palaa takaisin. Kuvat Wikimedia Commonsin kautta: Nasjonalbiblioteket, Nasjonalmuseet ja Oslo Museum (Norja), News Øresund (CC BY), Hideko Bondesen ja Liberaler Humanist (CC BY-SA)."
+    }
+}

@@ -1,0 +1,452 @@
+{
+    "meta": {
+        "htmlTitle": "Graah-krønikan — fimm øldir av afturkomum",
+        "defaultTitle": "GRAAH",
+        "description": "Krønikan hjá Graah-ættini — fimm øldir við kongum, eldsbrunum, ríkidømi og afturkomum, frá einum stolinum donskum slotti til røddina hjá einari tjóð.",
+        "ogTitle": "Graah-krønikan",
+        "ogDescription": "Fimm øldir við kongum, eldsbrunum, ríkidømi og afturkomum. Eitt navn."
+    },
+    "languageSwitcher": {
+        "legend": "Mál",
+        "options": {
+            "da": { "label": "Dansk", "ariaLabel": "Skift til danskt" },
+            "sv": { "label": "Svenska", "ariaLabel": "Skift til svenskt" },
+            "nb": { "label": "Norsk", "ariaLabel": "Skift til norskt" },
+            "fi": { "label": "Suomi", "ariaLabel": "Skift til finskt" },
+            "is": { "label": "Íslenska", "ariaLabel": "Skift til íslendskt" },
+            "fo": { "label": "Føroyskt", "ariaLabel": "Skift til føroyskt" },
+            "en": { "label": "English", "ariaLabel": "Skift til enskt" }
+        }
+    },
+    "nav": {
+        "logoAlt": "Skjaldarmerki hjá Graah: tríggjar reyðar stjørnur og eitt blátt-gull-reytt band á silvurlitum skildi",
+        "brand": "GRAAH"
+    },
+    "hero": {
+        "crestAlt": "",
+        "chip": "Ættarkrønikan",
+        "titleLines": ["Fimm øldir.", "Eitt navn."],
+        "intro": "Eitt slott mist til ein kong. Prestar, sum stýrdu sóknum, meklarar, sum stýrdu einari havn, ein bummullsbarónur, sum keypti ein foss — og ein mótstøðukvinna, sum gjørdist røddin hjá einari tjóð.",
+        "introEmphasis": "Fimm hundrað ár við kongum, eldsbrunum, ríkidømi og afturkomum. Halt fast.",
+        "startYear": "1462",
+        "endYear": "1982"
+    },
+    "chronicleStats": [
+        { "value": "1", "label": "slott mist til ein kong", "bg": "bg-coral" },
+        { "value": "3", "label": "kongsríki kallað heim", "bg": "bg-blue" },
+        {
+            "value": "12,000",
+            "label": "spinnisnældur riknar av einari á",
+            "bg": "bg-signal"
+        },
+        { "value": "7", "label": "stavimátar av einum navni", "bg": "bg-mint" }
+    ],
+    "nameForms": [
+        "GROH",
+        "GRAA",
+        "GRÅ",
+        "GRAAE",
+        "GRAAH",
+        "GRAAH-HAGELBÄCK",
+        "GRAAH"
+    ],
+    "chapterRecordHeading": "Prógvini",
+    "chapterSourcesHeading": "Les sjálv/ur",
+    "chapters": [
+        {
+            "id": "manor",
+            "image": {
+                "src": "/history/manor-1866.jpg",
+                "alt": "19. aldar gravering av harragarðinum Søllestedgård við torni og gørðum",
+                "caption": "Søllestedgård sjálvur, teknaður í 1866"
+            },
+            "numeral": "I",
+            "years": "1462–1550",
+            "place": "Søllestedgård, Lolland, Danmark",
+            "title": "Stolna slottið",
+            "kicker": "Eitt slott, ein kongur og eitt agg, sum ættin hevur borið í fimm hundrað ár",
+            "mood": { "label": "Kongaligt agg", "bg": "bg-coral" },
+            "theme": "grid",
+            "paragraphs": [
+                "Søgan byrjar við einum slotti. Søllestedgård á Lollandi var jørð, vápn og vald. Í tríggjar ættarliðir hoyrdi tað til Graa-ættina.",
+                "Í 1530 tók kongurin tað. Brahe-ættin fekk slottið; Graa-ættin helt eftir navninum, leiðini víðari og søguni."
+            ],
+            "record": [
+                { "year": "1462", "text": "Anders Graa heldur Søllestedgård" },
+                { "year": "1530", "text": "Garðurin fer til donsku krúnuna" },
+                {
+                    "year": "1550",
+                    "text": "Christian III selur hann til Jørgen Brahe, farbróður Tycho"
+                },
+                {
+                    "year": "—",
+                    "text": "Eitt innsigli við ættarvápninum ferst í eldsbruna"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Danske Herregårde — Søllestedgaard",
+                    "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
+                },
+                {
+                    "label": "Wikipedia — Søllestedgård",
+                    "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
+                }
+            ]
+        },
+        {
+            "id": "pulpit",
+            "image": {
+                "src": "/history/skaarup-kirke.jpg",
+                "alt": "Hvíta miðaldarkirkjan í Skårup á Fyn við reyðum tekjutaki",
+                "caption": "Skårup kirkja — hásæti ættarinnar í 80 ár"
+            },
+            "numeral": "II",
+            "years": "1591–1670",
+            "place": "Skårup og Tved, Fyn",
+            "title": "Áttati ár á prædikustólinum",
+            "kicker": "Tá presturin stýrdi øllum, vóru Graa-menninir prestarnir",
+            "mood": { "label": "Gud og vald", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Eftir slottið fann ættin eitt nýtt hásæti: prædikustólin. John Olufsen Graa fekk sóknirnar Skårup og Tved í 1591 og gjørdist próstur.",
+                "Sonurin Hans tók við og helt embætinum til 1670. Faðir og sonur góvu ættini lærdóm, støðu og sambond."
+            ],
+            "record": [
+                {
+                    "year": "1591",
+                    "text": "John Olufsen Graa fær Skårup og Tved"
+                },
+                { "year": "1622", "text": "Verður útnevndur próstur" },
+                {
+                    "year": "1670",
+                    "text": "Hans Johnsen Graa doyr; prestaveldið endar"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                }
+            ]
+        },
+        {
+            "id": "broker",
+            "image": {
+                "src": "/history/budolfi-aalborg.jpg",
+                "alt": "Hvíti tornurin á Budolfi kirkju yvir einari gøtu í Aalborg",
+                "caption": "Budolfi kirkja, Aalborg — har meklarin varð doyptur"
+            },
+            "numeral": "III",
+            "years": "1666–1775",
+            "place": "Aalborg, Jútland",
+            "title": "Meklari kongsins",
+            "kicker": "Tríggir ættarliðir gjørdu havnaslatur til harðan pening",
+            "mood": { "label": "Salt og gull", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "Í 1700-talinum er ættin í Aalborg. Handilin snýr seg um skip, farm og kreditt. David Olufsen Graae fekk í 1767 kongaligt loyvi sum meklarin í havnini.",
+                "Havnin gav, og havnin tók. Gommine Kristine Graae giftist skiparanum Ole Bondo í mars 1836. Eitt ár seinni tók havið hann."
+            ],
+            "record": [
+                {
+                    "year": "1727",
+                    "text": "David Olufsen Graae doyptur í Budolfi kirkju"
+                },
+                { "year": "1767", "text": "Kongaligt meklara-loyvi" },
+                {
+                    "year": "1837",
+                    "text": "Skiparin Ole Bondo hvørvur við ensku strondina"
+                }
+            ],
+            "aside": {
+                "title": "Giftur í mars, druknaður í mars",
+                "text": "Gommine Kristine Graae giftist Ole Bondo 8. mars 1836. Hann fórst við Ongland 11. mars 1837. Í einari handilsætt var havið bæði ríkidømi og váði."
+            },
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "href": "https://biografiskleksikon.lex.dk/Graae"
+                }
+            ]
+        },
+        {
+            "id": "crossing",
+            "image": {
+                "src": "/history/christiania-1800.jpg",
+                "alt": "Handlitað útsýni yvir Christiania og fjørðin, málað um 1800",
+                "caption": "Christiania um 1800 — býurin, tey settu sítt álit á"
+            },
+            "numeral": "IV",
+            "years": "1826–1859",
+            "place": "Christiania, Noreg",
+            "title": "Yvirferðin",
+            "kicker": "Tveir synir hjá einum donskum presti settu alt upp á ein nýggjan høvuðsstað",
+            "mood": { "label": "Váðin", "bg": "bg-coral" },
+            "theme": "blue",
+            "paragraphs": [
+                "Christiania var ein høvuðsstaður í skundi og tørvaði pening, vørur, hugskot og dirvi. Graah-brøðurnir tóku alt hetta við sær.",
+                "David kom fyrst í 1826 og bygdi eitt handilshús. Knud kom í 1833, sekstan ára gamal, og fór frá handilsborði til ídnað."
+            ],
+            "record": [
+                {
+                    "year": "1826",
+                    "text": "David Graah setir seg niður í Christiania"
+                },
+                {
+                    "year": "1833",
+                    "text": "Knud Graah kemur, sekstan ára gamal"
+                },
+                {
+                    "year": "1859",
+                    "text": "David stovnar fyrsta djóraverndarfelagið í Noregi"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Store norske leksikon — David Graah",
+                    "href": "https://snl.no/David_Graah"
+                }
+            ]
+        },
+        {
+            "id": "cotton",
+            "image": {
+                "src": "/history/knud-graah.jpg",
+                "alt": "Oljuportrett av Knud Graah, hvítthærdum við medaljum á svørtum frakka",
+                "caption": "Knud Graah — handilsdrongur, bummullskongur"
+            },
+            "numeral": "V",
+            "years": "1844–1859",
+            "place": "Manchester → Akerselva",
+            "title": "Bummull og vatn",
+            "kicker": "Hann fór til Onglands eftir maskinum og kom heim við einum ídnaði",
+            "mood": { "label": "Kollvelting", "bg": "bg-blue" },
+            "theme": "paper",
+            "paragraphs": [
+                "Knud Graah fór til Manchester eftir vitanini, sum broytti ídnaðin. Síðan kom hann heim til Akerselva.",
+                "Í 1844 keypti hann fossrættindini við Nedre Vøyen. Tvey ár seinni fór Vøiens Bomuldsspinderi í gongd við bretskum maskinum og norskari vatnorku."
+            ],
+            "record": [
+                {
+                    "year": "1844",
+                    "text": "Keypir fossrættindini við Nedre Vøyen"
+                },
+                { "year": "1846", "text": "Vøiens Bomuldsspinderi letur upp" },
+                { "year": "1854", "text": "Keypir felagan og svágin út" }
+            ],
+            "sources": [
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "ashes",
+            "image": {
+                "src": "/history/graah-mill.jpg",
+                "alt": "Múrsteinsbygningarnir hjá spinnarínum hjá Knud Graah við fossin á Akerselva",
+                "caption": "Endurbygda spinnaríið og fossurin á Akerselva"
+            },
+            "numeral": "VI",
+            "years": "1860–1909",
+            "place": "Kristiania",
+            "title": "Úr øskuni",
+            "kicker": "Spinnaríið brann. Hann bygdi tað størri upp aftur — og bjargaði síðan einum banka",
+            "mood": { "label": "Fønix", "bg": "bg-signal" },
+            "theme": "paper",
+            "paragraphs": [
+                "Fyri flestu menn hevði eldsbrunin verið endin. Fyri Knud Graah var hann ein steðgur, tí alt var tryggjað. Innan eitt ár reis eitt nýtt fýra hædda spinnarí.",
+                "Sama ró gjørdi hann til bankamann. Kreditkassen kom ígjøgnum Kristiania-krakið í 1899, meðan aðrir bankar fullu."
+            ],
+            "record": [
+                {
+                    "year": "1860",
+                    "text": "Nýtt fýra hædda spinnarí eftir Oluf N. Roll"
+                },
+                {
+                    "year": "1889",
+                    "text": "12,000 spinnisnældur í gongd við Vøien"
+                },
+                {
+                    "year": "1899",
+                    "text": "Kreditkassen kemur ígjøgnum Kristiania-krakið"
+                },
+                {
+                    "year": "1906",
+                    "text": "A/S Knud Graah & Co. — umleið 350 starvsfólk"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "voice",
+            "image": {
+                "src": "/history/white-buses-1945.jpg",
+                "alt": "Frígivnir fangar á einum ferjudekki millum hvítar Reyða Kross bussar, várið 1945",
+                "caption": "Hvítu bussarnir føra tey heim, várið 1945"
+            },
+            "numeral": "VII",
+            "years": "1908–2001",
+            "place": "Oslo — Grini — Ravensbrück — NRK",
+            "title": "Røddin sum yvirlivdi",
+            "kicker": "Ommudóttir spinnaríeigaran valdi mótstøðu fram um vælveru",
+            "mood": { "label": "Tráss", "bg": "bg-coral" },
+            "theme": "ink",
+            "paragraphs": [
+                "Anne Knudsdatter Graah, kallað Lille, setti navn og støðu í váða, tá hon arbeiddi fyri ólógligu pressuna undir hersetingini av Noregi.",
+                "Hon yvirlivdi Grini, Ravensbrück og heimferðina við Hvítu bussunum. Eftir kríggið gjørdist hon ein av kendastu útvarpsrøddunum hjá NRK."
+            ],
+            "record": [
+                {
+                    "year": "1942",
+                    "text": "Handtikin av Gestapo; fongslað á Grini"
+                },
+                { "year": "1943", "text": "Send til Ravensbrück" },
+                { "year": "1945", "text": "Kemur heim við Hvítu bussunum" },
+                {
+                    "year": "1977",
+                    "text": "Fær St. Hallvard-heiðursmerkið í Oslo"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
+                },
+                {
+                    "label": "Store norske leksikon — De hvite bussene",
+                    "href": "https://snl.no/hvite_busser"
+                }
+            ]
+        },
+        {
+            "id": "hyphen",
+            "image": {
+                "src": "/history/malmo-1859.jpg",
+                "alt": "Gravering av Stortorget í Malmö við fólki og ráðhúsinum, 1859",
+                "caption": "Stortorget í Malmö, 1859 — næsta pallur hjá ættini"
+            },
+            "numeral": "VIII",
+            "years": "1892–1982",
+            "place": "Malmö · Helsingborg · Stockholm",
+            "title": "Bindistrikan sum bjargaði einum navni",
+            "kicker": "Ein doyggjandi móðir, ein nýføddur sonur og eitt navn, sum noktaði at hvørva",
+            "mood": { "label": "Navnið livir", "bg": "bg-mint" },
+            "theme": "paper",
+            "paragraphs": [
+                "Ingeborg Graah giftist svenska Gustaf Hagelbäck. Sonurin Knut varð føddur í Malmö í 1892, sama árið sum hon doyði.",
+                "Navnið varð Graah-Hagelbäck og helt fram í svenskum lívi gjøgnum Knut, Björn og næstu ættarlið."
+            ],
+            "record": [
+                {
+                    "year": "1892",
+                    "text": "Knut Graah-Hagelbäck føddur í Malmö"
+                },
+                {
+                    "year": "1892",
+                    "text": "Ingeborg Graah doyr, tjúguníggju ára gomul"
+                },
+                {
+                    "year": "1921",
+                    "text": "Björn Graah-Hagelbäck, seinni verjuætlanarmaður"
+                }
+            ],
+            "sources": [
+                { "label": "Egnu ættarupplýsingar familjunnar (Anlängd, 2012)" }
+            ]
+        }
+    ],
+    "fireInterstitial": {
+        "label": "Týsdagur 20. desember 1859 · um 23:00",
+        "titlePrefix": "Spinnaríið",
+        "titleEmphasis": "brennur",
+        "body": "Bummullsdust, trægólv, olja og gasljós — í myrkrinum fyri jól fór trettan ára arbeiði upp í royk eina nátt. Tað næsta, Knud Graah gjørdi, sigur alt: hann hevði tryggjað alt."
+    },
+    "bearersSection": {
+        "eyebrow": "Berarar av navninum",
+        "title": "Sama navn, villari søgur",
+        "intro": "Har søgan gjørdist vandamikil, kom ein Graah undan kavi — á Grønlandsísinum og aftan fyri fíggindalinjur.",
+        "figure": {
+            "src": "/history/umiak-graah.jpg",
+            "alt": "Gravering av einum umiak róðrum í tungum sjógvi av grønlendskari manning",
+            "caption": "Ein umiak á opnum havi við Eysturgrønland — teknaður av kapteini W.A. Graah sjálvum"
+        },
+        "bearers": [
+            {
+                "icon": "snowflake",
+                "img": {
+                    "src": "/history/wa-graah.jpg",
+                    "alt": "Graverað ovalmynd av kapteini Wilhelm August Graah við undirskrift hansara"
+                },
+                "name": "Wilhelm August Graah",
+                "years": "1793–1863",
+                "deed": "Sendur av danska konginum at finna horvnu norðurlendsku búsetingina á eysturstrond Grønlands. Hann ferðaðist í grønlendskum umiakum og teknaði kortið av nýggjum.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
+                }
+            },
+            {
+                "icon": "radio",
+                "name": "Jutta Graae — “Storhertuginden”",
+                "years": "1906–1997",
+                "deed": "Storhertoginnan í donsku mótstøðuni. Hon flutti pengar og mikrofilm, flýddi til Svøríkis í 1943 og arbeiddi úr London við bretsku SOE.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/Jutta_Graae"
+                }
+            }
+        ]
+    },
+    "timelineSection": {
+        "eyebrow": "Langi bogin",
+        "title": "1462 → 1982",
+        "stops": [
+            { "year": "1462", "text": "Anders Graa á Søllestedgård" },
+            { "year": "1530", "text": "Krúnan tekur harragarðin" },
+            { "year": "1550", "text": "Seldur til Jørgen Brahe" },
+            { "year": "1591", "text": "Graa-prestar taka Skårup og Tved" },
+            { "year": "1767", "text": "Kongaligt meklara-loyvi í Aalborg" },
+            { "year": "1826", "text": "David Graah fer til Christiania" },
+            { "year": "1833", "text": "Knud Graah fylgir, 16 ára gamal" },
+            { "year": "1844", "text": "Knud keypir fossin" },
+            { "year": "1846", "text": "Bummullsspinnaríið byrjar" },
+            {
+                "year": "1859",
+                "text": "Eldsbruni oyðileggur spinnaríið fyri jól"
+            },
+            {
+                "year": "1860",
+                "text": "Endurbygt — fýra hæddir, meira nútímans"
+            },
+            { "year": "1881", "text": "Knud fer í stjórnina hjá Kreditkassen" },
+            { "year": "1892", "text": "Navnið fer inn í Svøríki" },
+            { "year": "1899", "text": "Bankin yvirlivir stóra krakið" },
+            { "year": "1942", "text": "Lille Graah handtikin av Gestapo" },
+            { "year": "1945", "text": "Heim við Hvítu bussunum" },
+            { "year": "1977", "text": "St. Hallvard-heiðursmerki til Lille" }
+        ]
+    },
+    "closing": {
+        "eyebrow": "Hvat tað alt verður til",
+        "title": "Ein ætt, sum helt fram at endurbyggja amboðini hjá síni tíð",
+        "body": "Jørð, síðan prædikustólar. Prædikustólar, síðan havnir. Havnir, síðan fossar og spinnisnældur. Bankar, ólóglig bløð, ein útvarpsmikrofon. Mynstrið broyttist ikki: finn nýggju undirstøðukervini hjá tíðini, far um markið og bygg.",
+        "cta": "Skriva til familjuna",
+        "note": "Sagt soleiðis sum familjan sigur tað — góðu partarnir hildnir inni, keðiligu partarnir latnir liggja, og dagfestingarnar so sannar sum vit kunnu gera tær. Skjalasøvnini hósta enn yvirraskingar upp. Kom aftur. Myndir um Wikimedia Commons: Nasjonalbiblioteket, Nasjonalmuseet og Oslo Museum (Noreg), News Øresund (CC BY), Hideko Bondesen og Liberaler Humanist (CC BY-SA)."
+    }
+}

@@ -1,11 +1,23 @@
 import da from './locales/da.json'
 import en from './locales/en.json'
+import fi from './locales/fi.json'
+import foContent from './locales/fo-locale.json'
+import isContent from './locales/is-locale.json'
+import nb from './locales/nb.json'
 import sv from './locales/sv.json'
 import type { HistoryContent } from './types'
 
 export const defaultLocale = 'en'
 
-export const supportedLocales = ['da', 'sv', 'en'] as const
+export const supportedLocales = [
+    'da',
+    'sv',
+    'nb',
+    'fi',
+    'is',
+    'fo',
+    'en',
+] as const
 
 export type Locale = (typeof supportedLocales)[number]
 
@@ -29,6 +41,26 @@ export const localeOptions: readonly LocaleOption[] = [
         htmlLang: 'sv',
     },
     {
+        locale: 'nb',
+        flag: '🇳🇴',
+        htmlLang: 'nb',
+    },
+    {
+        locale: 'fi',
+        flag: '🇫🇮',
+        htmlLang: 'fi',
+    },
+    {
+        locale: 'is',
+        flag: '🇮🇸',
+        htmlLang: 'is',
+    },
+    {
+        locale: 'fo',
+        flag: '🇫🇴',
+        htmlLang: 'fo',
+    },
+    {
         locale: 'en',
         flag: '🇬🇧',
         htmlLang: 'en',
@@ -38,6 +70,10 @@ export const localeOptions: readonly LocaleOption[] = [
 const historyByLocale: Record<Locale, HistoryContent> = {
     da: da as HistoryContent,
     en: en as HistoryContent,
+    fi: fi as HistoryContent,
+    fo: foContent as HistoryContent,
+    is: isContent as HistoryContent,
+    nb: nb as HistoryContent,
     sv: sv as HistoryContent,
 }
 
@@ -47,6 +83,12 @@ export function isLocale(value: string): value is Locale {
 
 export function normalizeLocale(value: string): Locale | null {
     const primaryLanguage = value.toLowerCase().split('-')[0]
+    const norwegianLocale = primaryLanguage === 'no' || primaryLanguage === 'nn'
+
+    if (norwegianLocale) {
+        return 'nb'
+    }
+
     return isLocale(primaryLanguage) ? primaryLanguage : null
 }
 

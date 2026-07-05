@@ -17,6 +17,22 @@
                 "label": "Svenska",
                 "ariaLabel": "Skift til svensk"
             },
+            "nb": {
+                "label": "Norsk",
+                "ariaLabel": "Skift til norsk"
+            },
+            "fi": {
+                "label": "Suomi",
+                "ariaLabel": "Skift til finsk"
+            },
+            "is": {
+                "label": "Íslenska",
+                "ariaLabel": "Skift til islandsk"
+            },
+            "fo": {
+                "label": "Føroyskt",
+                "ariaLabel": "Skift til færøsk"
+            },
             "en": {
                 "label": "English",
                 "ariaLabel": "Skift til engelsk"
