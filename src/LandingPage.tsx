@@ -73,10 +73,10 @@ export function LandingPage() {
 
             <main>
                 <section className="relative isolate flex min-h-[88svh] items-end overflow-hidden border-b-2 border-ink bg-grid px-4 pb-12 pt-24 sm:px-6 lg:px-8">
-                    <div className="absolute right-[-5rem] top-20 -z-10 h-[72vmin] max-h-[720px] min-h-[340px] w-[72vmin] min-w-[340px] max-w-[720px] rotate-6 opacity-95">
+                    <div className="absolute right-[-14rem] top-28 -z-10 h-[72vmin] max-h-[720px] min-h-[340px] w-[72vmin] min-w-[340px] max-w-[720px] rotate-6 opacity-90 sm:right-[-5rem] sm:top-20">
                         <img
                             alt=""
-                            className="h-full w-full object-contain drop-shadow-solid"
+                            className="h-full w-full object-contain"
                             src="/graah-mark.svg"
                         />
                     </div>
