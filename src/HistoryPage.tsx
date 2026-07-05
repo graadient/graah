@@ -1,0 +1,719 @@
+import type { ReactNode } from 'react'
+import { useEffect } from 'react'
+
+import { Button, Chip, Link } from '@heroui/react'
+
+import { motion, useReducedMotion } from 'framer-motion'
+import {
+    Anchor,
+    ArrowDown,
+    ArrowLeft,
+    ArrowUpRight,
+    Flame,
+    Radio,
+    Snowflake,
+} from 'lucide-react'
+
+interface Mood {
+    label: string
+    bg: string
+}
+
+const sagaStats = [
+    { value: '1', label: 'castle lost to a king', bg: 'bg-coral' },
+    { value: '3', label: 'kingdoms called home', bg: 'bg-blue' },
+    { value: '12,000', label: 'spindles on one river', bg: 'bg-signal' },
+    { value: '7', label: 'spellings of one name', bg: 'bg-mint' },
+]
+
+interface Chapter {
+    id: string
+    numeral: string
+    years: string
+    place: string
+    title: string
+    kicker: string
+    mood: Mood
+    theme: 'paper' | 'grid' | 'blue' | 'ink' | 'mint'
+    paragraphs: string[]
+    record: Array<{ year: string; text: string }>
+    aside?: { title: string; text: string }
+}
+
+const chapters: Chapter[] = [
+    {
+        id: 'manor',
+        numeral: 'I',
+        years: '1462–1550',
+        place: 'Søllestedgård, Lolland, Denmark',
+        title: 'The Lost Manor',
+        kicker: 'A king, a castle, and the family that remembers being driven out',
+        grade: 'saga',
+        theme: 'grid',
+        paragraphs: [
+            'The family has always told it the same way: there was an estate, there was a king, and the king took it — and then the mighty Brahe family moved in. For five hundred years that story has travelled with the name, across three countries and a dozen spellings.',
+            'Here is what the manor records actually show. A noble family called Graa held Søllestedgård on the island of Lolland: Anders Graa from the 1460s, his widow Gertrud Mogensdatter Munk after him, and their son Jørgen Graa until 1530 — when the estate passed to the Danish Crown. Twenty years later, King Christian III sold it to Jørgen Brahe, uncle of the astronomer Tycho Brahe.',
+            'So the king is real. The Brahes are real. The loss is real. What no document yet proves is that our line descends from those Graas — the bridge from the manor to the later family is still being researched. The family also remembers a signet ring bearing the old arms, lost in a fire. We tell the saga as a saga, and it is a very good one.',
+        ],
+        record: [
+            { year: '1462', text: 'Anders Graa holds Søllestedgård' },
+            { year: '1530', text: 'The estate passes to the Danish Crown' },
+            {
+                year: '1550',
+                text: 'Christian III sells it to Jørgen Brahe, Tycho’s uncle',
+            },
+            {
+                year: '—',
+                text: 'A signet with the family arms, lost in a fire',
+            },
+        ],
+    },
+    {
+        id: 'pulpit',
+        numeral: 'II',
+        years: '1591–1670',
+        place: 'Skårup & Tved, Funen',
+        title: 'Eighty Years in the Pulpit',
+        kicker: 'When the priest was the state, the Graas were the priests',
+        grade: 'probable',
+        theme: 'paper',
+        paragraphs: [
+            'In 1591, John Olufsen Graa secured the right to the parishes of Skårup and Tved on Funen. By 1622 he was provost — the crown’s senior churchman for the district. When he died, his son Hans Johnsen Graa took the pulpit and held it until 1670.',
+            'A parish priest in post-Reformation Denmark was not just a preacher. He kept the records, ran the school, managed the poor relief and answered to the king. Father and son together held that authority for the better part of a century — literacy, standing and influence that would carry the family into the towns.',
+        ],
+        record: [
+            { year: '1591', text: 'John Olufsen Graa gains Skårup and Tved' },
+            { year: '1622', text: 'Appointed provost' },
+            { year: '1670', text: 'Hans Johnsen Graa dies; the dynasty ends' },
+        ],
+    },
+    {
+        id: 'broker',
+        numeral: 'III',
+        years: '1666–1775',
+        place: 'Aalborg, Jutland',
+        title: 'The Broker’s Licence',
+        kicker: 'From church land to harbour credit in three generations',
+        grade: 'probable',
+        theme: 'paper',
+        paragraphs: [
+            'By the 1700s the family is in Aalborg, one of Denmark’s great port towns, and the trade is no longer souls — it is ships, goods and credit. David Olufsen Graae, baptised in Budolfi Church in 1727, started as a købmandskarl, a merchant’s apprentice, and in 1767 won a royal licence as a broker: the trusted man who stood between buyers, sellers, shipowners and insurers.',
+            'The harbour gave, and the harbour took. David buried two wives before his third outlived him by thirty-five years. And in the family’s Svendborg branch, Gommine Kristine Graae married the skipper Ole Bondo in March 1836 — one year later, almost to the day, he was lost off the English coast.',
+        ],
+        record: [
+            {
+                year: '1727',
+                text: 'David Olufsen Graae baptised, Budolfi Church',
+            },
+            {
+                year: '1767',
+                text: 'Royal broker’s licence — bevilling som mægler',
+            },
+            {
+                year: '1837',
+                text: 'Skipper Ole Bondo lost off the English coast',
+            },
+        ],
+        aside: {
+            title: 'Married in March, drowned in March',
+            text: 'Gommine Kristine Graae wed Ole Bondo on 8 March 1836. He went down off England on 11 March 1837. In a merchant family, the sea was both the fortune and the risk.',
+        },
+    },
+    {
+        id: 'crossing',
+        numeral: 'IV',
+        years: '1826–1859',
+        place: 'Christiania, Norway',
+        title: 'The Crossing',
+        kicker: 'Two sons of a Danish priest bet everything on a brand-new capital',
+        grade: 'documented',
+        theme: 'blue',
+        paragraphs: [
+            'Knud David Graah (1770–1827) went back to the church — a parish priest, married to Johanne Günther. It was his children who made the leap that defines the family: out of Denmark, into Norway, a country reborn after 1814 and hungry for capital, skills and institutions.',
+            'David Graah went first, in 1826, and built a merchant house in Christiania. He became one of the city’s benefactors: in 1859 he founded what is regarded as Norway’s first animal-protection society, and he endowed funds for women in need and for kindergartens. His little brother Knud followed in 1833 — sixteen years old, off the boat from Jutland, starting behind a shop counter.',
+        ],
+        record: [
+            { year: '1826', text: 'David Graah settles in Christiania' },
+            { year: '1833', text: 'Knud Graah arrives, aged sixteen' },
+            {
+                year: '1859',
+                text: 'David founds Norway’s first animal-protection society',
+            },
+        ],
+    },
+    {
+        id: 'cotton',
+        numeral: 'V',
+        years: '1844–1859',
+        place: 'Manchester → the Akerselva',
+        title: 'Cotton & Water',
+        kicker: 'He went to England for machines and came home with an industry',
+        grade: 'documented',
+        theme: 'paper',
+        paragraphs: [
+            'When Britain finally allowed its jealously guarded textile machinery to be exported, Knud Graah saw the opening and went straight to the source — Lancashire and Manchester, the engine room of the industrial world. Family lore says that in Manchester he ran into Adam Hiorth, another Norwegian on exactly the same errand. They went home and built rival mills on the same river.',
+            'In 1844 Graah made the decisive move: he bought the waterfall rights at Nedre Vøyen on the Akerselva. No electricity existed — the river was the power grid, and now he owned a piece of it. In 1846 Vøiens Bomuldsspinderi began to spin: British machines, Norwegian water, an iron overshot waterwheel, some eighty workers, and its own gasworks — the first factory gasworks in Christiania.',
+        ],
+        record: [
+            { year: '1844', text: 'Buys the waterfall rights at Nedre Vøyen' },
+            { year: '1846', text: 'Vøiens Bomuldsspinderi opens' },
+            { year: '1854', text: 'Buys out his partner and brother-in-law' },
+        ],
+    },
+    {
+        id: 'ashes',
+        numeral: 'VI',
+        years: '1860–1909',
+        place: 'Kristiania',
+        title: 'Out of the Ashes',
+        kicker: 'The mill burned down. He built it back bigger — then saved a bank',
+        grade: 'documented',
+        theme: 'paper',
+        paragraphs: [
+            'For most industrialists, the fire of 1859 would have been the end of the story. For Graah it became the hinge. Everything — buildings, machinery, stock — was insured, because the man who took bold industrial risks never took careless financial ones. He hired the architect Oluf N. Roll, and by 1860 a new four-storey mill stood at Vøien, larger and more modern than the one that burned. By 1889 it ran twelve thousand spindles.',
+            'The same cold nerve made him a banker. He joined the board of Christiania Bank og Kreditkasse in 1881 and later chaired it — and when the great Kristiania crash of 1899 wiped out speculators and shook the city’s banks, Kreditkassen’s cautious reserves held. In 1906, aged eighty-nine, he reorganised the firm as A/S Knud Graah & Co., roughly 350 people strong. He died in 1909; his brick mills still stand along the Akerselva.',
+        ],
+        record: [
+            {
+                year: '1860',
+                text: 'New four-storey mill by architect Oluf N. Roll',
+            },
+            { year: '1889', text: '12,000 spindles running at Vøien' },
+            {
+                year: '1899',
+                text: 'Kreditkassen rides out the Kristiania crash',
+            },
+            { year: '1906', text: 'A/S Knud Graah & Co. — ~350 employees' },
+        ],
+    },
+    {
+        id: 'voice',
+        numeral: 'VII',
+        years: '1908–2001',
+        place: 'Oslo — Grini — Ravensbrück — NRK',
+        title: 'The Voice That Survived',
+        kicker: 'The mill-owner’s granddaughter chose resistance over comfort',
+        grade: 'documented',
+        theme: 'ink',
+        paragraphs: [
+            'Anne Knudsdatter Graah — everyone called her Lille — was born in Kristiania in January 1908, granddaughter of the industrialist. Her father died the same year she was born. She grew up an heiress to the family’s name and standing, and when Germany occupied Norway she put all of it at risk: she went to work for the illegal press, the underground newspapers that kept the truth moving.',
+            'In 1942 the Gestapo arrested her. Grini prison camp first; then deportation to Ravensbrück, the concentration camp for women. She survived it. In the spring of 1945 the Swedish Red Cross White Buses carried her home.',
+            'And then she gave Norway her voice. Lille Graah joined NRK and became one of the country’s most recognisable radio presences, above all through Ønskekonserten, the request concert that stitched the postwar country back together one dedication at a time. In 1948 she helped found a relief association for Czechoslovak refugees; in 1977 Oslo gave her the St. Hallvard Medal. From privilege, to resistance, to survival, to service.',
+        ],
+        record: [
+            {
+                year: '1942',
+                text: 'Arrested by the Gestapo; imprisoned at Grini',
+            },
+            { year: '1943', text: 'Deported to Ravensbrück' },
+            { year: '1945', text: 'Comes home with the White Buses' },
+            { year: '1977', text: 'Awarded Oslo’s St. Hallvard Medal' },
+        ],
+    },
+    {
+        id: 'hyphen',
+        numeral: 'VIII',
+        years: '1892–1982',
+        place: 'Malmö · Helsingborg · Stockholm',
+        title: 'The Hyphen That Saved a Name',
+        kicker: 'A daughter carried the name into Sweden — and the family kept it',
+        grade: 'record',
+        theme: 'paper',
+        paragraphs: [
+            'Ingeborg Graah, of the Norwegian industrial branch, married the Swede Gustaf Hagelbäck. Their son Knut was born in Malmö in March 1892 — and Ingeborg died that same year, twenty-nine years old. What she left her son was the name, and the family made a deliberate choice: he would be Knut Graah-Hagelbäck. The hyphen was an act of remembrance.',
+            'It was also, quietly, an act of defiance. Old noble law counts only the male line, and the family knew a name carried by a daughter would never satisfy the heralds. They kept it anyway. Through Knut and his son Björn — a military officer in Sweden’s postwar defence planning — the Graah-Hagelbäcks rooted themselves in Swedish professional life: officers, architects, psychologists, engineers, security specialists.',
+        ],
+        record: [
+            { year: '1892', text: 'Knut Graah-Hagelbäck born in Malmö' },
+            { year: '1892', text: 'Ingeborg Graah dies, aged twenty-nine' },
+            {
+                year: '1921',
+                text: 'Björn Graah-Hagelbäck, later defence planner',
+            },
+        ],
+    },
+    {
+        id: 'wallet',
+        numeral: 'IX',
+        years: '1982–now',
+        place: 'Lund → the internet',
+        title: 'From Waterwheel to Wallet',
+        kicker: 'The short name returns — and so does the family pattern',
+        grade: 'documented',
+        theme: 'mint',
+        paragraphs: [
+            'Hannes Sebastian Graah was born in Lund in 1982, son of Kristian Graah-Hagelbäck. Professionally he dropped the hyphen and took back the short old name — Graah — and then did something the family had done before: he went where the new machinery was.',
+            'He helped scale Spotify through its years of international expansion, led growth at the fintech Revolut, founded the stablecoin protocol Gro, and then founded Zeal, a self-custodial crypto wallet built to make open finance usable in daily life.',
+            'In 1844 Knud Graah bought a waterfall, because whoever controls the power source controls the mill. In the 2020s the scarce resource is custody — direct control of your own money on open networks. Different century, same move: find the new infrastructure of the age, cross whatever border is in the way, and build the tools that make it work for ordinary people.',
+        ],
+        record: [
+            { year: '1982', text: 'Born in Lund; the short name returns' },
+            { year: '2010s', text: 'Growth at Spotify, then Revolut' },
+            {
+                year: 'now',
+                text: 'Founder of Gro and Zeal — self-custody for all',
+            },
+        ],
+    },
+]
+
+const nameForms = [
+    'GROH',
+    'GRAA',
+    'GRÅ',
+    'GRAAE',
+    'GRAAH',
+    'GRAAH-HAGELBÄCK',
+    'GRAAH',
+]
+
+const bearers = [
+    {
+        Icon: Snowflake,
+        name: 'Wilhelm August Graah',
+        years: '1793–1863',
+        deed: 'Sent by the Danish king to find the lost Norse colony of Greenland’s east coast. Travelled 1828–31 in Greenlandic umiaks with Greenlandic crews, wintered in the ice, nearly starved — and proved the myth wrong, redrawing the map on the way.',
+    },
+    {
+        Icon: Radio,
+        name: 'Jutta Graae — “Storhertuginden”',
+        years: '1906–1997',
+        deed: 'The Grand Duchess of the Danish resistance. Moved money and microfilm for the underground intelligence networks, fled to Sweden in 1943, and worked from London with the British SOE until liberation.',
+    },
+]
+
+const timeline = [
+    { year: '1462', text: 'Anders Graa at Søllestedgård' },
+    { year: '1530', text: 'The Crown takes the manor' },
+    { year: '1550', text: 'Sold to Jørgen Brahe' },
+    { year: '1591', text: 'Graa priests take Skårup & Tved' },
+    { year: '1767', text: 'Royal broker’s licence in Aalborg' },
+    { year: '1826', text: 'David Graah crosses to Christiania' },
+    { year: '1833', text: 'Knud Graah follows, aged 16' },
+    { year: '1844', text: 'Knud buys the waterfall' },
+    { year: '1846', text: 'The cotton mill starts spinning' },
+    { year: '1859', text: 'Fire destroys the mill at Christmas' },
+    { year: '1860', text: 'Rebuilt — four storeys, more modern' },
+    { year: '1881', text: 'Knud joins the Kreditkassen board' },
+    { year: '1892', text: 'The name crosses into Sweden' },
+    { year: '1899', text: 'The bank survives the great crash' },
+    { year: '1942', text: 'Lille Graah arrested by the Gestapo' },
+    { year: '1945', text: 'Home on the White Buses' },
+    { year: '1977', text: 'St. Hallvard Medal for Lille' },
+    { year: '1982', text: 'Hannes Graah born in Lund' },
+    { year: 'now', text: 'Zeal — self-custody for everyone' },
+]
+
+const themeStyles: Record<Chapter['theme'], string> = {
+    paper: 'bg-paper text-ink',
+    grid: 'bg-paper bg-grid text-ink',
+    blue: 'bg-blue text-ink',
+    ink: 'bg-ink text-paper',
+    mint: 'bg-mint text-ink',
+}
+
+function contact(): void {
+    globalThis.location.href = 'mailto:hello@graah.se'
+}
+
+function EvidenceChip({ grade }: { grade: EvidenceGrade }) {
+    const meta = gradeMeta[grade]
+    return (
+        <span
+            className={`inline-flex items-center gap-2 border-2 border-ink ${meta.bg} px-3 py-1 font-mono text-xs font-bold uppercase tracking-normal text-ink`}
+        >
+            <span className="size-2 rounded-full bg-ink" />
+            {meta.label}
+        </span>
+    )
+}
+
+function Reveal({
+    children,
+    className,
+}: {
+    children: ReactNode
+    className?: string
+}) {
+    const reduceMotion = useReducedMotion()
+    return (
+        <motion.div
+            className={className}
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            viewport={{ once: true, margin: '-80px' }}
+            whileInView={{ opacity: 1, y: 0 }}
+        >
+            {children}
+        </motion.div>
+    )
+}
+
+function ChapterSection({ chapter }: { chapter: Chapter }) {
+    const dark = chapter.theme === 'ink'
+    const borderColor = dark ? 'border-paper' : 'border-ink'
+    const shadow = dark ? 'shadow-paper' : 'shadow-hard'
+    return (
+        <section
+            className={`border-b-2 border-ink px-4 py-16 sm:px-6 sm:py-24 lg:px-8 ${themeStyles[chapter.theme]}`}
+            id={chapter.id}
+        >
+            <div className="mx-auto w-full max-w-7xl">
+                <Reveal>
+                    <div className="flex flex-wrap items-end justify-between gap-6">
+                        <div className="flex items-end gap-5">
+                            <span
+                                aria-hidden="true"
+                                className="font-serif text-7xl font-medium leading-none text-coral sm:text-9xl"
+                            >
+                                {chapter.numeral}
+                            </span>
+                            <div className="pb-1">
+                                <p className="font-mono text-sm font-bold uppercase tracking-normal">
+                                    {chapter.years} · {chapter.place}
+                                </p>
+                                <h2 className="mt-2 font-display text-4xl font-black uppercase leading-none tracking-normal sm:text-6xl lg:text-7xl">
+                                    {chapter.title}
+                                </h2>
+                            </div>
+                        </div>
+                        <EvidenceChip grade={chapter.grade} />
+                    </div>
+                </Reveal>
+
+                <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,0.62fr)_minmax(280px,0.38fr)]">
+                    <Reveal>
+                        <p
+                            className={`font-serif text-2xl italic leading-9 sm:text-3xl sm:leading-11 ${
+                                dark ? 'text-blue' : ''
+                            }`}
+                        >
+                            {chapter.kicker}.
+                        </p>
+                        <div className="mt-6 space-y-5 font-serif text-lg leading-8 sm:text-xl sm:leading-9">
+                            {chapter.paragraphs.map((paragraph) => (
+                                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                            ))}
+                        </div>
+                    </Reveal>
+                    <Reveal>
+                        <div
+                            className={`border-2 ${borderColor} ${shadow} ${
+                                dark ? 'bg-ink' : 'bg-paper'
+                            } p-5`}
+                        >
+                            <p className="font-mono text-xs font-bold uppercase tracking-normal">
+                                From the record
+                            </p>
+                            <ul className="mt-4 space-y-3">
+                                {chapter.record.map((entry) => (
+                                    <li
+                                        className={`flex gap-4 border-t-2 ${borderColor} pt-3 first:border-t-0 first:pt-0`}
+                                        key={entry.year + entry.text}
+                                    >
+                                        <span className="w-14 shrink-0 font-display text-lg font-black">
+                                            {entry.year}
+                                        </span>
+                                        <span className="text-sm font-semibold leading-6">
+                                            {entry.text}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        {chapter.aside ? (
+                            <div
+                                className={`mt-4 border-2 ${borderColor} ${shadow} bg-signal p-5 text-ink`}
+                            >
+                                <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-normal">
+                                    <Anchor aria-hidden="true" size={14} />
+                                    {chapter.aside.title}
+                                </p>
+                                <p className="mt-2 font-serif text-base leading-7">
+                                    {chapter.aside.text}
+                                </p>
+                            </div>
+                        ) : null}
+                    </Reveal>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function FireInterstitial() {
+    return (
+        <section className="border-b-2 border-ink bg-ink bg-stripes-coral px-4 py-20 text-paper sm:px-6 sm:py-28 lg:px-8">
+            <div className="mx-auto w-full max-w-7xl">
+                <Reveal>
+                    <p className="flex items-center gap-3 font-mono text-sm font-bold uppercase tracking-normal text-coral">
+                        <Flame aria-hidden="true" size={18} />
+                        Tuesday 20 December 1859 · around 23:00
+                    </p>
+                    <p className="mt-6 max-w-6xl font-display text-[clamp(3rem,10vw,8.5rem)] font-black uppercase leading-[0.85] tracking-normal">
+                        The mill is <span className="text-coral">burning</span>
+                    </p>
+                    <p className="mt-8 max-w-2xl font-serif text-xl italic leading-9 text-paper/85 sm:text-2xl sm:leading-10">
+                        Cotton dust, wooden floors, oil and gaslight — in the
+                        dark of the Christmas week, thirteen years of work went
+                        up in a single night. What Knud Graah did next is the
+                        whole family in one move: he had insured everything.
+                    </p>
+                </Reveal>
+            </div>
+        </section>
+    )
+}
+
+function NameTicker() {
+    const sequence = [...nameForms, ...nameForms]
+    return (
+        <div
+            aria-hidden="true"
+            className="ticker border-b-2 border-ink bg-signal py-4"
+        >
+            <div className="ticker-track">
+                {sequence.map((form, index) => (
+                    <span
+                        className="flex items-center gap-6 pr-6 font-display text-2xl font-black tracking-normal text-ink sm:text-3xl"
+                        key={`${form}-${index}`}
+                    >
+                        {form}
+                        <span className="text-coral">→</span>
+                    </span>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export function HistoryPage() {
+    useEffect(() => {
+        globalThis.document.title = 'The Graah Chronicle — five centuries'
+        return () => {
+            globalThis.document.title = 'GRAAH'
+        }
+    }, [])
+
+    return (
+        <div className="min-h-screen bg-paper text-ink">
+            <header className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper/92 backdrop-blur">
+                <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <Link className="flex items-center gap-3 text-ink" href="/">
+                        <img
+                            alt=""
+                            className="size-9 border-2 border-ink"
+                            src="/graah-mark.svg"
+                        />
+                        <span className="font-display text-xl font-black tracking-normal">
+                            GRAAH
+                        </span>
+                    </Link>
+                    <Link
+                        className="flex items-center gap-2 border-2 border-ink bg-paper px-4 py-2 font-bold text-ink shadow-hard"
+                        href="/"
+                    >
+                        <ArrowLeft aria-hidden="true" size={16} />
+                        Studio
+                    </Link>
+                </nav>
+            </header>
+
+            <main>
+                <section className="relative isolate overflow-hidden border-b-2 border-ink bg-grid px-4 pb-14 pt-28 sm:px-6 sm:pb-20 sm:pt-36 lg:px-8">
+                    <div className="absolute right-[-16rem] top-24 -z-10 h-[70vmin] max-h-[680px] min-h-[320px] w-[70vmin] min-w-[320px] max-w-[680px] -rotate-6 opacity-15 sm:right-[-6rem]">
+                        <img
+                            alt=""
+                            className="h-full w-full object-contain"
+                            src="/graah-mark.svg"
+                        />
+                    </div>
+                    <div className="mx-auto w-full max-w-7xl">
+                        <Chip className="mb-6 rounded-md border-2 border-ink bg-coral px-3 font-bold text-ink">
+                            The family chronicle
+                        </Chip>
+                        <h1 className="max-w-6xl font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.82] tracking-normal">
+                            Five centuries.
+                            <br />
+                            One name.
+                        </h1>
+                        <p className="mt-8 max-w-3xl font-serif text-xl leading-9 sm:text-2xl sm:leading-10">
+                            Manor lords who lost a castle to a king. Priests,
+                            harbour brokers, a cotton baron on a Norwegian
+                            river, a woman who survived Ravensbrück and became
+                            the voice of a nation, and a wallet for the open
+                            internet.{' '}
+                            <em>
+                                This is the story of the Graah family — legends
+                                told as legends, records told as records.
+                            </em>
+                        </p>
+                        <div className="mt-10 flex flex-wrap items-center gap-3">
+                            <span className="border-2 border-ink bg-ink px-4 py-2 font-display text-2xl font-black text-paper shadow-hard sm:text-3xl">
+                                1462
+                            </span>
+                            <ArrowDown
+                                aria-hidden="true"
+                                className="-rotate-90"
+                                size={26}
+                            />
+                            <span className="border-2 border-ink bg-mint px-4 py-2 font-display text-2xl font-black text-ink shadow-hard sm:text-3xl">
+                                NOW
+                            </span>
+                        </div>
+                        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                            {gradeLegend.map(({ grade, meaning }) => (
+                                <div
+                                    className="border-2 border-ink bg-paper p-4 shadow-hard"
+                                    key={grade}
+                                >
+                                    <EvidenceChip grade={grade} />
+                                    <p className="mt-3 text-sm font-semibold leading-6">
+                                        {meaning}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <NameTicker />
+
+                {chapters.slice(0, 5).map((chapter) => (
+                    <ChapterSection chapter={chapter} key={chapter.id} />
+                ))}
+
+                <FireInterstitial />
+
+                {chapters.slice(5).map((chapter) => (
+                    <ChapterSection chapter={chapter} key={chapter.id} />
+                ))}
+
+                <section className="border-b-2 border-ink bg-ink py-16 text-paper sm:py-24">
+                    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <Reveal>
+                            <p className="font-mono text-sm font-bold uppercase tracking-normal text-blue">
+                                Bearers of the name
+                            </p>
+                            <h2 className="mt-2 max-w-4xl font-display text-4xl font-black uppercase tracking-normal sm:text-6xl">
+                                Same name, wilder stories
+                            </h2>
+                            <p className="mt-4 max-w-2xl font-serif text-lg italic leading-8 text-paper/80">
+                                Two more Graahs made history. No document yet
+                                ties them to our line — so they stand here as
+                                kin of the name, until the archives say more.
+                            </p>
+                        </Reveal>
+                        <div className="mt-10 grid gap-4 md:grid-cols-2">
+                            {bearers.map(({ Icon, deed, name, years }) => (
+                                <Reveal key={name}>
+                                    <div className="h-full border-2 border-paper bg-paper p-6 text-ink shadow-paper">
+                                        <div className="flex items-center justify-between">
+                                            <span className="font-mono text-sm font-bold uppercase tracking-normal">
+                                                {years}
+                                            </span>
+                                            <span className="grid size-11 place-items-center border-2 border-ink bg-blue">
+                                                <Icon
+                                                    aria-hidden="true"
+                                                    size={22}
+                                                    strokeWidth={2.4}
+                                                />
+                                            </span>
+                                        </div>
+                                        <h3 className="mt-5 font-display text-2xl font-black leading-8 tracking-normal">
+                                            {name}
+                                        </h3>
+                                        <p className="mt-3 font-serif text-base leading-7">
+                                            {deed}
+                                        </p>
+                                    </div>
+                                </Reveal>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="border-b-2 border-ink bg-paper py-16 sm:py-20">
+                    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <Reveal>
+                            <p className="font-mono text-sm font-bold uppercase tracking-normal">
+                                The long arc
+                            </p>
+                            <h2 className="mt-2 font-display text-4xl font-black uppercase tracking-normal sm:text-6xl">
+                                1462 → now
+                            </h2>
+                        </Reveal>
+                    </div>
+                    <div className="mt-8 overflow-x-auto pb-6">
+                        <div className="mx-auto flex w-max gap-4 px-4 sm:px-6 lg:px-8">
+                            {timeline.map((stop) => (
+                                <div
+                                    className="w-52 shrink-0 border-2 border-ink bg-paper p-4 shadow-hard"
+                                    key={stop.year + stop.text}
+                                >
+                                    <p className="font-display text-3xl font-black">
+                                        {stop.year}
+                                    </p>
+                                    <p className="mt-2 text-sm font-semibold leading-6">
+                                        {stop.text}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="bg-coral px-4 py-16 text-ink sm:px-6 sm:py-24 lg:px-8">
+                    <div className="mx-auto w-full max-w-7xl">
+                        <Reveal>
+                            <p className="font-mono text-sm font-bold uppercase tracking-normal">
+                                What it all adds up to
+                            </p>
+                            <h2 className="mt-3 max-w-6xl font-display text-[clamp(2.6rem,7.5vw,6.5rem)] font-black uppercase leading-[0.88] tracking-normal">
+                                A family that kept rebuilding the tools of its
+                                age
+                            </h2>
+                            <p className="mt-8 max-w-3xl font-serif text-xl leading-9">
+                                Land, then pulpits. Pulpits, then harbours.
+                                Harbours, then waterfalls and spindles. Banks,
+                                underground newspapers, a radio microphone — and
+                                now open finance. The pattern never changed:
+                                find the new infrastructure of the age, cross
+                                the border, and build.
+                            </p>
+                            <div className="mt-10 flex flex-wrap gap-3">
+                                <Button
+                                    className="h-12 rounded-md border-2 border-ink bg-ink px-5 font-bold text-paper shadow-hard"
+                                    onPress={contact}
+                                    variant="primary"
+                                >
+                                    Write to the family
+                                    <ArrowUpRight
+                                        aria-hidden="true"
+                                        size={19}
+                                    />
+                                </Button>
+                                <Link
+                                    className="flex h-12 items-center gap-2 rounded-md border-2 border-ink bg-paper px-5 font-bold text-ink shadow-hard"
+                                    href="/"
+                                >
+                                    Back to the studio
+                                </Link>
+                            </div>
+                            <p className="mt-10 max-w-3xl border-t-2 border-ink pt-5 text-sm font-semibold leading-6">
+                                A note on honesty: this chronicle grades its own
+                                sources. The manor saga is family memory with a
+                                true historical core; the Danish middle
+                                generations rest on printed family histories and
+                                the family’s own lineage draft; the Norwegian,
+                                wartime and modern chapters are public record.
+                                Research in the Danish, Norwegian and Swedish
+                                archives continues.
+                            </p>
+                        </Reveal>
+                    </div>
+                </section>
+            </main>
+        </div>
+    )
+}

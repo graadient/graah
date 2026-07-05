@@ -3,6 +3,7 @@ import { Button, Card, Chip, Link } from '@heroui/react'
 import {
     ArrowUpRight,
     Blocks,
+    BookOpen,
     CircleDot,
     Code2,
     Cpu,
@@ -60,14 +61,23 @@ export function LandingPage() {
                             GRAAH
                         </span>
                     </Link>
-                    <Button
-                        className="h-10 rounded-md border-2 border-ink bg-signal px-4 font-bold text-ink shadow-hard"
-                        onPress={contact}
-                        variant="secondary"
-                    >
-                        Contact
-                        <Mail aria-hidden="true" size={17} />
-                    </Button>
+                    <div className="flex items-center gap-3">
+                        <Link
+                            className="hidden items-center gap-1 border-2 border-ink bg-paper px-4 py-2 font-bold text-ink shadow-hard sm:flex"
+                            href="/history"
+                        >
+                            History
+                            <BookOpen aria-hidden="true" size={16} />
+                        </Link>
+                        <Button
+                            className="h-10 rounded-md border-2 border-ink bg-signal px-4 font-bold text-ink shadow-hard"
+                            onPress={contact}
+                            variant="secondary"
+                        >
+                            Contact
+                            <Mail aria-hidden="true" size={17} />
+                        </Button>
+                    </div>
                 </nav>
             </header>
 
@@ -173,6 +183,26 @@ export function LandingPage() {
                                 </Card>
                             ))}
                         </div>
+                    </div>
+                </section>
+
+                <section className="border-b-2 border-ink bg-signal px-4 py-12 text-ink sm:px-6 lg:px-8">
+                    <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <p className="font-mono text-sm font-bold uppercase tracking-normal">
+                                1462 → now
+                            </p>
+                            <h2 className="mt-2 max-w-3xl font-display text-3xl font-black uppercase tracking-normal sm:text-5xl">
+                                The name on the door is five centuries old.
+                            </h2>
+                        </div>
+                        <Link
+                            className="flex h-12 w-fit items-center gap-2 rounded-md border-2 border-ink bg-paper px-5 font-bold text-ink shadow-hard"
+                            href="/history"
+                        >
+                            Read the family chronicle
+                            <BookOpen aria-hidden="true" size={18} />
+                        </Link>
                     </div>
                 </section>
 
