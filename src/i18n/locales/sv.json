@@ -33,6 +33,10 @@
                 "label": "Føroyskt",
                 "ariaLabel": "Byt till färöiska"
             },
+            "fr": {
+                "label": "Français",
+                "ariaLabel": "Byt till franska"
+            },
             "en": {
                 "label": "English",
                 "ariaLabel": "Byt till engelska"

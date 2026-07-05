@@ -33,6 +33,10 @@
                 "label": "Føroyskt",
                 "ariaLabel": "Skift til færøsk"
             },
+            "fr": {
+                "label": "Français",
+                "ariaLabel": "Skift til fransk"
+            },
             "en": {
                 "label": "English",
                 "ariaLabel": "Skift til engelsk"

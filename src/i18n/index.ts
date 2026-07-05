@@ -2,6 +2,7 @@ import da from './locales/da.json'
 import en from './locales/en.json'
 import fi from './locales/fi.json'
 import foContent from './locales/fo-locale.json'
+import fr from './locales/fr.json'
 import isContent from './locales/is-locale.json'
 import nb from './locales/nb.json'
 import sv from './locales/sv.json'
@@ -16,6 +17,7 @@ export const supportedLocales = [
     'fi',
     'is',
     'fo',
+    'fr',
     'en',
 ] as const
 
@@ -61,6 +63,11 @@ export const localeOptions: readonly LocaleOption[] = [
         htmlLang: 'fo',
     },
     {
+        locale: 'fr',
+        flag: '🇫🇷',
+        htmlLang: 'fr',
+    },
+    {
         locale: 'en',
         flag: '🇬🇧',
         htmlLang: 'en',
@@ -72,6 +79,7 @@ const historyByLocale: Record<Locale, HistoryContent> = {
     en: en as HistoryContent,
     fi: fi as HistoryContent,
     fo: foContent as HistoryContent,
+    fr: fr as HistoryContent,
     is: isContent as HistoryContent,
     nb: nb as HistoryContent,
     sv: sv as HistoryContent,

@@ -15,6 +15,7 @@
             "fi": { "label": "Suomi", "ariaLabel": "Vaihda suomeksi" },
             "is": { "label": "Íslenska", "ariaLabel": "Vaihda islanniksi" },
             "fo": { "label": "Føroyskt", "ariaLabel": "Vaihda färsaareksi" },
+            "fr": { "label": "Français", "ariaLabel": "Vaihda ranskaksi" },
             "en": { "label": "English", "ariaLabel": "Vaihda englanniksi" }
         }
     },

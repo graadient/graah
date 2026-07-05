@@ -15,6 +15,7 @@
             "fi": { "label": "Suomi", "ariaLabel": "Bytt til finsk" },
             "is": { "label": "Íslenska", "ariaLabel": "Bytt til islandsk" },
             "fo": { "label": "Føroyskt", "ariaLabel": "Bytt til færøysk" },
+            "fr": { "label": "Français", "ariaLabel": "Bytt til fransk" },
             "en": { "label": "English", "ariaLabel": "Bytt til engelsk" }
         }
     },

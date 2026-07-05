@@ -21,6 +21,10 @@
                 "label": "Føroyskt",
                 "ariaLabel": "Skipta yfir í færeysku"
             },
+            "fr": {
+                "label": "Français",
+                "ariaLabel": "Skipta yfir í frönsku"
+            },
             "en": { "label": "English", "ariaLabel": "Skipta yfir í ensku" }
         }
     },

@@ -1,0 +1,586 @@
+{
+    "meta": {
+        "htmlTitle": "La chronique Graah — cinq siècles de retours",
+        "defaultTitle": "GRAAH",
+        "description": "La chronique de la famille Graah — cinq siècles de rois, d'incendies, de fortunes et de retours, d'un château danois perdu à la voix d'une nation.",
+        "ogTitle": "La chronique Graah",
+        "ogDescription": "Cinq siècles de rois, d'incendies, de fortunes et de retours. Un seul nom."
+    },
+    "languageSwitcher": {
+        "legend": "Langue",
+        "options": {
+            "da": {
+                "label": "Dansk",
+                "ariaLabel": "Passer au danois"
+            },
+            "sv": {
+                "label": "Svenska",
+                "ariaLabel": "Passer au suédois"
+            },
+            "nb": {
+                "label": "Norsk",
+                "ariaLabel": "Passer au norvégien"
+            },
+            "fi": {
+                "label": "Suomi",
+                "ariaLabel": "Passer au finnois"
+            },
+            "is": {
+                "label": "Íslenska",
+                "ariaLabel": "Passer à l'islandais"
+            },
+            "fo": {
+                "label": "Føroyskt",
+                "ariaLabel": "Passer au féroïen"
+            },
+            "fr": {
+                "label": "Français",
+                "ariaLabel": "Passer au français"
+            },
+            "en": {
+                "label": "English",
+                "ariaLabel": "Passer à l'anglais"
+            }
+        }
+    },
+    "nav": {
+        "logoAlt": "Les armoiries Graah : trois étoiles rouges et une bande bleue, or et rouge sur un écu argenté",
+        "brand": "GRAAH"
+    },
+    "hero": {
+        "crestAlt": "",
+        "chip": "La chronique familiale",
+        "titleLines": ["Cinq siècles.", "Un nom."],
+        "intro": "Un château perdu au profit d'un roi. Des prêtres qui tenaient une province, des courtiers qui tenaient un port, un baron du coton qui acheta une chute d'eau — et une résistante devenue la voix d'une nation.",
+        "introEmphasis": "Cinq cents ans de rois, d'incendies, de fortunes et de retours. Attachez vos ceintures.",
+        "startYear": "1462",
+        "endYear": "AUJOURD'HUI"
+    },
+    "chronicleStats": [
+        {
+            "value": "1",
+            "label": "château perdu au profit d'un roi",
+            "bg": "bg-coral"
+        },
+        {
+            "value": "3",
+            "label": "royaumes appelés foyer",
+            "bg": "bg-blue"
+        },
+        {
+            "value": "12,000",
+            "label": "broches sur une seule rivière",
+            "bg": "bg-signal"
+        },
+        {
+            "value": "7",
+            "label": "graphies d'un même nom",
+            "bg": "bg-mint"
+        }
+    ],
+    "nameForms": [
+        "GROH",
+        "GRAA",
+        "GRÅ",
+        "GRAAE",
+        "GRAAH",
+        "GRAAH-HAGELBÄCK",
+        "GRAAH"
+    ],
+    "chapterRecordHeading": "Les preuves",
+    "chapterSourcesHeading": "Lire par soi-même",
+    "chapters": [
+        {
+            "id": "manor",
+            "image": {
+                "src": "/history/manor-1866.jpg",
+                "alt": "Gravure du XIXe siècle du manoir Søllestedgård avec sa tour et ses jardins",
+                "caption": "Søllestedgård lui-même, dessiné en 1866"
+            },
+            "numeral": "I",
+            "years": "1462–1550",
+            "place": "Søllestedgård, Lolland, Danemark",
+            "title": "Le château volé",
+            "kicker": "Un château, un roi et une rancune que la famille porte depuis cinq cents ans",
+            "mood": {
+                "label": "Une rancune royale",
+                "bg": "bg-coral"
+            },
+            "theme": "grid",
+            "paragraphs": [
+                "Tout commence par un château. Søllestedgård, sur l'île danoise de Lolland : des terres, des armes et du pouvoir. Pendant trois générations, il appartient aux Graa — Anders Graa le prend dans les années 1460, sa redoutable veuve Gertrud Munk le dirige après lui, puis leur fils Jørgen le tient comme un seigneur de l'ancienne école.",
+                "Puis, en 1530, le roi s'en empare. Vingt ans plus tard, Christian III remet le domaine à Jørgen Brahe — l'oncle de Tycho Brahe, l'astronome le plus célèbre à avoir perdu son nez dans un duel. Les Brahe ont obtenu le château. Les Graa ont pris la route.",
+                "Il ne reste que le nom et une chevalière portant les anciennes armes familiales — qui, dans un style parfaitement Graah, disparaîtra plus tard dans un incendie. Cinq siècles plus tard, la famille raconte encore l'histoire. Personne ne demande la version des Brahe."
+            ],
+            "record": [
+                {
+                    "year": "1462",
+                    "text": "Anders Graa tient Søllestedgård"
+                },
+                {
+                    "year": "1530",
+                    "text": "Le domaine passe à la couronne danoise"
+                },
+                {
+                    "year": "1550",
+                    "text": "Christian III le vend à Jørgen Brahe, l'oncle de Tycho"
+                },
+                {
+                    "year": "—",
+                    "text": "Un sceau aux armes familiales, perdu dans un incendie"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Danske Herregårde — Søllestedgaard",
+                    "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
+                },
+                {
+                    "label": "Wikipedia — Søllestedgård",
+                    "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
+                }
+            ]
+        },
+        {
+            "id": "pulpit",
+            "image": {
+                "src": "/history/skaarup-kirke.jpg",
+                "alt": "L'église médiévale blanchie à la chaux de Skårup, en Fionie, avec son toit de tuiles rouges",
+                "caption": "L'église de Skårup — le trône familial pendant 80 ans"
+            },
+            "numeral": "II",
+            "years": "1591–1670",
+            "place": "Skårup et Tved, Fionie",
+            "title": "Quatre-vingts ans en chaire",
+            "kicker": "Quand le prêtre dirigeait tout, les Graa étaient les prêtres",
+            "mood": {
+                "label": "Dieu et pouvoir",
+                "bg": "bg-blue"
+            },
+            "theme": "paper",
+            "paragraphs": [
+                "Privée du château, la famille trouve un nouveau trône : la chaire. En 1591, John Olufsen Graa reçoit les paroisses de Skårup et de Tved, en Fionie, et devient prévôt en 1622 — le principal homme d'Église de la couronne dans le district.",
+                "À sa mort, son fils Hans reprend la chaire et la conserve jusqu'en 1670. Quatre-vingts ans, père et fils, une même famille aux commandes de la machine spirituelle d'un coin du Danemark — et, discrètement, l'alphabétisation, le rang et les réseaux qui lanceront la suite."
+            ],
+            "record": [
+                {
+                    "year": "1591",
+                    "text": "John Olufsen Graa reçoit Skårup et Tved"
+                },
+                {
+                    "year": "1622",
+                    "text": "Nommé prévôt"
+                },
+                {
+                    "year": "1670",
+                    "text": "Hans Johnsen Graa meurt ; la dynastie s'achève"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                }
+            ]
+        },
+        {
+            "id": "broker",
+            "image": {
+                "src": "/history/budolfi-aalborg.jpg",
+                "alt": "La tour blanche de l'église Budolfi dominant une rue d'Aalborg",
+                "caption": "L'église Budolfi, Aalborg — où le courtier fut baptisé"
+            },
+            "numeral": "III",
+            "years": "1666–1775",
+            "place": "Aalborg, Jutland",
+            "title": "Le courtier du roi",
+            "kicker": "Trois générations transformant les rumeurs du port en monnaie sonnante",
+            "mood": {
+                "label": "Sel et or",
+                "bg": "bg-signal"
+            },
+            "theme": "paper",
+            "paragraphs": [
+                "Au XVIIIe siècle, la famille se trouve à Aalborg, l'une des grandes villes portuaires du Danemark. Le commerce ne porte plus sur les âmes, mais sur les navires, les cargaisons et le crédit. David Olufsen Graae commence comme købmandskarl, apprenti marchand, puis gravit les échelons jusqu'à recevoir en 1767 une licence royale de courtier.",
+                "Le port donne, et le port reprend. David enterre deux épouses avant que la troisième ne lui survive trente-cinq ans. Dans la branche de Svendborg, Gommine Kristine Graae épouse le skipper Ole Bondo en mars 1836 — un an plus tard, presque jour pour jour, la mer l'emporte au large de l'Angleterre."
+            ],
+            "record": [
+                {
+                    "year": "1727",
+                    "text": "David Olufsen Graae baptisé à l'église Budolfi"
+                },
+                {
+                    "year": "1767",
+                    "text": "Licence royale de courtier — bevilling som mægler"
+                },
+                {
+                    "year": "1837",
+                    "text": "Le skipper Ole Bondo disparaît au large de l'Angleterre"
+                }
+            ],
+            "aside": {
+                "title": "Mariés en mars, noyé en mars",
+                "text": "Gommine Kristine Graae épouse Ole Bondo le 8 mars 1836. Il sombre au large de l'Angleterre le 11 mars 1837. Dans une famille marchande, la mer est à la fois fortune et risque."
+            },
+            "sources": [
+                {
+                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "href": "https://biografiskleksikon.lex.dk/Graae"
+                }
+            ]
+        },
+        {
+            "id": "crossing",
+            "image": {
+                "src": "/history/christiania-1800.jpg",
+                "alt": "Vue coloriée à la main de Christiania et de son fjord, peinte vers 1800",
+                "caption": "Christiania vers 1800 — la ville sur laquelle ils ont parié"
+            },
+            "numeral": "IV",
+            "years": "1826–1859",
+            "place": "Christiania, Norvège",
+            "title": "La traversée",
+            "kicker": "Deux fils d'un prêtre danois misent tout sur une toute nouvelle capitale",
+            "mood": {
+                "label": "Le pari",
+                "bg": "bg-coral"
+            },
+            "theme": "blue",
+            "paragraphs": [
+                "Le prêtre Knud David Graah élève ses enfants dans un presbytère danois — et les voit partir, l'un après l'autre, pour la Norvège. L'ancienne union vient de s'effondrer, Christiania est une capitale pressée, et un pays pressé a besoin de tout : argent, marchandises, idées, audace. Les Graah apportent les quatre.",
+                "David Graah part le premier, en 1826, et bâtit une maison de commerce. Puis il fait une chose étrange pour un homme riche de son siècle : il commence à donner — fonde la première société norvégienne de protection des animaux, dote des fonds pour femmes en difficulté, construit des jardins d'enfants. Son petit frère Knud arrive en 1833, seize ans, tout juste débarqué du Jutland, derrière un comptoir de boutique. Retenez le nom."
+            ],
+            "record": [
+                {
+                    "year": "1826",
+                    "text": "David Graah s'installe à Christiania"
+                },
+                {
+                    "year": "1833",
+                    "text": "Knud Graah arrive, âgé de seize ans"
+                },
+                {
+                    "year": "1859",
+                    "text": "David fonde la première société norvégienne de protection des animaux"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Store norske leksikon — David Graah",
+                    "href": "https://snl.no/David_Graah"
+                }
+            ]
+        },
+        {
+            "id": "cotton",
+            "image": {
+                "src": "/history/knud-graah.jpg",
+                "alt": "Portrait à l'huile de Knud Graah, cheveux blancs et médailles sur manteau noir",
+                "caption": "Knud Graah — garçon de boutique, roi du coton"
+            },
+            "numeral": "V",
+            "years": "1844–1859",
+            "place": "Manchester → l'Akerselva",
+            "title": "Coton et eau",
+            "kicker": "Il part en Angleterre chercher des machines et revient avec une industrie",
+            "mood": {
+                "label": "Révolution",
+                "bg": "bg-blue"
+            },
+            "theme": "paper",
+            "paragraphs": [
+                "Lorsque la Grande-Bretagne desserre enfin son emprise sur les machines qui l'ont enrichie, Knud Graah va droit à la source : Manchester, la ville industrielle la plus bruyante, la plus sale et la plus riche du monde. Là, dit-on, il croise Adam Hiorth, un autre Norvégien à la poursuite des mêmes machines. Ils se jaugent, rentrent au pays et construisent des filatures rivales sur la même rivière.",
+                "Le coup de maître de Graah arrive en 1844 : il achète la chute d'eau de Nedre Vøyen, sur l'Akerselva. L'électricité n'existe pas — la rivière est le réseau d'énergie, et il en possède désormais une partie. Deux ans plus tard, Vøiens Bomuldsspinderi tonne : machines britanniques, eau norvégienne, grande roue hydraulique en fer, quatre-vingts ouvriers — et sa propre usine à gaz, la première de Christiania, pour que les broches ne s'arrêtent jamais à la tombée de la nuit."
+            ],
+            "record": [
+                {
+                    "year": "1844",
+                    "text": "Achète les droits de la chute de Nedre Vøyen"
+                },
+                {
+                    "year": "1846",
+                    "text": "Vøiens Bomuldsspinderi ouvre"
+                },
+                {
+                    "year": "1854",
+                    "text": "Rachète son associé et beau-frère"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "ashes",
+            "image": {
+                "src": "/history/graah-mill.jpg",
+                "alt": "Les bâtiments de brique de la filature de Knud Graah près de la chute d'eau sur l'Akerselva",
+                "caption": "La filature reconstruite et sa chute d'eau sur l'Akerselva"
+            },
+            "numeral": "VI",
+            "years": "1860–1909",
+            "place": "Kristiania",
+            "title": "Sortir des cendres",
+            "kicker": "La filature brûle. Il la reconstruit plus grande — puis sauve une banque",
+            "mood": {
+                "label": "Phénix",
+                "bg": "bg-signal"
+            },
+            "theme": "paper",
+            "paragraphs": [
+                "Pour la plupart des hommes, l'incendie aurait été la fin. Pour Knud Graah, ce n'est qu'un entracte — car l'homme qui pariait sur les machines ne jouait jamais avec l'argent, et chaque brique, bobine et balle était assurée. Il engage l'architecte Oluf N. Roll et, en moins d'un an, une nouvelle filature de quatre étages domine la rivière, plus grande et plus moderne que celle qui fume encore. En 1889, douze mille broches y tournent.",
+                "Le même sang-froid fait de lui un banquier. Il entre au conseil de Christiania Bank og Kreditkasse en 1881 et en devient président — et lorsque le grand krach de Kristiania de 1899 vaporise les spéculateurs et renverse des banques tout autour, la sienne reste debout. À quatre-vingt-neuf ans, il est encore aux commandes, réorganisant l'empire sous le nom A/S Knud Graah & Co., fort de 350 ouvriers. Ses filatures de brique se dressent toujours sur l'Akerselva."
+            ],
+            "record": [
+                {
+                    "year": "1860",
+                    "text": "Nouvelle filature de quatre étages par l'architecte Oluf N. Roll"
+                },
+                {
+                    "year": "1889",
+                    "text": "12,000 broches en marche à Vøien"
+                },
+                {
+                    "year": "1899",
+                    "text": "Kreditkassen traverse le krach de Kristiania"
+                },
+                {
+                    "year": "1906",
+                    "text": "A/S Knud Graah & Co. — environ 350 employés"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                }
+            ]
+        },
+        {
+            "id": "voice",
+            "image": {
+                "src": "/history/white-buses-1945.jpg",
+                "alt": "Des prisonniers libérés serrés sur le pont d'un ferry entre des bus blancs de la Croix-Rouge, printemps 1945",
+                "caption": "Les Bus blancs les ramènent chez eux, printemps 1945"
+            },
+            "numeral": "VII",
+            "years": "1908–2001",
+            "place": "Oslo — Grini — Ravensbrück — NRK",
+            "title": "La voix qui a survécu",
+            "kicker": "La petite-fille du propriétaire de filature choisit la résistance plutôt que le confort",
+            "mood": {
+                "label": "Défi",
+                "bg": "bg-coral"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "Anne Knudsdatter Graah — tout le monde l'appelait Lille — naît à Kristiania en janvier 1908, petite-fille de l'industriel. Son père meurt l'année même de sa naissance. Elle grandit héritière du nom et du rang familial, et lorsque l'Allemagne occupe la Norvège, elle met tout cela en jeu : elle travaille pour la presse illégale, les journaux clandestins qui maintiennent la vérité en circulation.",
+                "En 1942, la Gestapo l'arrête. D'abord le camp de Grini, puis la déportation à Ravensbrück, le camp de concentration pour femmes. Elle survit. Au printemps 1945, les Bus blancs de la Croix-Rouge suédoise la ramènent chez elle.",
+                "Puis elle donne sa voix à la Norvège. Lille Graah rejoint NRK et devient l'une des présences radiophoniques les plus reconnaissables du pays, surtout grâce à Ønskekonserten, le concert de demandes qui recoud le pays d'après-guerre, dédicace après dédicace. En 1948, elle contribue à fonder une association d'aide aux réfugiés tchécoslovaques ; en 1977, Oslo lui remet la médaille St. Hallvard. Du privilège à la résistance, de la survie au service."
+            ],
+            "record": [
+                {
+                    "year": "1942",
+                    "text": "Arrêtée par la Gestapo ; emprisonnée à Grini"
+                },
+                {
+                    "year": "1943",
+                    "text": "Déportée à Ravensbrück"
+                },
+                {
+                    "year": "1945",
+                    "text": "Rentre avec les Bus blancs"
+                },
+                {
+                    "year": "1977",
+                    "text": "Reçoit la médaille St. Hallvard d'Oslo"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
+                },
+                {
+                    "label": "Store norske leksikon — De hvite bussene",
+                    "href": "https://snl.no/hvite_busser"
+                }
+            ]
+        },
+        {
+            "id": "hyphen",
+            "image": {
+                "src": "/history/malmo-1859.jpg",
+                "alt": "Gravure de la grande place de Malmö avec promeneurs et hôtel de ville, 1859",
+                "caption": "Stortorget à Malmö, 1859 — la prochaine scène de la famille"
+            },
+            "numeral": "VIII",
+            "years": "1892–1982",
+            "place": "Malmö · Helsingborg · Stockholm",
+            "title": "Le trait d'union qui sauva un nom",
+            "kicker": "Une mère mourante, un fils nouveau-né et un nom qui refuse de disparaître",
+            "mood": {
+                "label": "Le nom vit",
+                "bg": "bg-mint"
+            },
+            "theme": "paper",
+            "paragraphs": [
+                "Ingeborg Graah, de la lignée même du roi de la filature, épouse le Suédois Gustaf Hagelbäck et traverse l'eau. En mars 1892, leur fils Knut naît à Malmö — et cette même année, Ingeborg meurt, âgée de vingt-neuf ans. Ce qu'elle laisse à son fils, c'est le nom.",
+                "La famille l'officialise : il sera Knut Graah-Hagelbäck, trait d'union compris. Les vieux hérauts auraient reniflé — les noms passent par les fils, auraient-ils dit, pas par les filles. La famille les ignore. Par Knut et son fils Björn — officier dans la planification de la défense suédoise pendant la guerre froide — le nom poursuit sa marche dans la vie suédoise : officiers, architectes, psychologues, ingénieurs, spécialistes de la sécurité."
+            ],
+            "record": [
+                {
+                    "year": "1892",
+                    "text": "Knut Graah-Hagelbäck naît à Malmö"
+                },
+                {
+                    "year": "1892",
+                    "text": "Ingeborg Graah meurt à vingt-neuf ans"
+                },
+                {
+                    "year": "1921",
+                    "text": "Björn Graah-Hagelbäck, futur planificateur de défense"
+                }
+            ],
+            "sources": [
+                {
+                    "label": "Archives généalogiques propres à la famille (Anlängd, 2012)"
+                }
+            ]
+        }
+    ],
+    "fireInterstitial": {
+        "label": "Mardi 20 décembre 1859 · vers 23:00",
+        "titlePrefix": "La filature",
+        "titleEmphasis": "brûle",
+        "body": "Poussière de coton, planchers de bois, huile et lumière au gaz — dans l'obscurité de la semaine de Noël, treize ans de travail partent en une seule nuit. Ce que fait ensuite Knud Graah résume toute la famille en un geste : il avait tout assuré."
+    },
+    "bearersSection": {
+        "eyebrow": "Porteurs du nom",
+        "title": "Même nom, histoires plus folles",
+        "intro": "Partout où l'histoire devient dangereuse, un Graah réapparaît — sur la glace du Groenland et derrière les lignes ennemies.",
+        "figure": {
+            "src": "/history/umiak-graah.jpg",
+            "alt": "Gravure d'un umiak ramé dans une mer forte par son équipage groenlandais",
+            "caption": "Un umiak en eau libre au large de l'est du Groenland — dessiné par le capitaine W.A. Graah lui-même"
+        },
+        "bearers": [
+            {
+                "icon": "snowflake",
+                "img": {
+                    "src": "/history/wa-graah.jpg",
+                    "alt": "Portrait ovale gravé du capitaine Wilhelm August Graah avec sa signature"
+                },
+                "name": "Wilhelm August Graah",
+                "years": "1793–1863",
+                "deed": "Envoyé par le roi du Danemark pour retrouver la colonie nordique perdue de la côte est du Groenland. Il voyage de 1828 à 1831 dans des umiaks groenlandais avec des équipages groenlandais, hiverne dans la glace, frôle la famine — et prouve que le mythe était faux, redessinant la carte au passage.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/W.A._Graah"
+                }
+            },
+            {
+                "icon": "radio",
+                "name": "Jutta Graae — “Storhertuginden”",
+                "years": "1906–1997",
+                "deed": "La grande-duchesse de la résistance danoise. Elle transporte argent et microfilms pour les réseaux clandestins de renseignement, fuit en Suède en 1943, puis travaille depuis Londres avec le SOE britannique jusqu'à la libération.",
+                "source": {
+                    "label": "Dansk Biografisk Leksikon",
+                    "href": "https://biografiskleksikon.lex.dk/Jutta_Graae"
+                }
+            }
+        ]
+    },
+    "timelineSection": {
+        "eyebrow": "Le long arc",
+        "title": "1462 → aujourd'hui",
+        "stops": [
+            {
+                "year": "1462",
+                "text": "Anders Graa à Søllestedgård"
+            },
+            {
+                "year": "1530",
+                "text": "La couronne prend le manoir"
+            },
+            {
+                "year": "1550",
+                "text": "Vendu à Jørgen Brahe"
+            },
+            {
+                "year": "1591",
+                "text": "Les prêtres Graa prennent Skårup et Tved"
+            },
+            {
+                "year": "1767",
+                "text": "Licence royale de courtier à Aalborg"
+            },
+            {
+                "year": "1826",
+                "text": "David Graah traverse vers Christiania"
+            },
+            {
+                "year": "1833",
+                "text": "Knud Graah suit, âgé de 16 ans"
+            },
+            {
+                "year": "1844",
+                "text": "Knud achète la chute d'eau"
+            },
+            {
+                "year": "1846",
+                "text": "La filature de coton se met à tourner"
+            },
+            {
+                "year": "1859",
+                "text": "Un incendie détruit la filature à Noël"
+            },
+            {
+                "year": "1860",
+                "text": "Reconstruite — quatre étages, plus moderne"
+            },
+            {
+                "year": "1881",
+                "text": "Knud entre au conseil de Kreditkassen"
+            },
+            {
+                "year": "1892",
+                "text": "Le nom passe en Suède"
+            },
+            {
+                "year": "1899",
+                "text": "La banque survit au grand krach"
+            },
+            {
+                "year": "1942",
+                "text": "Lille Graah arrêtée par la Gestapo"
+            },
+            {
+                "year": "1945",
+                "text": "Retour avec les Bus blancs"
+            },
+            {
+                "year": "1977",
+                "text": "Médaille St. Hallvard pour Lille"
+            }
+        ]
+    },
+    "closing": {
+        "eyebrow": "Ce que tout cela donne",
+        "title": "Une famille qui n'a cessé de reconstruire les outils de son époque",
+        "body": "La terre, puis les chaires. Les chaires, puis les ports. Les ports, puis les chutes d'eau et les broches. Les banques, les journaux clandestins, un microphone de radio. Le schéma n'a jamais changé : trouver la nouvelle infrastructure de l'époque, franchir la frontière et construire.",
+        "cta": "Écrire à la famille",
+        "note": "Raconté comme la famille le raconte — les bons passages conservés, les passages ennuyeux laissés de côté, et les dates aussi exactes que possible. Les archives réservent encore des surprises. Revenez voir. Images via Wikimedia Commons : Nasjonalbiblioteket, Nasjonalmuseet et Oslo Museum (Norvège), News Øresund (CC BY), Hideko Bondesen et Liberaler Humanist (CC BY-SA)."
+    }
+}
