@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme {
+    --color-paper: #f8f4ea;
+    --color-ink: #101014;
+    --color-coral: #f2573a;
+    --color-blue: #5bc0eb;
+    --color-signal: #f4d35e;
+    --color-mint: #1dd3b0;
+
+    --font-display: "Arial Black", "Inter Tight", system-ui, sans-serif;
+    --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        min-width: 320px;
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--color-paper);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+        background: var(--color-signal);
+        color: var(--color-ink);
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-blue);
+        outline-offset: 3px;
+    }
+}
+
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(16, 16, 20, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 16, 20, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.shadow-hard {
+    box-shadow: 5px 5px 0 0 var(--color-ink);
+}
+
+.shadow-paper {
+    box-shadow: 5px 5px 0 0 var(--color-paper);
+}
+
+.drop-shadow-solid {
+    filter: drop-shadow(12px 12px 0 var(--color-ink));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

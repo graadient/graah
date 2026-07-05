@@ -1,0 +1,129 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 80,
+        "lineEnding": "lf"
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "correctness": {
+                "noConstAssign": "warn",
+                "useIsNan": "warn",
+                "useYield": "warn",
+                "noPrecisionLoss": "error",
+                "noUnsafeFinally": "error",
+                "useValidTypeof": "warn",
+                "useExhaustiveDependencies": "off"
+            },
+            "style": {
+                "useDefaultSwitchClause": "error",
+                "useConsistentBuiltinInstantiation": "warn",
+                "useThrowOnlyError": "warn",
+                "noNegationElse": "warn",
+                "noNestedTernary": "off",
+                "noDefaultExport": "off",
+                "noNonNullAssertion": "off",
+                "useImportType": "error",
+                "useExportType": "error",
+                "noInferrableTypes": "warn",
+                "useTemplate": "warn"
+            },
+            "suspicious": {
+                "noDebugger": "error",
+                "noDoubleEquals": "off",
+                "noFallthroughSwitchClause": "warn",
+                "noDuplicateCase": "error",
+                "noRedeclare": "warn",
+                "useAwait": "off",
+                "useIterableCallbackReturn": "warn",
+                "noExplicitAny": "off",
+                "noArrayIndexKey": "off"
+            },
+            "complexity": {
+                "noUselessConstructor": "warn",
+                "noCommaOperator": "warn",
+                "noUselessTypeConstraint": "warn",
+                "noForEach": "warn",
+                "useFlatMap": "warn"
+            },
+            "performance": {
+                "noAwaitInLoops": "off",
+                "noAccumulatingSpread": "error",
+                "noDelete": "warn"
+            },
+            "security": {
+                "noSecrets": "off",
+                "noGlobalEval": "error",
+                "noDangerouslySetInnerHtml": "off"
+            }
+        }
+    },
+    "css": {
+        "parser": {
+            "tailwindDirectives": true
+        },
+        "linter": {
+            "enabled": false
+        }
+    },
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "off"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "single",
+            "jsxQuoteStyle": "double",
+            "semicolons": "asNeeded",
+            "trailingCommas": "es5",
+            "bracketSpacing": true,
+            "arrowParentheses": "always"
+        }
+    },
+    "json": {
+        "formatter": {
+            "indentWidth": 4
+        }
+    },
+    "files": {
+        "includes": [
+            "**",
+            "!node_modules",
+            "!.yarn",
+            "!.pnp.*",
+            "!.expo",
+            "!dist",
+            "!web-build",
+            "!test-results",
+            "!playwright-report",
+            "!tmp",
+            "!ios",
+            "!android",
+            "!expo-env.d.ts",
+            "!src/uniwind.d.ts"
+        ]
+    },
+    "overrides": [
+        {
+            "includes": ["scripts/**", "tools/ast-rules/**"],
+            "linter": {
+                "rules": {
+                    "complexity": {
+                        "noForEach": "off"
+                    },
+                    "suspicious": {
+                        "useIterableCallbackReturn": "off"
+                    }
+                }
+            }
+        }
+    ]
+}
