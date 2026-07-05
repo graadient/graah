@@ -29,7 +29,7 @@
         "intro": "Linna menetettiin kuninkaalle. Papit johtivat seurakuntia, välittäjät satamaa, puuvillaparoni osti kosken — ja vastarintasankari nousi kansakunnan ääneksi.",
         "introEmphasis": "Viisisataa vuotta kuninkaita, tulipaloja, omaisuuksia ja paluita. Pidä kiinni.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "TÄNÄÄN"
     },
     "chronicleStats": [
         {
@@ -417,7 +417,7 @@
     },
     "timelineSection": {
         "eyebrow": "Pitkä kaari",
-        "title": "1462 → 1982",
+        "title": "1462 → tänään",
         "stops": [
             { "year": "1462", "text": "Anders Graa Søllestedgårdissa" },
             { "year": "1530", "text": "Kruunu ottaa kartanon" },

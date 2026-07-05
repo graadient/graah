@@ -50,7 +50,7 @@
         "intro": "En borg förlorad till en kung. Präster som styrde ett härad, mäklare som styrde en hamn, en bomullsbaron som köpte ett vattenfall — och en motståndshjältinna som blev en hel nations röst.",
         "introEmphasis": "Femhundra år av kungar, bränder, förmögenheter och återkomster. Håll i dig.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "I DAG"
     },
     "chronicleStats": [
         {
@@ -500,7 +500,7 @@
     },
     "timelineSection": {
         "eyebrow": "Den långa bågen",
-        "title": "1462 → 1982",
+        "title": "1462 → i dag",
         "stops": [
             {
                 "year": "1462",

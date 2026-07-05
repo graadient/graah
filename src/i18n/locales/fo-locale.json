@@ -29,7 +29,7 @@
         "intro": "Eitt slott mist til ein kong. Prestar, sum stýrdu sóknum, meklarar, sum stýrdu einari havn, ein bummullsbarónur, sum keypti ein foss — og ein mótstøðukvinna, sum gjørdist røddin hjá einari tjóð.",
         "introEmphasis": "Fimm hundrað ár við kongum, eldsbrunum, ríkidømi og afturkomum. Halt fast.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "Í DAG"
     },
     "chronicleStats": [
         { "value": "1", "label": "slott mist til ein kong", "bg": "bg-coral" },
@@ -415,7 +415,7 @@
     },
     "timelineSection": {
         "eyebrow": "Langi bogin",
-        "title": "1462 → 1982",
+        "title": "1462 → í dag",
         "stops": [
             { "year": "1462", "text": "Anders Graa á Søllestedgård" },
             { "year": "1530", "text": "Krúnan tekur harragarðin" },

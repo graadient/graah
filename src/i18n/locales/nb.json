@@ -29,7 +29,7 @@
         "intro": "En borg tapt til en konge. Prester som styrte et prestegjeld, meglere som styrte en havn, en bomullsbaron som kjøpte en foss — og en motstandsheltinne som ble stemmen til en nasjon.",
         "introEmphasis": "Fem hundre år med konger, branner, formuer og comeback. Hold fast.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "I DAG"
     },
     "chronicleStats": [
         { "value": "1", "label": "borg tapt til en konge", "bg": "bg-coral" },
@@ -415,7 +415,7 @@
     },
     "timelineSection": {
         "eyebrow": "Den lange buen",
-        "title": "1462 → 1982",
+        "title": "1462 → i dag",
         "stops": [
             { "year": "1462", "text": "Anders Graa på Søllestedgård" },
             { "year": "1530", "text": "Kronen tar herregården" },

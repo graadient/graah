@@ -50,7 +50,7 @@
         "intro": "A castle lost to a king. Priests who ran a province, brokers who ran a harbour, a cotton baron who bought a waterfall — and a resistance heroine who became the voice of a nation.",
         "introEmphasis": "Five hundred years of kings, fires, fortunes and comebacks. Buckle up.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "TODAY"
     },
     "chronicleStats": [
         {
@@ -499,7 +499,7 @@
     },
     "timelineSection": {
         "eyebrow": "The long arc",
-        "title": "1462 → 1982",
+        "title": "1462 → today",
         "stops": [
             {
                 "year": "1462",

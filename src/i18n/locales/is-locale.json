@@ -35,7 +35,7 @@
         "intro": "Kastali tapaðist til konungs. Prestar stjórnuðu sóknum, miðlarar stjórnuðu höfn, bómullarbarón keypti foss — og andspyrnuhetja varð rödd þjóðar.",
         "introEmphasis": "Fimm hundruð ár af konungum, eldsvoðum, auði og endurkomum. Haltu þér fast.",
         "startYear": "1462",
-        "endYear": "1982"
+        "endYear": "Í DAG"
     },
     "chronicleStats": [
         {
@@ -413,7 +413,7 @@
     },
     "timelineSection": {
         "eyebrow": "Langi boginn",
-        "title": "1462 → 1982",
+        "title": "1462 → í dag",
         "stops": [
             { "year": "1462", "text": "Anders Graa á Søllestedgård" },
             { "year": "1530", "text": "Krúnan tekur herragarðinn" },
