@@ -91,6 +91,7 @@ export interface HistoryContent {
         titlePrefix: string
         titleEmphasis: string
         body: string
+        sources?: Source[]
     }
     bearersSection: {
         eyebrow: string

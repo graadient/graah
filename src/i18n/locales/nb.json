@@ -9,14 +9,38 @@
     "languageSwitcher": {
         "legend": "Språk",
         "options": {
-            "da": { "label": "Dansk", "ariaLabel": "Bytt til dansk" },
-            "sv": { "label": "Svenska", "ariaLabel": "Bytt til svensk" },
-            "nb": { "label": "Norsk", "ariaLabel": "Bytt til norsk" },
-            "fi": { "label": "Suomi", "ariaLabel": "Bytt til finsk" },
-            "is": { "label": "Íslenska", "ariaLabel": "Bytt til islandsk" },
-            "fo": { "label": "Føroyskt", "ariaLabel": "Bytt til færøysk" },
-            "fr": { "label": "Français", "ariaLabel": "Bytt til fransk" },
-            "en": { "label": "English", "ariaLabel": "Bytt til engelsk" }
+            "da": {
+                "label": "Dansk",
+                "ariaLabel": "Bytt til dansk"
+            },
+            "sv": {
+                "label": "Svenska",
+                "ariaLabel": "Bytt til svensk"
+            },
+            "nb": {
+                "label": "Norsk",
+                "ariaLabel": "Bytt til norsk"
+            },
+            "fi": {
+                "label": "Suomi",
+                "ariaLabel": "Bytt til finsk"
+            },
+            "is": {
+                "label": "Íslenska",
+                "ariaLabel": "Bytt til islandsk"
+            },
+            "fo": {
+                "label": "Føroyskt",
+                "ariaLabel": "Bytt til færøysk"
+            },
+            "fr": {
+                "label": "Français",
+                "ariaLabel": "Bytt til fransk"
+            },
+            "en": {
+                "label": "English",
+                "ariaLabel": "Bytt til engelsk"
+            }
         }
     },
     "nav": {
@@ -33,14 +57,26 @@
         "endYear": "I DAG"
     },
     "chronicleStats": [
-        { "value": "1", "label": "borg tapt til en konge", "bg": "bg-coral" },
-        { "value": "3", "label": "kongedømmer kalt hjem", "bg": "bg-blue" },
+        {
+            "value": "1",
+            "label": "borg tapt til en konge",
+            "bg": "bg-coral"
+        },
+        {
+            "value": "3",
+            "label": "kongedømmer kalt hjem",
+            "bg": "bg-blue"
+        },
         {
             "value": "12,000",
             "label": "spindler drevet av én elv",
             "bg": "bg-signal"
         },
-        { "value": "7", "label": "stavemåter av ett navn", "bg": "bg-mint" }
+        {
+            "value": "7",
+            "label": "stavemåter av ett navn",
+            "bg": "bg-mint"
+        }
     ],
     "nameForms": [
         "GROH",
@@ -66,14 +102,20 @@
             "place": "Søllestedgård, Lolland, Danmark",
             "title": "Den stjålne borgen",
             "kicker": "En borg, en konge og et nag familien har båret i fem hundre år",
-            "mood": { "label": "Et kongelig nag", "bg": "bg-coral" },
+            "mood": {
+                "label": "Et kongelig nag",
+                "bg": "bg-coral"
+            },
             "theme": "grid",
             "paragraphs": [
                 "Det begynner med en borg. Søllestedgård på Lolland var jord, våpen og makt. I tre generasjoner tilhørte den Graa-slekten: Anders Graa tok den på 1460-tallet, Gertrud Munk styrte den etter ham, og sønnen Jørgen holdt den som en herre av den gamle skolen.",
                 "I 1530 tok kongen den. Tyve år senere ga Christian III gården til Jørgen Brahe, Tycho Brahes onkel. Brahe-slekten fikk borgen. Graa-slekten fikk veien videre. Navnet og fortellingen ble igjen."
             ],
             "record": [
-                { "year": "1462", "text": "Anders Graa holder Søllestedgård" },
+                {
+                    "year": "1462",
+                    "text": "Anders Graa holder Søllestedgård"
+                },
                 {
                     "year": "1530",
                     "text": "Gården går over til den danske kronen"
@@ -89,11 +131,19 @@
             ],
             "sources": [
                 {
-                    "label": "Danske Herregårde — Søllestedgaard",
+                    "label": "Danske Herregaarde - Sollestedgaard",
                     "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
                 },
                 {
-                    "label": "Wikipedia — Søllestedgård",
+                    "label": "Historisk Atlas - Sollestedgard",
+                    "href": "https://historiskatlas.dk/S%C3%B8llestedg%C3%A5rd_(15351)"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon - Jorgen Brahe",
+                    "href": "https://biografiskleksikon.lex.dk/J%C3%B8rgen_Brahe_-_lensmand"
+                },
+                {
+                    "label": "Wikipedia - Sollestedgard",
                     "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
                 }
             ]
@@ -110,7 +160,10 @@
             "place": "Skårup og Tved, Fyn",
             "title": "Åtti år på prekestolen",
             "kicker": "Da presten styrte alt, var Graa prestene",
-            "mood": { "label": "Gud og makt", "bg": "bg-blue" },
+            "mood": {
+                "label": "Gud og makt",
+                "bg": "bg-blue"
+            },
             "theme": "paper",
             "paragraphs": [
                 "Uten borgen fant familien en ny trone: prekestolen. I 1591 tok John Olufsen Graa sognene Skårup og Tved på Fyn, og i 1622 var han prost, kronens øverste kirkemann i distriktet.",
@@ -121,7 +174,10 @@
                     "year": "1591",
                     "text": "John Olufsen Graa får Skårup og Tved"
                 },
-                { "year": "1622", "text": "Utnevnes til prost" },
+                {
+                    "year": "1622",
+                    "text": "Utnevnes til prost"
+                },
                 {
                     "year": "1670",
                     "text": "Hans Johnsen Graa dør; dynastiet slutter"
@@ -129,8 +185,12 @@
             ],
             "sources": [
                 {
-                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "label": "Den Graaeske Slaegtebog (1914)",
                     "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Stamtavle over den Svenborgske Familie Graae (1882)",
+                    "href": "https://slaegtsbibliotek.dk/929159.pdf"
                 }
             ]
         },
@@ -146,7 +206,10 @@
             "place": "Aalborg, Jylland",
             "title": "Kongens megler",
             "kicker": "Tre generasjoner som gjorde havnesladder til hard valuta",
-            "mood": { "label": "Salt og gull", "bg": "bg-signal" },
+            "mood": {
+                "label": "Salt og gull",
+                "bg": "bg-signal"
+            },
             "theme": "paper",
             "paragraphs": [
                 "På 1700-tallet er familien i Aalborg, og handelen gjelder ikke lenger sjeler, men skip, last og kreditt. David Olufsen Graae begynte som kjøpmannsgutt og arbeidet seg opp til kongelig bevilling som megler.",
@@ -157,7 +220,10 @@
                     "year": "1727",
                     "text": "David Olufsen Graae døpes i Budolfi kirke"
                 },
-                { "year": "1767", "text": "Kongelig meglerbevilling" },
+                {
+                    "year": "1767",
+                    "text": "Kongelig meglerbevilling"
+                },
                 {
                     "year": "1837",
                     "text": "Skipper Ole Bondo forsvinner utenfor Englands kyst"
@@ -169,12 +235,16 @@
             },
             "sources": [
                 {
-                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "label": "Den Graaeske Slaegtebog (1914)",
                     "href": "https://slaegtsbibliotek.dk/900459.pdf"
                 },
                 {
-                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "label": "Dansk Biografisk Leksikon - Graae",
                     "href": "https://biografiskleksikon.lex.dk/Graae"
+                },
+                {
+                    "label": "Personalhistoriske Notitser om Aalborg",
+                    "href": "https://slaegtsbibliotek.dk/920320.pdf"
                 }
             ]
         },
@@ -190,7 +260,10 @@
             "place": "Christiania, Norge",
             "title": "Overfarten",
             "kicker": "To sønner av en dansk prest satset alt på en ny hovedstad",
-            "mood": { "label": "Satsingen", "bg": "bg-coral" },
+            "mood": {
+                "label": "Satsingen",
+                "bg": "bg-coral"
+            },
             "theme": "blue",
             "paragraphs": [
                 "Presten Knud David Graah oppdro barna i en dansk prestegård og så dem dra til Norge. Christiania var en hovedstad i hast, og landet trengte penger, varer, ideer og nerve.",
@@ -212,8 +285,16 @@
             ],
             "sources": [
                 {
-                    "label": "Store norske leksikon — David Graah",
+                    "label": "Store norske leksikon - David Graah",
                     "href": "https://snl.no/David_Graah"
+                },
+                {
+                    "label": "Norsk biografisk leksikon - Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Graah",
+                    "href": "https://lokalhistoriewiki.no/Graah"
                 }
             ]
         },
@@ -229,7 +310,10 @@
             "place": "Manchester → Akerselva",
             "title": "Bomull og vann",
             "kicker": "Han dro til England etter maskiner og kom hjem med en industri",
-            "mood": { "label": "Revolusjon", "bg": "bg-blue" },
+            "mood": {
+                "label": "Revolusjon",
+                "bg": "bg-blue"
+            },
             "theme": "paper",
             "paragraphs": [
                 "Da Storbritannia slapp litt av grepet om maskinene som hadde gjort landet rikt, dro Knud Graah til Manchester. Derfra tok han hjem kunnskapen og konkurransen som skulle forme Akerselva.",
@@ -240,13 +324,31 @@
                     "year": "1844",
                     "text": "Kjøper fallrettighetene ved Nedre Vøyen"
                 },
-                { "year": "1846", "text": "Vøiens Bomuldsspinderi åpner" },
-                { "year": "1854", "text": "Kjøper ut partneren og svogeren" }
+                {
+                    "year": "1846",
+                    "text": "Vøiens Bomuldsspinderi åpner"
+                },
+                {
+                    "year": "1854",
+                    "text": "Kjøper ut partneren og svogeren"
+                }
             ],
             "sources": [
                 {
-                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "label": "Norsk biografisk leksikon - Knud Graah",
                     "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Knud Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Science Norway - cotton and industrialisation",
+                    "href": "https://www.sciencenorway.no/clothing-history-industry/this-cotton-spool-changed-norway/2200880"
+                },
+                {
+                    "label": "Store norske leksikon - Nydalens Compagnie",
+                    "href": "https://snl.no/Nydalens_Compagnie"
                 }
             ]
         },
@@ -262,7 +364,10 @@
             "place": "Kristiania",
             "title": "Ut av asken",
             "kicker": "Spinneriet brant ned. Han bygde det større opp igjen — og reddet så en bank",
-            "mood": { "label": "Føniks", "bg": "bg-signal" },
+            "mood": {
+                "label": "Føniks",
+                "bg": "bg-signal"
+            },
             "theme": "paper",
             "paragraphs": [
                 "For Knud Graah var brannen knapt en pause. Alt var forsikret, og innen ett år reiste et nytt fireetasjes spinneri seg over elven. I 1889 gikk tolv tusen spindler ved Vøien.",
@@ -273,7 +378,10 @@
                     "year": "1860",
                     "text": "Nytt fireetasjes spinneri av arkitekt Oluf N. Roll"
                 },
-                { "year": "1889", "text": "12,000 spindler i drift ved Vøien" },
+                {
+                    "year": "1889",
+                    "text": "12,000 spindler i drift ved Vøien"
+                },
                 {
                     "year": "1899",
                     "text": "Kreditkassen rir av Kristiania-krakket"
@@ -285,12 +393,16 @@
             ],
             "sources": [
                 {
-                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "label": "Lokalhistoriewiki - Knud Graah",
                     "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
                 },
                 {
-                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "label": "Norsk biografisk leksikon - Knud Graah",
                     "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Oslo Museum - Byminner",
+                    "href": "https://www.oslomuseum.no/globalassets/medier/byminner/byminner_oslo-museum_2023-02_web.pdf"
                 }
             ]
         },
@@ -306,7 +418,10 @@
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "Stemmen som overlevde",
             "kicker": "Spinnerieierens barnebarn valgte motstand fremfor komfort",
-            "mood": { "label": "Tross", "bg": "bg-coral" },
+            "mood": {
+                "label": "Tross",
+                "bg": "bg-coral"
+            },
             "theme": "ink",
             "paragraphs": [
                 "Anne Knudsdatter Graah, kalt Lille, ble født i Kristiania i 1908. Da Tyskland okkuperte Norge, satte hun navn og stilling på spill og arbeidet for den illegale pressen.",
@@ -317,8 +432,14 @@
                     "year": "1942",
                     "text": "Arrestert av Gestapo; fengslet på Grini"
                 },
-                { "year": "1943", "text": "Deportert til Ravensbrück" },
-                { "year": "1945", "text": "Kommer hjem med De hvite bussene" },
+                {
+                    "year": "1943",
+                    "text": "Deportert til Ravensbrück"
+                },
+                {
+                    "year": "1945",
+                    "text": "Kommer hjem med De hvite bussene"
+                },
                 {
                     "year": "1977",
                     "text": "Tildeles Oslos St. Hallvard-medalje"
@@ -326,11 +447,15 @@
             ],
             "sources": [
                 {
-                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "label": "Norsk biografisk leksikon - Lille Graah",
+                    "href": "https://nbl.snl.no/Lille_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Lille Graah",
                     "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
                 },
                 {
-                    "label": "Store norske leksikon — De hvite bussene",
+                    "label": "Store norske leksikon - De hvite bussene",
                     "href": "https://snl.no/hvite_busser"
                 }
             ]
@@ -347,7 +472,10 @@
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "Bindestreken som reddet et navn",
             "kicker": "En døende mor, en nyfødt sønn og et navn som nektet å forsvinne",
-            "mood": { "label": "Navnet lever", "bg": "bg-mint" },
+            "mood": {
+                "label": "Navnet lever",
+                "bg": "bg-mint"
+            },
             "theme": "paper",
             "paragraphs": [
                 "Ingeborg Graah giftet seg med svensken Gustaf Hagelbäck og krysset vannet. Sønnen Knut ble født i Malmö i 1892, samme år som Ingeborg døde, bare tjueni år gammel.",
@@ -368,7 +496,22 @@
                 }
             ],
             "sources": [
-                { "label": "Familiens egne slektsopptegnelser (Anlängd, 2012)" }
+                {
+                    "label": "Bjorn Graah-Hagelback - Wikipedia",
+                    "href": "https://sv.wikipedia.org/wiki/Bj%C3%B6rn_Graah-Hagelb%C3%A4ck"
+                },
+                {
+                    "label": "Riksdagen - 1961 redogorelse",
+                    "href": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/framstallning-redogorelse/till-1961-ars-riksdag-om-vad-i-rikets-styrelse_em40rberb1/html/"
+                },
+                {
+                    "label": "MER Arkitekter - Anna Graah-Hagelback",
+                    "href": "https://www.mer.se/medarbetare/anna-graah-hagelback/"
+                },
+                {
+                    "label": "The Org - Hans Graah-Hagelback",
+                    "href": "https://theorg.com/org/sourcecom/org-chart/hans-graah-hagelback"
+                }
             ]
         }
     ],
@@ -376,7 +519,17 @@
         "label": "Tirsdag 20. desember 1859 · omkring 23:00",
         "titlePrefix": "Spinneriet",
         "titleEmphasis": "brenner",
-        "body": "Bomullsstøv, tregulv, olje og gasslys — i mørket før jul gikk tretten års arbeid opp i røyk på én natt. Det Knud Graah gjorde etterpå, sier alt: han hadde forsikret alt."
+        "body": "Bomullsstøv, tregulv, olje og gasslys — i mørket før jul gikk tretten års arbeid opp i røyk på én natt. Det Knud Graah gjorde etterpå, sier alt: han hadde forsikret alt.",
+        "sources": [
+            {
+                "label": "Lokalhistoriewiki - Knud Graah",
+                "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+            },
+            {
+                "label": "Norsk biografisk leksikon - Knud Graah",
+                "href": "https://nbl.snl.no/Knud_Graah"
+            }
+        ]
     },
     "bearersSection": {
         "eyebrow": "Navnets bærere",
@@ -418,26 +571,74 @@
         "eyebrow": "Den lange buen",
         "title": "1462 → i dag",
         "stops": [
-            { "year": "1462", "text": "Anders Graa på Søllestedgård" },
-            { "year": "1530", "text": "Kronen tar herregården" },
-            { "year": "1550", "text": "Solgt til Jørgen Brahe" },
-            { "year": "1591", "text": "Graa-prester tar Skårup og Tved" },
-            { "year": "1767", "text": "Kongelig meglerbevilling i Aalborg" },
-            { "year": "1826", "text": "David Graah krysser til Christiania" },
-            { "year": "1833", "text": "Knud Graah følger etter, 16 år gammel" },
-            { "year": "1844", "text": "Knud kjøper fossen" },
-            { "year": "1846", "text": "Bomullsspinneriet starter" },
-            { "year": "1859", "text": "Brann ødelegger spinneriet ved jul" },
+            {
+                "year": "1462",
+                "text": "Anders Graa på Søllestedgård"
+            },
+            {
+                "year": "1530",
+                "text": "Kronen tar herregården"
+            },
+            {
+                "year": "1550",
+                "text": "Solgt til Jørgen Brahe"
+            },
+            {
+                "year": "1591",
+                "text": "Graa-prester tar Skårup og Tved"
+            },
+            {
+                "year": "1767",
+                "text": "Kongelig meglerbevilling i Aalborg"
+            },
+            {
+                "year": "1826",
+                "text": "David Graah krysser til Christiania"
+            },
+            {
+                "year": "1833",
+                "text": "Knud Graah følger etter, 16 år gammel"
+            },
+            {
+                "year": "1844",
+                "text": "Knud kjøper fossen"
+            },
+            {
+                "year": "1846",
+                "text": "Bomullsspinneriet starter"
+            },
+            {
+                "year": "1859",
+                "text": "Brann ødelegger spinneriet ved jul"
+            },
             {
                 "year": "1860",
                 "text": "Gjenoppbygd — fire etasjer, mer moderne"
             },
-            { "year": "1881", "text": "Knud går inn i Kreditkassens styre" },
-            { "year": "1892", "text": "Navnet krysser inn i Sverige" },
-            { "year": "1899", "text": "Banken overlever det store krakket" },
-            { "year": "1942", "text": "Lille Graah arresteres av Gestapo" },
-            { "year": "1945", "text": "Hjem med De hvite bussene" },
-            { "year": "1977", "text": "St. Hallvard-medaljen til Lille" }
+            {
+                "year": "1881",
+                "text": "Knud går inn i Kreditkassens styre"
+            },
+            {
+                "year": "1892",
+                "text": "Navnet krysser inn i Sverige"
+            },
+            {
+                "year": "1899",
+                "text": "Banken overlever det store krakket"
+            },
+            {
+                "year": "1942",
+                "text": "Lille Graah arresteres av Gestapo"
+            },
+            {
+                "year": "1945",
+                "text": "Hjem med De hvite bussene"
+            },
+            {
+                "year": "1977",
+                "text": "St. Hallvard-medaljen til Lille"
+            }
         ]
     },
     "closing": {

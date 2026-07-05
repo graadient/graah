@@ -347,6 +347,26 @@ function FireInterstitial({
                     <p className="mt-8 max-w-2xl font-serif text-xl italic leading-9 text-paper/85 sm:text-2xl sm:leading-10">
                         {content.body}
                     </p>
+                    {content.sources?.length ? (
+                        <ul className="mt-6 flex flex-wrap gap-3">
+                            {content.sources.map((source) => (
+                                <li key={source.label}>
+                                    <a
+                                        className="inline-flex items-center gap-1 border-2 border-paper bg-paper px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-normal text-ink hover:bg-mint"
+                                        href={source.href}
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
+                                        {source.label}
+                                        <ArrowUpRight
+                                            aria-hidden="true"
+                                            size={14}
+                                        />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : null}
                 </Reveal>
             </div>
         </section>

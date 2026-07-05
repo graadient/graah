@@ -132,11 +132,19 @@
             ],
             "sources": [
                 {
-                    "label": "Danske Herregårde — Søllestedgaard",
+                    "label": "Danske Herregaarde - Sollestedgaard",
                     "href": "https://www.danskeherregaarde.dk/nutid/soellestedgaard"
                 },
                 {
-                    "label": "Wikipedia — Søllestedgård",
+                    "label": "Historisk Atlas - Sollestedgard",
+                    "href": "https://historiskatlas.dk/S%C3%B8llestedg%C3%A5rd_(15351)"
+                },
+                {
+                    "label": "Dansk Biografisk Leksikon - Jorgen Brahe",
+                    "href": "https://biografiskleksikon.lex.dk/J%C3%B8rgen_Brahe_-_lensmand"
+                },
+                {
+                    "label": "Wikipedia - Sollestedgard",
                     "href": "https://da.wikipedia.org/wiki/S%C3%B8llestedg%C3%A5rd"
                 }
             ]
@@ -178,8 +186,12 @@
             ],
             "sources": [
                 {
-                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "label": "Den Graaeske Slaegtebog (1914)",
                     "href": "https://slaegtsbibliotek.dk/900459.pdf"
+                },
+                {
+                    "label": "Stamtavle over den Svenborgske Familie Graae (1882)",
+                    "href": "https://slaegtsbibliotek.dk/929159.pdf"
                 }
             ]
         },
@@ -224,12 +236,16 @@
             },
             "sources": [
                 {
-                    "label": "Den Graae’ske Slægtebog (1914)",
+                    "label": "Den Graaeske Slaegtebog (1914)",
                     "href": "https://slaegtsbibliotek.dk/900459.pdf"
                 },
                 {
-                    "label": "Dansk Biografisk Leksikon — Graae",
+                    "label": "Dansk Biografisk Leksikon - Graae",
                     "href": "https://biografiskleksikon.lex.dk/Graae"
+                },
+                {
+                    "label": "Personalhistoriske Notitser om Aalborg",
+                    "href": "https://slaegtsbibliotek.dk/920320.pdf"
                 }
             ]
         },
@@ -270,8 +286,16 @@
             ],
             "sources": [
                 {
-                    "label": "Store norske leksikon — David Graah",
+                    "label": "Store norske leksikon - David Graah",
                     "href": "https://snl.no/David_Graah"
+                },
+                {
+                    "label": "Norsk biografisk leksikon - Knud Graah",
+                    "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Graah",
+                    "href": "https://lokalhistoriewiki.no/Graah"
                 }
             ]
         },
@@ -312,8 +336,20 @@
             ],
             "sources": [
                 {
-                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "label": "Norsk biografisk leksikon - Knud Graah",
                     "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Knud Graah",
+                    "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+                },
+                {
+                    "label": "Science Norway - cotton and industrialisation",
+                    "href": "https://www.sciencenorway.no/clothing-history-industry/this-cotton-spool-changed-norway/2200880"
+                },
+                {
+                    "label": "Store norske leksikon - Nydalens Compagnie",
+                    "href": "https://snl.no/Nydalens_Compagnie"
                 }
             ]
         },
@@ -358,12 +394,16 @@
             ],
             "sources": [
                 {
-                    "label": "Lokalhistoriewiki — Knud Graah (1817–1909)",
+                    "label": "Lokalhistoriewiki - Knud Graah",
                     "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
                 },
                 {
-                    "label": "Norsk biografisk leksikon — Knud Graah",
+                    "label": "Norsk biografisk leksikon - Knud Graah",
                     "href": "https://nbl.snl.no/Knud_Graah"
+                },
+                {
+                    "label": "Oslo Museum - Byminner",
+                    "href": "https://www.oslomuseum.no/globalassets/medier/byminner/byminner_oslo-museum_2023-02_web.pdf"
                 }
             ]
         },
@@ -409,11 +449,15 @@
             ],
             "sources": [
                 {
-                    "label": "Lokalhistoriewiki — Lille Graah",
+                    "label": "Norsk biografisk leksikon - Lille Graah",
+                    "href": "https://nbl.snl.no/Lille_Graah"
+                },
+                {
+                    "label": "Lokalhistoriewiki - Lille Graah",
                     "href": "https://lokalhistoriewiki.no/wiki/Lille_Graah"
                 },
                 {
-                    "label": "Store norske leksikon — De hvite bussene",
+                    "label": "Store norske leksikon - De hvite bussene",
                     "href": "https://snl.no/hvite_busser"
                 }
             ]
@@ -455,7 +499,20 @@
             ],
             "sources": [
                 {
-                    "label": "Familjens egna släktanteckningar (Anlängd, 2012)"
+                    "label": "Bjorn Graah-Hagelback - Wikipedia",
+                    "href": "https://sv.wikipedia.org/wiki/Bj%C3%B6rn_Graah-Hagelb%C3%A4ck"
+                },
+                {
+                    "label": "Riksdagen - 1961 redogorelse",
+                    "href": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/framstallning-redogorelse/till-1961-ars-riksdag-om-vad-i-rikets-styrelse_em40rberb1/html/"
+                },
+                {
+                    "label": "MER Arkitekter - Anna Graah-Hagelback",
+                    "href": "https://www.mer.se/medarbetare/anna-graah-hagelback/"
+                },
+                {
+                    "label": "The Org - Hans Graah-Hagelback",
+                    "href": "https://theorg.com/org/sourcecom/org-chart/hans-graah-hagelback"
                 }
             ]
         }
@@ -464,7 +521,17 @@
         "label": "Tisdag 20 december 1859 · omkring 23:00",
         "titlePrefix": "Spinneriet",
         "titleEmphasis": "brinner",
-        "body": "Bomullsdamm, trägolv, olja och gasljus — i julveckans mörker gick tretton års arbete upp i rök på en enda natt. Det Knud Graah gjorde sedan fångar hela familjen i ett enda drag: han hade försäkrat allt."
+        "body": "Bomullsdamm, trägolv, olja och gasljus — i julveckans mörker gick tretton års arbete upp i rök på en enda natt. Det Knud Graah gjorde sedan fångar hela familjen i ett enda drag: han hade försäkrat allt.",
+        "sources": [
+            {
+                "label": "Lokalhistoriewiki - Knud Graah",
+                "href": "https://lokalhistoriewiki.no/wiki/Knud_Graah_(1817%E2%80%931909)"
+            },
+            {
+                "label": "Norsk biografisk leksikon - Knud Graah",
+                "href": "https://nbl.snl.no/Knud_Graah"
+            }
+        ]
     },
     "bearersSection": {
         "eyebrow": "Namnets bärare",
