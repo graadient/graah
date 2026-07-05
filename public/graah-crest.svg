@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 116">
+  <title>The Graah family crest: a tower over waves, crowned by flame</title>
+  <defs>
+    <clipPath id="shield">
+      <path d="M50 5 L93 13 V50 C93 82 74 101 50 111 C26 101 7 82 7 50 V13 Z" />
+    </clipPath>
+  </defs>
+  <!-- field: grey, for Graa -->
+  <path d="M50 5 L93 13 V50 C93 82 74 101 50 111 C26 101 7 82 7 50 V13 Z" fill="#8b909a" />
+  <g clip-path="url(#shield)">
+    <!-- wavy base: the harbours and the sea -->
+    <path d="M0 78 Q12 72 25 78 T50 78 T75 78 T100 78 V120 H0 Z" fill="#5bc0eb" />
+    <path d="M0 90 Q12 84 25 90 T50 90 T75 90 T100 90" fill="none" stroke="#101014" stroke-width="4" />
+    <path d="M0 78 Q12 72 25 78 T50 78 T75 78 T100 78" fill="none" stroke="#101014" stroke-width="4" />
+    <!-- the flame of 1859 -->
+    <path d="M50 8 C58 16 60 22 55 27 C61 25 62 21 62 18 C67 26 64 33 50 35 C36 33 33 26 38 18 C38 21 39 25 45 27 C40 22 42 16 50 8 Z" fill="#f2573a" stroke="#101014" stroke-width="3.5" stroke-linejoin="round" />
+    <!-- the stolen tower -->
+    <g stroke="#101014" stroke-width="4" stroke-linejoin="round">
+      <path d="M33 38 H41 V44 H46 V38 H54 V44 H59 V38 H67 V86 H33 Z" fill="#f8f4ea" />
+      <path d="M43 86 V70 A7 7 0 0 1 57 70 V86 Z" fill="#f2573a" />
+    </g>
+    <rect x="46.5" y="50" width="7" height="10" fill="#101014" />
+  </g>
+  <!-- shield outline -->
+  <path d="M50 5 L93 13 V50 C93 82 74 101 50 111 C26 101 7 82 7 50 V13 Z" fill="none" stroke="#101014" stroke-width="6" stroke-linejoin="round" />
+</svg>

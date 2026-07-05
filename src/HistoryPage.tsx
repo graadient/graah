@@ -9,7 +9,6 @@ import {
     ArrowDown,
     ArrowUpRight,
     Flame,
-    Mail,
     Radio,
     Snowflake,
 } from 'lucide-react'
@@ -576,22 +575,14 @@ export function HistoryPage() {
                 <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                     <Link className="flex items-center gap-3 text-ink" href="/">
                         <img
-                            alt=""
-                            className="size-9 border-2 border-ink"
-                            src="/graah-mark.svg"
+                            alt="The Graah family crest: a tower over waves, crowned by flame"
+                            className="h-11 w-auto"
+                            src="/graah-crest.svg"
                         />
                         <span className="font-display text-xl font-black tracking-normal">
                             GRAAH
                         </span>
                     </Link>
-                    <Button
-                        className="h-10 rounded-md border-2 border-ink bg-signal px-4 font-bold text-ink shadow-hard"
-                        onPress={contact}
-                        variant="secondary"
-                    >
-                        Contact
-                        <Mail aria-hidden="true" size={17} />
-                    </Button>
                 </nav>
             </header>
 
@@ -601,7 +592,7 @@ export function HistoryPage() {
                         <img
                             alt=""
                             className="h-full w-full object-contain"
-                            src="/graah-mark.svg"
+                            src="/graah-crest.svg"
                         />
                     </div>
                     <div className="mx-auto w-full max-w-7xl">
