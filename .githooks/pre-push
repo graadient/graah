@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+if ! git diff --quiet --ignore-submodules --; then
+    echo "pre-push: working tree has unstaged changes." >&2
+    echo "pre-push: commit, stash, or discard them before pushing so verification tests the pushed code." >&2
+    exit 1
+fi
+
+if ! git diff --cached --quiet --ignore-submodules --; then
+    echo "pre-push: index has staged but uncommitted changes." >&2
+    echo "pre-push: commit or unstage them before pushing so verification tests the pushed code." >&2
+    exit 1
+fi
+
+echo "pre-push: running npm run verify"
+npm run verify
