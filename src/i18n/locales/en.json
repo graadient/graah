@@ -1,7 +1,27 @@
 {
     "meta": {
         "htmlTitle": "The Graah Chronicle — five centuries of comebacks",
-        "defaultTitle": "GRAAH"
+        "defaultTitle": "GRAAH",
+        "description": "The Graah family chronicle — five centuries of kings, fires, fortunes and comebacks, from a stolen Danish castle to the voice of a nation.",
+        "ogTitle": "The Graah Chronicle",
+        "ogDescription": "Five centuries of kings, fires, fortunes and comebacks. One name."
+    },
+    "languageSwitcher": {
+        "legend": "Language",
+        "options": {
+            "da": {
+                "label": "Dansk",
+                "ariaLabel": "Switch to Danish"
+            },
+            "sv": {
+                "label": "Svenska",
+                "ariaLabel": "Switch to Swedish"
+            },
+            "en": {
+                "label": "English",
+                "ariaLabel": "Switch to English"
+            }
+        }
     },
     "nav": {
         "logoAlt": "The Graah coat of arms: three red stars and a blue-gold-red band on a silver shield",

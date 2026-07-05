@@ -1,41 +1,42 @@
+import da from './locales/da.json'
 import en from './locales/en.json'
 import sv from './locales/sv.json'
 import type { HistoryContent } from './types'
 
 export const defaultLocale = 'en'
 
-export const supportedLocales = ['en', 'sv'] as const
+export const supportedLocales = ['da', 'sv', 'en'] as const
 
 export type Locale = (typeof supportedLocales)[number]
 
 export interface LocaleOption {
     locale: Locale
     flag: string
-    label: string
     htmlLang: string
-    ariaLabel: string
 }
 
 const localeStorageKey = 'graah-locale'
 
 export const localeOptions: readonly LocaleOption[] = [
     {
+        locale: 'da',
+        flag: '🇩🇰',
+        htmlLang: 'da',
+    },
+    {
         locale: 'sv',
         flag: '🇸🇪',
-        label: 'Sverige',
         htmlLang: 'sv',
-        ariaLabel: 'Byt till svenska',
     },
     {
         locale: 'en',
         flag: '🇬🇧',
-        label: 'English',
         htmlLang: 'en',
-        ariaLabel: 'Switch to English',
     },
 ]
 
 const historyByLocale: Record<Locale, HistoryContent> = {
+    da: da as HistoryContent,
     en: en as HistoryContent,
     sv: sv as HistoryContent,
 }

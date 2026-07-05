@@ -1,7 +1,27 @@
 {
     "meta": {
         "htmlTitle": "Graah-krönikan — fem århundraden av återkomster",
-        "defaultTitle": "GRAAH"
+        "defaultTitle": "GRAAH",
+        "description": "Graah-familjens krönika — fem århundraden av kungar, bränder, förmögenheter och återkomster, från en stulen dansk borg till rösten för en nation.",
+        "ogTitle": "Graah-krönikan",
+        "ogDescription": "Fem århundraden av kungar, bränder, förmögenheter och återkomster. Ett namn."
+    },
+    "languageSwitcher": {
+        "legend": "Språk",
+        "options": {
+            "da": {
+                "label": "Dansk",
+                "ariaLabel": "Byt till danska"
+            },
+            "sv": {
+                "label": "Svenska",
+                "ariaLabel": "Byt till svenska"
+            },
+            "en": {
+                "label": "English",
+                "ariaLabel": "Byt till engelska"
+            }
+        }
     },
     "nav": {
         "logoAlt": "Graahs vapensköld: tre röda stjärnor och ett blått-guld-rött band på en silverfärgad sköld",

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { Button, Chip, Link } from '@heroui/react'
 
@@ -17,6 +17,7 @@ import {
     Anchor,
     ArrowDown,
     ArrowUpRight,
+    ChevronDown,
     Flame,
     Radio,
     Snowflake,
@@ -40,42 +41,99 @@ function contact(): void {
 }
 
 function LocaleSwitcher({
+    content,
     locale,
     onLocaleChange,
 }: {
+    content: HistoryContent['languageSwitcher']
     locale: Locale
     onLocaleChange: (locale: Locale) => void
 }) {
+    const [open, setOpen] = useState(false)
+    const switcherRef = useRef<HTMLDivElement>(null)
+    const activeOption = getLocaleOption(locale)
+    const activeCopy = content.options[locale]
+    const menuOptions = localeOptions.filter(
+        (option) => option.locale !== locale
+    )
+
+    useEffect(() => {
+        function closeOnOutsideInteraction(event: MouseEvent): void {
+            const target = event.target
+
+            if (
+                target instanceof Node &&
+                !switcherRef.current?.contains(target)
+            ) {
+                setOpen(false)
+            }
+        }
+
+        function closeOnEscape(event: KeyboardEvent): void {
+            if (event.key === 'Escape') {
+                setOpen(false)
+            }
+        }
+
+        globalThis.document.addEventListener(
+            'mousedown',
+            closeOnOutsideInteraction
+        )
+        globalThis.document.addEventListener('keydown', closeOnEscape)
+
+        return () => {
+            globalThis.document.removeEventListener(
+                'mousedown',
+                closeOnOutsideInteraction
+            )
+            globalThis.document.removeEventListener('keydown', closeOnEscape)
+        }
+    }, [])
+
     return (
-        <fieldset className="flex shrink-0 overflow-hidden rounded-md border-2 border-ink bg-paper shadow-hard">
-            <legend className="sr-only">Language</legend>
-            {localeOptions.map((option) => {
-                const selected = option.locale === locale
-                return (
-                    <button
-                        aria-label={option.ariaLabel}
-                        aria-pressed={selected}
-                        className={`flex h-9 items-center gap-1.5 border-l-2 border-ink px-2.5 font-mono text-xs font-bold uppercase tracking-normal first:border-l-0 sm:px-3 ${
-                            selected
-                                ? 'bg-ink text-paper'
-                                : 'bg-paper text-ink hover:bg-mint'
-                        }`}
-                        key={option.locale}
-                        onClick={() => {
-                            onLocaleChange(option.locale)
-                        }}
-                        type="button"
-                    >
-                        <span aria-hidden="true">{option.flag}</span>
-                        <span
-                            className={selected ? 'inline' : 'hidden sm:inline'}
-                        >
-                            {option.label}
-                        </span>
-                    </button>
-                )
-            })}
-        </fieldset>
+        <div className="relative shrink-0" ref={switcherRef}>
+            <button
+                aria-expanded={open}
+                aria-label={content.legend}
+                className="flex h-10 items-center gap-2 rounded-md border-2 border-ink bg-ink px-3 font-mono text-xs font-bold uppercase tracking-normal text-paper shadow-hard hover:bg-mint hover:text-ink"
+                onClick={() => {
+                    setOpen((currentOpen) => !currentOpen)
+                }}
+                type="button"
+            >
+                <span aria-hidden="true">{activeOption.flag}</span>
+                <span>{activeCopy.label}</span>
+                <ChevronDown
+                    aria-hidden="true"
+                    className={`transition-transform ${open ? 'rotate-180' : ''}`}
+                    size={14}
+                    strokeWidth={3}
+                />
+            </button>
+            {open ? (
+                <div className="absolute right-0 top-12 z-50 min-w-full overflow-hidden rounded-md border-2 border-ink bg-paper shadow-hard">
+                    <div className="sr-only">{content.legend}</div>
+                    {menuOptions.map((option) => {
+                        const copy = content.options[option.locale]
+                        return (
+                            <button
+                                aria-label={copy.ariaLabel}
+                                className="flex h-10 w-full items-center gap-2 border-t-2 border-ink px-3 text-left font-mono text-xs font-bold uppercase tracking-normal text-ink first:border-t-0 hover:bg-mint"
+                                key={option.locale}
+                                onClick={() => {
+                                    onLocaleChange(option.locale)
+                                    setOpen(false)
+                                }}
+                                type="button"
+                            >
+                                <span aria-hidden="true">{option.flag}</span>
+                                <span>{copy.label}</span>
+                            </button>
+                        )
+                    })}
+                </div>
+            ) : null}
+        </div>
     )
 }
 
@@ -317,6 +375,11 @@ function NameTicker({ nameForms }: { nameForms: string[] }) {
     )
 }
 
+function updateMetaTag(selector: string, content: string): void {
+    const element = globalThis.document.querySelector<HTMLMetaElement>(selector)
+    element?.setAttribute('content', content)
+}
+
 export function HistoryPage() {
     const [locale, setLocale] = useState<Locale>(resolveInitialLocale)
     const content = getHistoryContent(locale)
@@ -326,14 +389,27 @@ export function HistoryPage() {
         storeLocale(nextLocale)
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const localeOption = getLocaleOption(locale)
         globalThis.document.documentElement.lang = localeOption.htmlLang
         globalThis.document.title = content.meta.htmlTitle
+        updateMetaTag('meta[name="description"]', content.meta.description)
+        updateMetaTag('meta[property="og:title"]', content.meta.ogTitle)
+        updateMetaTag(
+            'meta[property="og:description"]',
+            content.meta.ogDescription
+        )
         return () => {
             globalThis.document.title = content.meta.defaultTitle
         }
-    }, [content.meta.defaultTitle, content.meta.htmlTitle, locale])
+    }, [
+        content.meta.defaultTitle,
+        content.meta.description,
+        content.meta.htmlTitle,
+        content.meta.ogDescription,
+        content.meta.ogTitle,
+        locale,
+    ])
 
     return (
         <div className="min-h-screen bg-paper text-ink">
@@ -350,6 +426,7 @@ export function HistoryPage() {
                         </span>
                     </Link>
                     <LocaleSwitcher
+                        content={content.languageSwitcher}
                         locale={locale}
                         onLocaleChange={handleLocaleChange}
                     />

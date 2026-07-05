@@ -54,6 +54,19 @@ export interface HistoryContent {
     meta: {
         htmlTitle: string
         defaultTitle: string
+        description: string
+        ogTitle: string
+        ogDescription: string
+    }
+    languageSwitcher: {
+        legend: string
+        options: Record<
+            string,
+            {
+                label: string
+                ariaLabel: string
+            }
+        >
     }
     nav: {
         logoAlt: string
