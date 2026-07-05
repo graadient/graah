@@ -272,34 +272,6 @@ const chapters: Chapter[] = [
             },
         ],
     },
-    {
-        id: 'wallet',
-        image: {
-            src: '/history/oresund-bridge.jpg',
-            alt: 'Aerial view of the Öresund bridge running out to sea from the Swedish coast',
-            caption: 'The bridge out of Skåne — cross the border and build',
-        },
-        numeral: 'IX',
-        years: '1982–now',
-        place: 'Lund → the internet',
-        title: 'From Waterwheel to Wallet',
-        kicker: 'The short name returns — and so does the family pattern',
-        mood: { label: 'Full circle', bg: 'bg-paper' },
-        theme: 'mint',
-        paragraphs: [
-            'Hannes Sebastian Graah was born in Lund in 1982, son of Kristian Graah-Hagelbäck. Professionally he dropped the hyphen and took back the short old name — Graah — and then did something the family had done before: he went where the new machinery was.',
-            'He helped scale Spotify through its years of international expansion, led growth at the fintech Revolut, founded the stablecoin protocol Gro, and then founded Zeal, a self-custodial crypto wallet built to make open finance usable in daily life.',
-            'In 1844 Knud Graah bought a waterfall, because whoever controls the power source controls the mill. In the 2020s the scarce resource is custody — direct control of your own money on open networks. Different century, same move: find the new infrastructure of the age, cross whatever border is in the way, and build the tools that make it work for ordinary people.',
-        ],
-        record: [
-            { year: '1982', text: 'Born in Lund; the short name returns' },
-            { year: '2010s', text: 'Growth at Spotify, then Revolut' },
-            {
-                year: 'now',
-                text: 'Founder of Gro and Zeal — self-custody for all',
-            },
-        ],
-    },
 ]
 
 const nameForms = [
@@ -350,8 +322,6 @@ const timeline = [
     { year: '1942', text: 'Lille Graah arrested by the Gestapo' },
     { year: '1945', text: 'Home on the White Buses' },
     { year: '1977', text: 'St. Hallvard Medal for Lille' },
-    { year: '1982', text: 'Hannes Graah born in Lund' },
-    { year: 'now', text: 'Zeal — self-custody for everyone' },
 ]
 
 const themeStyles: Record<Chapter['theme'], string> = {
@@ -607,9 +577,8 @@ export function HistoryPage() {
                         <p className="mt-8 max-w-3xl font-serif text-xl leading-9 sm:text-2xl sm:leading-10">
                             A castle lost to a king. Priests who ran a province,
                             brokers who ran a harbour, a cotton baron who bought
-                            a waterfall, a resistance heroine who became the
-                            voice of a nation — and a wallet for the open
-                            internet.{' '}
+                            a waterfall — and a resistance heroine who became
+                            the voice of a nation.{' '}
                             <em>
                                 Five hundred years of kings, fires, fortunes and
                                 comebacks. Buckle up.
@@ -625,7 +594,7 @@ export function HistoryPage() {
                                 size={26}
                             />
                             <span className="border-2 border-ink bg-mint px-4 py-2 font-display text-2xl font-black text-ink shadow-hard sm:text-3xl">
-                                NOW
+                                1982
                             </span>
                         </div>
                         <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -740,7 +709,7 @@ export function HistoryPage() {
                                 The long arc
                             </p>
                             <h2 className="mt-2 font-display text-4xl font-black uppercase tracking-normal sm:text-6xl">
-                                1462 → now
+                                1462 → 1982
                             </h2>
                         </Reveal>
                     </div>
@@ -776,10 +745,10 @@ export function HistoryPage() {
                             <p className="mt-8 max-w-3xl font-serif text-xl leading-9">
                                 Land, then pulpits. Pulpits, then harbours.
                                 Harbours, then waterfalls and spindles. Banks,
-                                underground newspapers, a radio microphone — and
-                                now open finance. The pattern never changed:
-                                find the new infrastructure of the age, cross
-                                the border, and build.
+                                underground newspapers, a radio microphone. The
+                                pattern never changed: find the new
+                                infrastructure of the age, cross the border, and
+                                build.
                             </p>
                             <div className="mt-10 flex flex-wrap gap-3">
                                 <Button
