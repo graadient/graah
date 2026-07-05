@@ -7,9 +7,9 @@ import { motion, useReducedMotion } from 'framer-motion'
 import {
     Anchor,
     ArrowDown,
-    ArrowLeft,
     ArrowUpRight,
     Flame,
+    Mail,
     Radio,
     Snowflake,
 } from 'lucide-react'
@@ -509,13 +509,14 @@ export function HistoryPage() {
                             GRAAH
                         </span>
                     </Link>
-                    <Link
-                        className="flex items-center gap-2 border-2 border-ink bg-paper px-4 py-2 font-bold text-ink shadow-hard"
-                        href="/"
+                    <Button
+                        className="h-10 rounded-md border-2 border-ink bg-signal px-4 font-bold text-ink shadow-hard"
+                        onPress={contact}
+                        variant="secondary"
                     >
-                        <ArrowLeft aria-hidden="true" size={16} />
-                        Studio
-                    </Link>
+                        Contact
+                        <Mail aria-hidden="true" size={17} />
+                    </Button>
                 </nav>
             </header>
 
@@ -695,12 +696,6 @@ export function HistoryPage() {
                                         size={19}
                                     />
                                 </Button>
-                                <Link
-                                    className="flex h-12 items-center gap-2 rounded-md border-2 border-ink bg-paper px-5 font-bold text-ink shadow-hard"
-                                    href="/"
-                                >
-                                    Back to the studio
-                                </Link>
                             </div>
                             <p className="mt-10 max-w-3xl border-t-2 border-ink pt-5 text-sm font-semibold leading-6">
                                 Told the way the family tells it — the good
