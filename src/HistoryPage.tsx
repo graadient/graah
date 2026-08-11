@@ -435,15 +435,11 @@ export function HistoryPage() {
         <div className="min-h-screen bg-paper text-ink">
             <header className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper/92 backdrop-blur">
                 <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-                    <Link className="flex items-center gap-3 text-ink" href="/">
-                        <img
-                            alt={content.nav.logoAlt}
-                            className="h-11 w-auto"
-                            src="/graah-coa.png"
-                        />
-                        <span className="font-display text-xl font-black tracking-normal">
-                            {content.nav.brand}
-                        </span>
+                    <Link
+                        className="font-display text-xl font-black tracking-normal text-ink"
+                        href="/"
+                    >
+                        {content.nav.brand}
                     </Link>
                     <LocaleSwitcher
                         content={content.languageSwitcher}
