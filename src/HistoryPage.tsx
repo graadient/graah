@@ -459,7 +459,7 @@ export function HistoryPage() {
                         <img
                             alt={content.hero.crestAlt}
                             className="h-full w-full object-contain"
-                            src="/graah-crest.svg"
+                            src="/graah-coa.png"
                         />
                     </div>
                     <div className="mx-auto w-full max-w-7xl">
