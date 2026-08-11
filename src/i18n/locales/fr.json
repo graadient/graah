@@ -250,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Gravure coloriée à la main montrant une église nordique en pierre, en ruine, seule sur une pente herbeuse au bord de la mer",
+                "caption": "Tout ce qui restait de la « colonie perdue » — gravé d’après le propre croquis de Graah"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "La côte est du Groenland",
+            "title": "Le glacier qu’il ne fallait pas nommer",
+            "kicker": "Les ordres d’un roi, une colonie perdue et une seule barque de peau face à tout l’Arctique",
+            "mood": {
+                "label": "Dans la glace",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "Dans les années 1820, l’Europe se racontait encore une histoire de fantômes : les colons nordiques du Groenland médiéval — muets depuis le XVe siècle — seraient toujours vivants derrière le mur de banquise de la côte est, cultivant leurs terres dans un royaume caché qu’aucun navire ne pouvait atteindre. En 1828, le roi Frederik VI décide de vérifier et confie la mission au maître cartographe de la famille : le capitaine de marine Wilhelm August Graah. Une famille qui avait perdu un château était désormais envoyée chercher une civilisation perdue.",
+                "Là où les Britanniques lançaient des navires de guerre contre l’Arctique et regardaient la glace les briser, Graah choisit l’inverse : une barque de peau ouverte, ramée par des femmes groenlandaises, des kayaks en éclaireurs, aucune ligne de retour. L’épreuve s’appelait Puissortoq — « celui qui jaillit » — un glacier qui projette sans prévenir des blocs de glace gros comme des maisons depuis le fond de la mer. Son équipage croyait que prononcer son nom à voix haute pouvait le réveiller. Quand la plupart refusèrent de continuer, Graah renvoya les savants et poursuivit avec une seule barque, deux femmes de Nanortalik et une famille est-groenlandaise. Il fallut trois jours de silence pour se glisser au-delà du glacier.",
+                "Le 8 août 1829, la banquise se referme près d’un rocher nu qu’il nomme île Dannebrog, et Graah rebrousse chemin pour hiverner dans une hutte de terre et de pierre, quatre mètres sur deux. L’hiver de famine qui suit relève de la saga : ils mangent les chiens de traîneau, font bouillir de vieilles peaux de phoque, combattent le scorbut — et Graah, dans l’obscurité, dessine des cartes. Au printemps, il repart dix-huit fois, passe quinze jours prisonnier de la glace dérivante et finit par admettre ce que l’Arctique disait depuis le début. Il atteint Nanortalik un an jour pour jour après son point le plus au nord.",
+                "Il rentre avec 550 kilomètres de côte nouvellement cartographiés, la preuve qu’aucune colonie cachée n’avait jamais cultivé derrière la glace — les ruines du sud-ouest étaient l’établissement perdu —, une chevalerie et un livre que Charles Darwin citerait. Et regardez une carte du Groenland aujourd’hui : les monts Graah, le fjord Graah et le cap Graah sont toujours là. La famille qui avait perdu un château a gagné une chaîne de montagnes."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Quitte Copenhague pour retrouver l’établissement oriental perdu"
+                },
+                {
+                    "year": "1829",
+                    "text": "Trois jours silencieux au-delà de Puissortoq ; point le plus au nord le 8 août"
+                },
+                {
+                    "year": "1830",
+                    "text": "L’hiver de famine terminé — dix-huit nouvelles tentatives, puis la retraite"
+                },
+                {
+                    "year": "1832",
+                    "text": "Publie le récit de l’expédition ; Darwin le citera plus tard"
+                },
+                {
+                    "year": "—",
+                    "text": "Monts Graah, fjord Graah, cap Graah — toujours sur la carte"
+                }
+            ],
+            "aside": {
+                "title": "Cité par Darwin",
+                "text": "Les notes de Graah sur la glace jaillissant du fond marin à Puissortoq se retrouvent dans Le Voyage du Beagle de Darwin. Pas mal pour un homme qui mangeait alors ses chiens de traîneau."
+            },
+            "sources": [
+                {
+                    "label": "Le récit de Graah lui-même (anglais, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Vue coloriée à la main de Christiania et de son fjord, peinte vers 1800",
                 "caption": "Christiania vers 1800 — la ville sur laquelle ils ont parié"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norvège",
             "title": "La traversée",
@@ -306,7 +370,7 @@
                 "alt": "Portrait à l'huile de Knud Graah, cheveux blancs et médailles sur manteau noir",
                 "caption": "Knud Graah — garçon de boutique, roi du coton"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → l'Akerselva",
             "title": "Coton et eau",
@@ -360,7 +424,7 @@
                 "alt": "Les bâtiments de brique de la filature de Knud Graah près de la chute d'eau sur l'Akerselva",
                 "caption": "La filature reconstruite et sa chute d'eau sur l'Akerselva"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Sortir des cendres",
@@ -414,7 +478,7 @@
                 "alt": "Des prisonniers libérés serrés sur le pont d'un ferry entre des bus blancs de la Croix-Rouge, printemps 1945",
                 "caption": "Les Bus blancs les ramènent chez eux, printemps 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "La voix qui a survécu",
@@ -469,7 +533,7 @@
                 "alt": "Gravure de la grande place de Malmö avec promeneurs et hôtel de ville, 1859",
                 "caption": "Stortorget à Malmö, 1859 — la prochaine scène de la famille"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "Le trait d'union qui sauva un nom",
@@ -596,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah traverse vers Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah cartographie la côte est du Groenland"
             },
             {
                 "year": "1833",

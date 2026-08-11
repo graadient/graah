@@ -108,8 +108,9 @@
             },
             "theme": "grid",
             "paragraphs": [
-                "Det begynner med en borg. Søllestedgård på Lolland var jord, våpen og makt. I tre generasjoner tilhørte den Graa-slekten: Anders Graa tok den på 1460-tallet, Gertrud Munk styrte den etter ham, og sønnen Jørgen holdt den som en herre av den gamle skolen.",
-                "I 1530 tok kongen den. Tyve år senere ga Christian III gården til Jørgen Brahe, Tycho Brahes onkel. Brahe-slekten fikk borgen. Graa-slekten fikk veien videre. Navnet og fortellingen ble igjen."
+                "Det begynner med en borg. Søllestedgård på den danske øya Lolland: jord, våpen og makt. I tre generasjoner tilhørte den Graa-slekten — Anders Graa tok den på 1460-tallet, den formidable enken Gertrud Munk styrte den etter ham, og sønnen Jørgen holdt den som en herre av den gamle skolen.",
+                "Så, i 1530, tok kongen den. Tyve år senere overlot Christian III gården til Jørgen Brahe — Tycho Brahes onkel, den mest berømte astronomen som noen gang mistet nesen i en duell. Brahe-slekten fikk borgen. Graa-slekten fikk landeveien.",
+                "Alt som overlevde var navnet, og en signetring med det gamle familievåpenet — som, i perfekt Graah-stil, senere gikk tapt i en brann. Fem århundrer senere forteller familien fortsatt historien. Ingen spør etter Brahes versjon."
             ],
             "record": [
                 {
@@ -249,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Håndkolorert kobberstikk av en ruinert norrøn steinkirke som står alene på en gresskledd skråning ved havet",
+                "caption": "Alt som var igjen av den «tapte kolonien» — gravert etter Graahs egen skisse"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "Grønlands østkyst",
+            "title": "Isbreen man ikke måtte nevne",
+            "kicker": "En konges ordre, en tapt koloni og én åpen skinnbåt mot hele Arktis",
+            "mood": {
+                "label": "Inn i isen",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "På 1820-tallet fortalte Europa fortsatt seg selv en spøkelseshistorie: at de norrøne bosetterne på middelalderens Grønland — tause siden 1400-tallet — levde bak pakkisens mur på øyas østkyst og dyrket jorden i et skjult rike ingen skip kunne nå. I 1828 bestemte kong Frederik VI seg for å finne ut av det, og ga oppdraget til familiens mesterkarttegner: marinekaptein Wilhelm August Graah. En familie som hadde mistet en borg, ble nå sendt for å finne en tapt sivilisasjon.",
+                "Der britene kastet krigsskip mot Arktis og så isen knekke dem, gikk Graah motsatt vei: en åpen skinnbåt rodd av grønlandske kvinner, kajakker som speidet foran, ingen livline hjem. Prøven het Puissortoq — «den som skyter opp» — en isbre som uten forvarsel slynger isblokker på størrelse med hus opp fra havbunnen. Mannskapet trodde at bare det å si navnet høyt kunne vekke den. Da de fleste nektet å fortsette, sendte Graah forskerne hjem og fortsatte med én båt, to kvinner fra Nanortalik og én østgrønlandsk familie. Det tok tre dager i stillhet å gli forbi breen.",
+                "8. august 1829 slo pakkisen igjen ved et nakent skjær han kalte Dannebrogøya, og Graah snudde for å overvintre i en hytte av jord og stein, fire meter ganger to. Hungervinteren som fulgte hører hjemme i en saga: de spiste trekkhundene, kokte gamle selskinn, kjempet mot skjørbuk — og Graah satt i mørket og tegnet kart. Om våren forsøkte han igjen atten ganger, satt femten dager fast på drivis og innrømmet til slutt det Arktis hadde sagt hele tiden. Han nådde Nanortalik ett år på dagen etter sitt nordligste punkt.",
+                "Han kom hjem med 550 kilometer nykartlagt kyst, beviset for at ingen skjult koloni noen gang hadde dyrket jord bak isen — ruinene i sørvest var den tapte bygden — et ridderkors og en bok Charles Darwin senere skulle sitere. Og se på et kart over Grønland i dag: Graahfjellene, Graahfjorden og Kap Graah ligger der fortsatt. Familien som mistet en borg, fikk en fjellkjede i stedet."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Seiler fra København for å finne den tapte Østerbygden"
+                },
+                {
+                    "year": "1829",
+                    "text": "Tre stille dager forbi Puissortoq; lengst nord 8. august"
+                },
+                {
+                    "year": "1830",
+                    "text": "Hungervinteren over — atten nye forsøk, så retretten"
+                },
+                {
+                    "year": "1832",
+                    "text": "Utgir ekspedisjonsberetningen; Darwin siterer den senere"
+                },
+                {
+                    "year": "—",
+                    "text": "Graahfjellene, Graahfjorden, Kap Graah — fortsatt på kartet"
+                }
+            ],
+            "aside": {
+                "title": "Sitert av Darwin",
+                "text": "Graahs notater om is som skjøt opp fra havbunnen ved Puissortoq, kom med i Darwins Reisen med Beagle. Ikke dårlig for en mann som samtidig spiste trekkhundene sine."
+            },
+            "sources": [
+                {
+                    "label": "Graahs egen ekspedisjonsberetning (engelsk, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Håndkolorert utsikt over Christiania og fjorden, malt omkring 1800",
                 "caption": "Christiania, malt omkring 1800 — byen de satset på"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norge",
             "title": "Overfarten",
@@ -305,7 +370,7 @@
                 "alt": "Oljemaleri av Knud Graah, hvithåret med medaljer på svart frakk",
                 "caption": "Knud Graah — butikkgutt, bomullskonge"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → Akerselva",
             "title": "Bomull og vann",
@@ -359,7 +424,7 @@
                 "alt": "Teglbygningene i Knud Graahs spinneri ved fossen på Akerselva",
                 "caption": "Det gjenoppbygde spinneriet og fossen på Akerselva"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Ut av asken",
@@ -413,7 +478,7 @@
                 "alt": "Frigitte fanger tett sammen på et ferjedekk mellom hvite Røde Kors-busser, våren 1945",
                 "caption": "De hvite bussene bringer dem hjem, våren 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "Stemmen som overlevde",
@@ -424,8 +489,9 @@
             },
             "theme": "ink",
             "paragraphs": [
-                "Anne Knudsdatter Graah, kalt Lille, ble født i Kristiania i 1908. Da Tyskland okkuperte Norge, satte hun navn og stilling på spill og arbeidet for den illegale pressen.",
-                "Gestapo arresterte henne i 1942. Hun overlevde Grini, Ravensbrück og hjemreisen med De hvite bussene. Etter krigen ble hun en av NRKs mest kjente radiostemmer."
+                "Anne Knudsdatter Graah — alle kalte henne Lille — ble født i Kristiania i januar 1908, barnebarn av industrimannen. Faren døde samme år som hun ble født. Hun vokste opp som arving til familiens navn og stilling, og da Tyskland okkuperte Norge satte hun alt på spill: hun gikk inn i den illegale pressen, de underjordiske avisene som holdt sannheten i bevegelse.",
+                "I 1942 arresterte Gestapo henne. Grini fangeleir først; deretter deportasjon til Ravensbrück, konsentrasjonsleiren for kvinner. Hun overlevde. Våren 1945 fraktet Svensk Røde Kors' hvite busser henne hjem.",
+                "Så ga hun Norge stemmen sin. Lille Graah begynte i NRK og ble en av landets mest gjenkjennelige radiostemmer, fremfor alt gjennom Ønskekonserten, ønskekonserten som sydde etterkrigslandet sammen igjen, én hilsen om gangen. I 1948 var hun med på å grunnlegge en hjelpeforening for tsjekkoslovakiske flyktninger; i 1977 ga Oslo henne St. Hallvard-medaljen. Fra privilegier, til motstand, til overlevelse, til tjeneste."
             ],
             "record": [
                 {
@@ -467,7 +533,7 @@
                 "alt": "Gravering av Stortorget i Malmö med spasergjengere og rådhuset, 1859",
                 "caption": "Malmös Stortorget, 1859 — familiens neste scene"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "Bindestreken som reddet et navn",
@@ -594,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah krysser til Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah kartlegger Grønlands østkyst"
             },
             {
                 "year": "1833",

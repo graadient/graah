@@ -108,8 +108,9 @@
             },
             "theme": "grid",
             "paragraphs": [
-                "Sagan hefst með kastala. Søllestedgård á Lollandi var land, vopn og vald. Í þrjár kynslóðir tilheyrði hann Graa-ættinni.",
-                "Árið 1530 tók konungurinn hann. Brahe-ættin fékk kastalann; Graa-ættin hélt nafninu, veginum áfram og sögunni."
+                "Sagan hefst með kastala. Søllestedgård á Lollandi: land, vopn og vald. Í þrjár kynslóðir tilheyrði hann Graa-ættinni — Anders Graa tók hann á 1460-árunum, hin öfluga ekkja hans Gertrud Munk stýrði honum eftir hann, og sonur þeirra Jørgen hélt honum eins og herra af gamla skólanum.",
+                "Síðan, árið 1530, tók konungurinn hann. Tuttugu árum síðar afhenti Christian III jörðina Jørgen Brahe — frænda Tycho Brahe, frægasta stjörnufræðingsins sem nokkurn tíma missti nefið í einvígi. Brahe-ættin fékk kastalann. Graa-ættin fékk veginn.",
+                "Það eina sem lifði af var nafnið og innsiglishringur með gamla ættarmerkinu — sem, á fullkominn Graah-hátt, glataðist síðar í eldsvoða. Fimm öldum síðar segir fjölskyldan söguna enn. Enginn spyr um útgáfu Brahe-ættarinnar."
             ],
             "record": [
                 {
@@ -249,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Handlituð koparstunga af rústum norrænnar steinkirkju sem stendur ein á grasi vaxinni brekku við sjóinn",
+                "caption": "Allt sem eftir var af “týndu nýlendunni” — grafið eftir eigin skissu Graahs"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "Austurströnd Grænlands",
+            "title": "Jökullinn sem mátti ekki nefna",
+            "kicker": "Skipun konungs, týnd nýlenda og einn opinn húðbátur gegn öllu heimskautinu",
+            "mood": {
+                "label": "Inn í ísinn",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "Á 1820-árunum sagði Evrópa sér enn draugasögu: að norrænu landnemarnir á miðalda-Grænlandi — hljóðir síðan á 1400-árunum — væru á lífi bak við hafísvegginn á austurströnd eyjarinnar og ræktuðu jörð í huldu ríki sem ekkert skip næði til. Árið 1828 ákvað Frederik VI konungur að komast að sannleikanum og fól verkefnið meistarakortagerðarmanni fjölskyldunnar: sjóliðsforingjanum Wilhelm August Graah. Fjölskylda sem hafði misst kastala var nú send til að finna týnda siðmenningu.",
+                "Þar sem Bretar sendu herskip gegn heimskautinu og horfðu á ísinn brjóta þau valdi Graah hina leiðina: opinn húðbát, róinn af grænlenskum konum, kajakar könnuðu leiðina á undan, engin líflína heim. Þrautin hét Puissortoq — “sá sem skýtur upp” — jökull sem varpar ísblokkum á stærð við hús upp af hafsbotni án viðvörunar. Áhöfnin trúði því að það eitt að segja nafnið upphátt gæti vakið hann. Þegar flestir neituðu að halda áfram sendi Graah vísindamennina heim og hélt áfram með einn bát, tvær konur frá Nanortalik og eina austurgrænlenska fjölskyldu. Það tók þrjá daga í þögn að smjúga fram hjá jöklinum.",
+                "8. ágúst 1829 lokaðist hafísinn við nakinn klett sem hann nefndi Dannebrogsey, og Graah sneri við til að hafa vetursetu í kofa úr mold og steini, fjóra metra á tvo. Hungurveturinn sem fylgdi á heima í sögu: þau átu sleðahundana, suðu gömul selskin, börðust við skyrbjúg — og Graah sat í myrkrinu og teiknaði kort. Um vorið reyndi hann aftur átján sinnum, sat fastur á rekís í fimmtán daga og viðurkenndi loks það sem heimskautið hafði sagt allan tímann. Hann náði Nanortalik upp á dag ári eftir nyrsta punkt sinn.",
+                "Hann kom heim með 550 kílómetra af nýkortlagðri strönd, sönnun þess að engin hulin nýlenda hafði nokkurn tíma ræktað jörð bak við ísinn — rústirnar í suðvestri voru týnda byggðin — riddarakross og bók sem Charles Darwin átti eftir að vitna í. Líttu á kort af Grænlandi í dag: Graah-fjöll, Graahfjörður og Kap Graah eru enn þar. Fjölskyldan sem missti kastala fékk fjallgarð í staðinn."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Siglir frá Kaupmannahöfn til að finna týndu Eystribyggðina"
+                },
+                {
+                    "year": "1829",
+                    "text": "Þrír hljóðir dagar fram hjá Puissortoq; nyrst 8. ágúst"
+                },
+                {
+                    "year": "1830",
+                    "text": "Hungurveturinn liðinn — átján nýjar tilraunir, síðan undanhaldið"
+                },
+                {
+                    "year": "1832",
+                    "text": "Gefur út leiðangursfrásögnina; Darwin vitnar síðar í hana"
+                },
+                {
+                    "year": "—",
+                    "text": "Graah-fjöll, Graahfjörður, Kap Graah — enn á kortinu"
+                }
+            ],
+            "aside": {
+                "title": "Vitnað af Darwin",
+                "text": "Athugasemdir Graahs um ís sem skaust upp af hafsbotninum við Puissortoq rötuðu inn í Ferð Darwins með Beagle. Ekki slæmt fyrir mann sem var á sama tíma að borða sleðahundana sína."
+            },
+            "sources": [
+                {
+                    "label": "Eigin leiðangursfrásögn Graahs (enska, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Handlituð sýn yfir Christiania og fjörðinn, máluð um 1800",
                 "caption": "Christiania um 1800 — borgin sem þau veðjuðu á"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Noregur",
             "title": "Yfirferðin",
@@ -305,7 +370,7 @@
                 "alt": "Olíumálverk af Knud Graah, hvíthærðum með medalíur á svörtum frakka",
                 "caption": "Knud Graah — verslunardrengur, bómullarkóngur"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → Akerselva",
             "title": "Bómull og vatn",
@@ -359,7 +424,7 @@
                 "alt": "Múrsteinsbyggingar spinnverks Knud Graah við fossinn á Akerselvu",
                 "caption": "Endurbyggða spinnverkið og fossinn á Akerselvu"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Úr öskunni",
@@ -413,7 +478,7 @@
                 "alt": "Frelsaðir fangar á ferjuþilfari milli hvítra Rauða kross rútna vorið 1945",
                 "caption": "Hvítu rúturnar flytja þau heim, vorið 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Osló — Grini — Ravensbrück — NRK",
             "title": "Röddin sem lifði af",
@@ -424,8 +489,9 @@
             },
             "theme": "ink",
             "paragraphs": [
-                "Anne Knudsdatter Graah, Lille, lagði nafn og stöðu að veði í ólöglegu pressunni þegar Noregur var hernuminn.",
-                "Hún lifði af Grini, Ravensbrück og heimferðina með Hvítu rútunum. Eftir stríð varð hún ein þekktasta útvarpsrödd NRK."
+                "Anne Knudsdatter Graah — allir kölluðu hana Lille — fæddist í Kristiania í janúar 1908, sonardóttir iðjuhöldsins. Faðir hennar dó sama ár og hún fæddist. Hún ólst upp sem erfingi að nafni og stöðu fjölskyldunnar, og þegar Þýskaland hernam Noreg lagði hún allt að veði: hún fór að vinna fyrir ólöglegu pressuna, neðanjarðarblöðin sem héldu sannleikanum á hreyfingu.",
+                "Árið 1942 handtók Gestapo hana. Fyrst fangabúðirnar Grini; síðan brottflutningur til Ravensbrück, kvennabúðanna. Hún lifði af. Vorið 1945 fluttu Hvítu rúturnar sænska Rauða krossins hana heim.",
+                "Síðan gaf hún Noregi rödd sína. Lille Graah gekk til liðs við NRK og varð ein þekktasta útvarpsrödd landsins, einkum í gegnum Ønskekonserten, óskalagaþáttinn sem saumaði eftirstríðslandið saman á ný, eina kveðju í einu. Árið 1948 tók hún þátt í að stofna hjálparfélag fyrir tékkóslóvakíska flóttamenn; árið 1977 veitti Ósló henni St. Hallvard-orðuna. Frá forréttindum, til andspyrnu, til lífsafkomu, til þjónustu."
             ],
             "record": [
                 {
@@ -467,7 +533,7 @@
                 "alt": "Koparstunga af Stortorget í Malmö með gangandi fólki og ráðhúsinu, 1859",
                 "caption": "Stortorget í Malmö, 1859 — næsta svið fjölskyldunnar"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stokkhólmur",
             "title": "Bandstrikið sem bjargaði nafni",
@@ -594,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah fer til Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah kortleggur austurströnd Grænlands"
             },
             {
                 "year": "1833",

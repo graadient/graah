@@ -108,8 +108,9 @@
             },
             "theme": "grid",
             "paragraphs": [
-                "Tarina alkaa linnasta. Søllestedgård Lollandin saarella oli maata, aseita ja valtaa. Kolmen sukupolven ajan se kuului Graa-suvulle: Anders Graa otti sen 1460-luvulla, Gertrud Munk hallitsi sitä hänen jälkeensä ja poika Jørgen piti siitä kiinni vanhan ajan herran tavoin.",
-                "Vuonna 1530 kuningas otti sen. Christian III luovutti tilan myöhemmin Jørgen Brahelle, Tycho Brahen sedälle. Brahet saivat linnan; Graa-suvulle jäi tie eteenpäin, nimi ja kertomus."
+                "Tarina alkaa linnasta. Søllestedgård Lollandin saarella: maata, vaakunoita ja valtaa. Kolmen sukupolven ajan se kuului Graa-suvulle — Anders Graa otti sen 1460-luvulla, hänen määrätietoinen leskensä Gertrud Munk hallitsi sitä hänen jälkeensä, ja heidän poikansa Jørgen piti siitä kiinni vanhan ajan herran tavoin.",
+                "Sitten, vuonna 1530, kuningas otti sen. Kaksikymmentä vuotta myöhemmin Christian III luovutti tilan Jørgen Brahelle — Tycho Brahen sedälle, kuuluisimmalle tähtitieteilijälle, joka on koskaan menettänyt nenänsä kaksintaistelussa. Brahet saivat linnan. Graat saivat tien.",
+                "Jäljelle jäi vain nimi ja sinettisormus, jossa oli suvun vanha vaakuna — joka Graahille sopivasti katosi myöhemmin tulipalossa. Viisi vuosisataa myöhemmin suku kertoo tarinaa yhä. Brahejen versiota ei kukaan kysy."
             ],
             "record": [
                 {
@@ -249,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Käsin väritetty kaiverrus raunioituneesta keskiaikaisesta pohjoismaisesta kivikirkosta yksin ruohorinteellä meren äärellä",
+                "caption": "Kaikki mitä “kadonneesta siirtokunnasta” oli jäljellä — kaiverrettu Graahin oman luonnoksen mukaan"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "Grönlannin itärannikko",
+            "title": "Jäätikkö jonka nimeä ei saanut sanoa",
+            "kicker": "Kuninkaan käsky, kadonnut siirtokunta ja yksi avoin nahkavene koko Arktista vastaan",
+            "mood": {
+                "label": "Kohti jäätä",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "1820-luvulla Eurooppa kertoi yhä itselleen aavetarinaa: keskiaikaisen Grönlannin norjalaiset asuttajat — joista ei ollut kuulunut 1400-luvun jälkeen — eläisivät vielä itärannikon ahtojäämuurin takana ja viljelisivät maata piilotetussa valtakunnassa, johon mikään laiva ei päässyt. Vuonna 1828 kuningas Frederik VI päätti selvittää asian ja antoi tehtävän suvun mestarikartantekijälle, merikapteeni Wilhelm August Graahille. Suku, joka oli menettänyt linnan, lähetettiin nyt etsimään kadonnutta sivilisaatiota.",
+                "Siinä missä britit työnsivät sotalaivoja Arktikselle ja katsoivat jään murskaavan ne, Graah valitsi toisen tien: avoin nahkavene, jota grönlantilaiset naiset soutivat, kajakit tiedustelemassa edellä, ei pelastusköyttä kotiin. Koetinkivi oli Puissortoq — “se joka syöksyy ylös” — jäätikkö, joka sinkoaa talon kokoisia jäälohkareita merenpohjasta ilman varoitusta. Hänen miehistönsä uskoi, että nimen lausuminen ääneen voisi herättää sen. Kun useimmat kieltäytyivät jatkamasta, Graah lähetti tiedemiehet kotiin ja jatkoi yhdellä veneellä, kahden Nanortalikista tulleen naisen ja yhden itägrönlantilaisen perheen kanssa. Jäätikön ohittamiseen tarvittiin kolme hiljaista päivää.",
+                "8. elokuuta 1829 ahtojää sulkeutui paljaan kallion luona, jonka hän nimesi Dannebrogin saareksi, ja Graah kääntyi takaisin talvehtiakseen maa- ja kivimajassa, neljä metriä kertaa kaksi. Seurannut nälkätalvi kuuluu saagaan: he söivät rekikoirat, keittivät vanhoja hylkeennahkoja, taistelivat keripukkia vastaan — ja Graah istui pimeässä piirtämässä karttoja. Keväällä hän yritti uudelleen kahdeksantoista kertaa, oli viisitoista päivää ajelehtivalla jäällä ja myönsi lopulta sen, mitä Arktis oli sanonut koko ajan. Hän saavutti Nanortalikin tasan vuoden kuluttua pohjoisimmasta pisteestään.",
+                "Hän palasi kotiin mukanaan 550 kilometriä uutta kartoitettua rannikkoa, todiste siitä, ettei mikään piilotettu siirtokunta ollut koskaan viljellyt maata jään takana — lounaisosan rauniot olivat kadonnut asutus — ritarimerkki ja kirja, jota Charles Darwin myöhemmin siteerasi. Katso Grönlannin karttaa tänään: Graahvuoret, Graahvuono ja Kap Graah ovat yhä siellä. Suku, joka menetti linnan, sai tilalle vuorijonon."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Purjehtii Kööpenhaminasta etsimään kadonnutta Itäistä asutusta"
+                },
+                {
+                    "year": "1829",
+                    "text": "Kolme hiljaista päivää Puissortoqin ohi; pohjoisin piste 8. elokuuta"
+                },
+                {
+                    "year": "1830",
+                    "text": "Nälkätalvi ohi — kahdeksantoista uutta yritystä, sitten perääntyminen"
+                },
+                {
+                    "year": "1832",
+                    "text": "Julkaisee retkikertomuksen; Darwin siteeraa sitä myöhemmin"
+                },
+                {
+                    "year": "—",
+                    "text": "Graahvuoret, Graahvuono, Kap Graah — yhä kartalla"
+                }
+            ],
+            "aside": {
+                "title": "Darwinin siteeraama",
+                "text": "Graahin muistiinpanot Puissortoqin merenpohjasta ylös syöksyvästä jäästä päätyivät Darwinin Beaglen matkalle. Ei huonosti mieheltä, joka samaan aikaan söi rekikoiriaan."
+            },
+            "sources": [
+                {
+                    "label": "Graahin oma retkikertomus (englanniksi, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Käsin väritetty näkymä Christianiaan ja vuonolle noin vuodelta 1800",
                 "caption": "Christiania noin vuonna 1800 — kaupunki, johon he panostivat"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norja",
             "title": "Ylitys",
@@ -305,7 +370,7 @@
                 "alt": "Öljymuotokuva Knud Graahista, valkohiuksisena ja mitalit mustassa takissa",
                 "caption": "Knud Graah — kauppa-apulainen, puuvillakuningas"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → Akerselva",
             "title": "Puuvilla ja vesi",
@@ -359,7 +424,7 @@
                 "alt": "Knud Graahin kehräämön tiilirakennukset Akerselvan kosken vieressä",
                 "caption": "Uudelleen rakennettu kehräämö ja sen koski Akerselvalla"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Tuhkasta",
@@ -413,7 +478,7 @@
                 "alt": "Vapautetut vangit tungoksessa lautan kannella valkoisten Punaisen Ristin bussien välissä keväällä 1945",
                 "caption": "Valkoiset bussit tuovat heidät kotiin, keväällä 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "Ääni joka selvisi",
@@ -424,8 +489,9 @@
             },
             "theme": "ink",
             "paragraphs": [
-                "Anne Knudsdatter Graah, Lille, syntyi Kristianiaan vuonna 1908. Kun Saksa miehitti Norjan, hän riskeerasi nimensä ja asemansa työskennellessään laittomalle lehdistölle.",
-                "Gestapo pidätti hänet 1942. Hän selvisi Grinistä, Ravensbrückistä ja palasi kotiin Valkoisilla busseilla. Sodan jälkeen hänestä tuli yksi NRK:n tunnetuimmista radioäänistä."
+                "Anne Knudsdatter Graah — kaikki kutsuivat häntä Lilleksi — syntyi Kristianiassa tammikuussa 1908, teollisuusmiehen pojantyttärenä. Hänen isänsä kuoli samana vuonna kuin hän syntyi. Hän kasvoi suvun nimen ja aseman perijänä, ja kun Saksa miehitti Norjan, hän pani kaiken vaaraan: hän ryhtyi työskentelemään laittomalle lehdistölle, maanalaisille sanomalehdille, jotka pitivät totuuden liikkeessä.",
+                "Vuonna 1942 Gestapo pidätti hänet. Ensin Grinin vankileiri, sitten karkotus Ravensbrückiin, naisten keskitysleirille. Hän selvisi. Keväällä 1945 Ruotsin Punaisen Ristin Valkoiset bussit toivat hänet kotiin.",
+                "Sitten hän antoi Norjalle äänensä. Lille Graah liittyi NRK:hon ja hänestä tuli yksi maan tunnistettavimmista radioäänistä, ennen kaikkea Ønskekonserten-ohjelman kautta, joka kokosi sodanjälkeistä maata yhteen tervehdys kerrallaan. Vuonna 1948 hän oli perustamassa tšekkoslovakialaisten pakolaisten avustusyhdistystä; vuonna 1977 Oslo myönsi hänelle St. Hallvard -mitalin. Etuoikeuksista vastarintaan, selviytymiseen ja palveluun."
             ],
             "record": [
                 {
@@ -467,7 +533,7 @@
                 "alt": "Kaiverrus Malmön Stortorgetilta, kulkijoita ja raatihuone vuonna 1859",
                 "caption": "Malmön Stortorget, 1859 — suvun seuraava näyttämö"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Tukholma",
             "title": "Yhdysmerkki joka pelasti nimen",
@@ -594,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah siirtyy Christianiaan"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah kartoittaa Grönlannin itärannikkoa"
             },
             {
                 "year": "1833",

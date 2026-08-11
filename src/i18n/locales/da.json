@@ -250,13 +250,77 @@
             ]
         },
         {
+            "id": "ice",
+            "image": {
+                "src": "/history/hvalsey-graah.jpg",
+                "alt": "Håndkoloreret stik af en forfalden nordisk stenkirke, der står alene på en græsklædt skråning ved havet",
+                "caption": "Alt, hvad der var tilbage af den “forsvundne koloni” — stukket efter Graahs egen skitse"
+            },
+            "numeral": "IV",
+            "years": "1828–1831",
+            "place": "Grønlands østkyst",
+            "title": "Gletsjeren man ikke måtte nævne",
+            "kicker": "En konges ordre, en forsvunden koloni og én åben skindbåd mod hele Arktis",
+            "mood": {
+                "label": "Ind i isen",
+                "bg": "bg-blue"
+            },
+            "theme": "ink",
+            "paragraphs": [
+                "I 1820’erne fortalte Europa stadig sig selv en spøgelseshistorie: at de nordboer, der havde bosat sig på middelalderens Grønland — tavse siden 1400-tallet — levede bag pakisens mur på øens østkyst og dyrkede jorden i et skjult rige, som intet skib kunne nå. I 1828 besluttede kong Frederik VI at finde ud af det og gav opgaven til familiens mesterkorttegner: søkaptajn Wilhelm August Graah. En familie, der havde mistet en borg, blev nu sendt ud for at finde en forsvunden civilisation.",
+                "Hvor briterne kastede krigsskibe mod Arktis og så isen knække dem, gik Graah den modsatte vej: en åben skindbåd roet af grønlandske kvinder, kajakker spejdende foran, ingen livline hjem. Prøven hed Puissortoq — “den der skyder op” — en gletsjer, der uden varsel slynger isblokke på størrelse med huse op fra havbunden. Hans mandskab troede, at bare det at sige navnet højt kunne vække den. Da de fleste nægtede at fortsætte, sendte Graah forskerne hjem og fortsatte med en enkelt båd, to kvinder fra Nanortalik og én østgrønlandsk familie. Det tog tre dages tavshed at snige sig forbi gletsjeren.",
+                "Den 8. august 1829 slog pakisen sammen ved en nøgen klippe, som han kaldte Dannebrog Ø, og Graah vendte om for at overvintre i en hytte af jord og sten, fire meter gange to. Sultvinteren, der fulgte, hører hjemme i en saga: de spiste slædehundene, kogte gamle sælskind, kæmpede mod skørbug — og Graah sad i mørket og tegnede kort. Om foråret forsøgte han igen atten gange, sad fast på drivis i femten dage og indrømmede til sidst, hvad Arktis hele tiden havde sagt. Han nåede Nanortalik præcis et år efter sit nordligste punkt.",
+                "Han kom hjem med 550 kilometer nykortlagt kyst, beviset for at ingen skjult koloni nogensinde havde dyrket jord bag isen — ruinerne i sydvest var den forsvundne bygd — et ridderkors og en bog, som Charles Darwin senere citerede. Og se på et kort over Grønland i dag: Graah-bjergene, Graah Fjord og Kap Graah ligger der stadig. Familien, der mistede en borg, fik en bjergkæde i stedet."
+            ],
+            "record": [
+                {
+                    "year": "1828",
+                    "text": "Sejler fra København for at finde den forsvundne Østerbygd"
+                },
+                {
+                    "year": "1829",
+                    "text": "Tre tavse dage forbi Puissortoq; længst mod nord den 8. august"
+                },
+                {
+                    "year": "1830",
+                    "text": "Sultvinteren forbi — atten nye forsøg, så tilbagetoget"
+                },
+                {
+                    "year": "1832",
+                    "text": "Udgiver ekspeditionsberetningen; Darwin citerer den senere"
+                },
+                {
+                    "year": "—",
+                    "text": "Graah-bjergene, Graah Fjord, Kap Graah — stadig på kortet"
+                }
+            ],
+            "aside": {
+                "title": "Citeret af Darwin",
+                "text": "Graahs notater om is, der skød op fra havbunden ved Puissortoq, kom med i Darwins Rejsen med Beagle. Ikke dårligt for en mand, der samtidig spiste sine slædehunde."
+            },
+            "sources": [
+                {
+                    "label": "Graahs egen rejseberetning (engelsk, 1837)",
+                    "href": "https://archive.org/details/graah-1837-narrative-of-an-expedition-to-the-east-c"
+                },
+                {
+                    "label": "Encyclopedia Arctica — W.A. Graah",
+                    "href": "https://collections.dartmouth.edu/arctica-beta/html/EA15-31.html"
+                },
+                {
+                    "label": "Wikipedia — Wilhelm August Graah",
+                    "href": "https://en.wikipedia.org/wiki/Wilhelm_August_Graah"
+                }
+            ]
+        },
+        {
             "id": "crossing",
             "image": {
                 "src": "/history/christiania-1800.jpg",
                 "alt": "Håndkoloreret udsigt over Christiania og fjorden, malet omkring 1800",
                 "caption": "Christiania, malet omkring 1800 — byen de satsede på"
             },
-            "numeral": "IV",
+            "numeral": "V",
             "years": "1826–1859",
             "place": "Christiania, Norge",
             "title": "Overfarten",
@@ -306,7 +370,7 @@
                 "alt": "Oliemaleri af Knud Graah, hvidhåret med medaljer på sort frakke",
                 "caption": "Knud Graah — butiksdreng, bomuldskonge"
             },
-            "numeral": "V",
+            "numeral": "VI",
             "years": "1844–1859",
             "place": "Manchester → Akerselva",
             "title": "Bomuld og vand",
@@ -360,7 +424,7 @@
                 "alt": "Teglbygningerne i Knud Graahs spinderi ved vandfaldet på Akerselva",
                 "caption": "Det genopbyggede spinderi og vandfaldet på Akerselva"
             },
-            "numeral": "VI",
+            "numeral": "VII",
             "years": "1860–1909",
             "place": "Kristiania",
             "title": "Ud af asken",
@@ -414,7 +478,7 @@
                 "alt": "Befriede fanger står tæt på et færgedæk mellem hvide Røde Kors-busser, foråret 1945",
                 "caption": "De hvide busser bringer dem hjem, foråret 1945"
             },
-            "numeral": "VII",
+            "numeral": "VIII",
             "years": "1908–2001",
             "place": "Oslo — Grini — Ravensbrück — NRK",
             "title": "Stemmen der overlevede",
@@ -469,7 +533,7 @@
                 "alt": "Gravering af Stortorget i Malmö med spadserende mennesker og rådhuset, 1859",
                 "caption": "Malmös Stortorget, 1859 — familiens næste scene"
             },
-            "numeral": "VIII",
+            "numeral": "IX",
             "years": "1892–1982",
             "place": "Malmö · Helsingborg · Stockholm",
             "title": "Bindestregen der reddede et navn",
@@ -596,6 +660,10 @@
             {
                 "year": "1826",
                 "text": "David Graah krydser til Christiania"
+            },
+            {
+                "year": "1829",
+                "text": "W.A. Graah kortlægger Grønlands østkyst"
             },
             {
                 "year": "1833",
