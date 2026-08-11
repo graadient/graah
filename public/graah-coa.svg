@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 192">
+  <title>The Graah coat of arms: three red stars and a blue-gold-red band on a silver shield</title>
+  <defs>
+    <clipPath id="field">
+      <path d="M12 26 Q12 14 24 14 L132 14 Q144 14 144 26 V92 C144 138 122 166 78 180 C34 166 12 138 12 92 Z" />
+    </clipPath>
+  </defs>
+  <path d="M12 26 Q12 14 24 14 L132 14 Q144 14 144 26 V92 C144 138 122 166 78 180 C34 166 12 138 12 92 Z" fill="#f2f3f5" />
+  <g clip-path="url(#field)" stroke="#1a1a1e" stroke-width="2" stroke-linejoin="round">
+    <path d="M4 96 Q78 56 152 96 L152 109 Q78 69 4 109 Z" fill="#2b4fd8" />
+    <path d="M4 109 Q78 69 152 109 L152 122 Q78 82 4 122 Z" fill="#f5c518" />
+    <path d="M4 122 Q78 82 152 122 L152 135 Q78 95 4 135 Z" fill="#d11a2a" />
+  </g>
+  <g fill="#d11a2a" stroke="#1a1a1e" stroke-width="2" stroke-linejoin="round">
+    <polygon points="47.0,28.0 52.3,38.9 64.3,38.0 57.5,48.0 64.3,58.0 52.3,57.1 47.0,68.0 41.8,57.1 29.7,58.0 36.5,48.0 29.7,38.0 41.7,38.9" />
+    <polygon points="109.0,28.0 114.3,38.9 126.3,38.0 119.5,48.0 126.3,58.0 114.3,57.1 109.0,68.0 103.8,57.1 91.7,58.0 98.5,48.0 91.7,38.0 103.8,38.9" />
+    <polygon points="78.0,128.0 83.3,138.9 95.3,138.0 88.5,148.0 95.3,158.0 83.3,157.1 78.0,168.0 72.8,157.1 60.7,158.0 67.5,148.0 60.7,138.0 72.8,138.9" />
+  </g>
+  <path d="M12 26 Q12 14 24 14 L132 14 Q144 14 144 26 V92 C144 138 122 166 78 180 C34 166 12 138 12 92 Z" fill="none" stroke="#1a1a1e" stroke-width="4" />
+</svg>
