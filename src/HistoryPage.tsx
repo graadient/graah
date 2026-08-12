@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-import { Button, Chip, Link } from '@heroui/react'
+import { Chip, Link } from '@heroui/react'
 
 import type { Locale } from './i18n'
 import {
@@ -35,10 +35,6 @@ const bearerIcons = {
     radio: Radio,
     snowflake: Snowflake,
 } satisfies Record<Bearer['icon'], typeof Radio>
-
-function contact(): void {
-    globalThis.location.href = 'mailto:hello@graah.se'
-}
 
 function LocaleSwitcher({
     content,
@@ -433,8 +429,8 @@ export function HistoryPage() {
 
     return (
         <div className="min-h-screen bg-paper text-ink">
-            <header className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper/92 backdrop-blur">
-                <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <header className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper/92 px-4 backdrop-blur sm:px-6 lg:px-8">
+                <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between">
                     <Link
                         className="font-display text-xl font-black tracking-normal text-ink"
                         href="/"
@@ -654,19 +650,6 @@ export function HistoryPage() {
                             <p className="mt-8 max-w-3xl font-serif text-xl leading-9">
                                 {content.closing.body}
                             </p>
-                            <div className="mt-10 flex flex-wrap gap-3">
-                                <Button
-                                    className="h-12 rounded-md border-2 border-ink bg-ink px-5 font-bold text-paper shadow-hard"
-                                    onPress={contact}
-                                    variant="primary"
-                                >
-                                    {content.closing.cta}
-                                    <ArrowUpRight
-                                        aria-hidden="true"
-                                        size={19}
-                                    />
-                                </Button>
-                            </div>
                             <p className="mt-10 max-w-3xl border-t-2 border-ink pt-5 text-sm font-semibold leading-6">
                                 {content.closing.note}
                             </p>

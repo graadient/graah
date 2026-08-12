@@ -109,7 +109,6 @@ export interface HistoryContent {
         eyebrow: string
         title: string
         body: string
-        cta: string
         note: string
     }
 }
