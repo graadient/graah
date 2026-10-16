@@ -101,6 +101,7 @@
             "!.pnp.*",
             "!.expo",
             "!dist",
+            "!public/theme-lab",
             "!web-build",
             "!test-results",
             "!playwright-report",
