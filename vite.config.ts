@@ -10,6 +10,7 @@ export default defineConfig({
             input: {
                 main: 'index.html',
                 notfound: '404.html',
+                themelab: 'theme-lab/index.html',
             },
         },
     },

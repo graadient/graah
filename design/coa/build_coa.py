@@ -10,6 +10,7 @@ Writes:
   public/graah-coa.svg       full-colour arms, shaded like the original
   public/graah-coa-flat.svg  same geometry, flat tinctures (print, embroidery)
   public/graah-coa-mono.svg  same geometry, one colour (currentColor) for seals, signets, etching
+  public/graah-coa-brass.svg one colour in brass, for the seal
 """
 
 from __future__ import annotations
@@ -173,6 +174,7 @@ if __name__ == "__main__":
         "graah-coa.svg": doc(shaded()),
         "graah-coa-flat.svg": doc(flat()),
         "graah-coa-mono.svg": doc(mono()),
+        "graah-coa-brass.svg": doc(mono("b", "#C9A15E", border=4)),
     }
     for name, svg in out.items():
         (ROOT / "public" / name).write_text(svg, encoding="utf-8")

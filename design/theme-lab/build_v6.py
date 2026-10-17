@@ -23,7 +23,7 @@ from build_v2 import DEFS  # noqa: E402
 from build_v5 import arms, seal  # noqa: E402
 
 ROOT = HERE.parents[1]
-OUT = ROOT / "public" / "theme-lab" / "index.html"
+OUT = ROOT / "public" / "theme-lab" / "v6" / "index.html"
 
 
 def preview() -> str:
@@ -83,7 +83,7 @@ def page() -> str:
 <body>
 {DEFS}
 <section class="intro"><div class="wrap">
-  <div class="eyebrow">Graah · Visual identity · v0.6 · <a href="/theme-lab/v5/">v0.5 (traced arms)</a> · <a href="/theme-lab/v4/">v0.4</a> · <a href="/theme-lab/v3/">v0.3</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
+  <div class="eyebrow">Graah · Visual identity · v0.6 · <a href="/theme-lab/">latest →</a> · <a href="/theme-lab/v5/">v0.5 (traced arms)</a> · <a href="/theme-lab/v4/">v0.4</a> · <a href="/theme-lab/v3/">v0.3</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
   <h1>The Graah system,<br/><em>chosen.</em></h1>
   <p class="lede">Everything you've picked, put together. One choice is still open, the body font. Flip between the two in the site preview below.</p>
   <div class="decided">
