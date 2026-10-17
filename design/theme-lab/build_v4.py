@@ -22,7 +22,7 @@ from build_v2 import DEFS, RUNES  # noqa: E402
 from build_v3 import ARC, CSS as V3CSS, glow_runes, sky  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "public" / "theme-lab" / "index.html"
+OUT = ROOT / "public" / "theme-lab" / "v4" / "index.html"
 
 _uid = itertools.count(1)
 SEAL_TEXT = "ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬ ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬"
@@ -626,7 +626,7 @@ def page() -> str:
 {DEFS}
 <section class="intro">
   <div class="wrap">
-    <div class="eyebrow">Graah · Visual identity · v0.4 · <a href="/theme-lab/v3/">v0.3 (Night Smithy)</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
+    <div class="eyebrow">Graah · Visual identity · v0.4 · <a href="/theme-lab/">latest →</a> · <a href="/theme-lab/v3/">v0.3 (Night Smithy)</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
     <h1>The shield,<br/><em>modernised.</em></h1>
     <p class="lede">The shield stays the primary mark, and the horns go back to being an optional crest. Below are fourteen modern, simplified versions of the arms. Each one keeps the two things that make it ours: the rainbow arc and the three stars. Everything else could change: the shield's outline, the line weight, the colour, the material and the angle of the arc.</p>
     {anatomy}
