@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate public/theme-lab/index.html — Graah identity exploration, iteration 3.
+"""Generate public/theme-lab/v3/index.html — Graah identity exploration, iteration 3.
 
 Converges on: the Night Smithy hero, the Forge II seal, glowing runes, and Forum.
 
@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from build_v2 import DEFS, RUNES, cord  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "public" / "theme-lab" / "index.html"
+OUT = ROOT / "public" / "theme-lab" / "v3" / "index.html"
 EN = json.loads((ROOT / "src" / "i18n" / "locales" / "en.json").read_text(encoding="utf-8"))
 
 SEAL_TEXT = "ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬ ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬"
@@ -605,7 +605,7 @@ def page() -> str:
 {DEFS}
 <section class="intro">
   <div class="wrap">
-    <div class="eyebrow">Graah · Visual identity · v0.3 · <a href="/theme-lab/v2/">v0.2 (five permutations)</a> · <a href="/theme-lab/v1/">v0.1 (four directions)</a></div>
+    <div class="eyebrow">Graah · Visual identity · v0.3 · <a href="/theme-lab/">latest →</a> · <a href="/theme-lab/v2/">v0.2 (five permutations)</a> · <a href="/theme-lab/v1/">v0.1 (four directions)</a></div>
     <h1>Night Smithy,<br/><em>sealed.</em></h1>
     <p class="lede">This round narrows to one direction. The base is the Night Smithy starting page. Added on top: the Forge II seal, the glowing runes and Forum as the display font. Below are four hero layouts, four seal finishes, rune and type studies, and a preview of what the real site would look like with your chronicle in it.</p>
     {kept()}
