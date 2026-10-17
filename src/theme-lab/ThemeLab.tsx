@@ -179,12 +179,14 @@ function Seal({ size = 160 }: { size?: number }) {
             >
                 <textPath href="#lab-seal-ring">{SEAL_TEXT}</textPath>
             </text>
+            {/* Optically centred: a shield's weight sits in its wide top, so it is
+                placed 2.5 units below its geometric centre. */}
             <image
                 height="79"
                 href="/graah-coa-brass.svg"
                 width="64"
                 x="68"
-                y="61"
+                y="63.5"
             />
         </svg>
     )
