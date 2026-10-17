@@ -18,7 +18,7 @@ from build_v2 import DEFS  # noqa: E402
 from build_v3 import ARC, CSS as V3CSS, HORNS, SEAL_TEXT, glow_runes, sky  # noqa: E402
 
 ROOT = HERE.parents[1]
-OUT = ROOT / "public" / "theme-lab" / "index.html"
+OUT = ROOT / "public" / "theme-lab" / "v5" / "index.html"
 BRASS, WAX, RIM = "#C9A15E", "#6E1414", "#9A2A2A"
 
 
@@ -111,7 +111,7 @@ def page() -> str:
 <body>
 {DEFS}
 <section class="intro"><div class="wrap">
-  <div class="eyebrow">Graah · Visual identity · v0.5 · <a href="/theme-lab/v4/">v0.4 (shield variants)</a> · <a href="/theme-lab/v3/">v0.3</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
+  <div class="eyebrow">Graah · Visual identity · v0.5 · <a href="/theme-lab/">latest →</a> · <a href="/theme-lab/v4/">v0.4 (shield variants)</a> · <a href="/theme-lab/v3/">v0.3</a> · <a href="/theme-lab/v2/">v0.2</a> · <a href="/theme-lab/v1/">v0.1</a></div>
   <h1>The original arms,<br/><em>kept.</em></h1>
   <p class="lede">No redesign. The arms are traced from the family's original image: same shield outline, same star size and placement, same rainbow curve and the same light-from-the-upper-left shading. Measured from the pixels, not drawn by eye. They now sit in the Night Smithy start page and the Forge II seal.</p>
 </div></section>
@@ -121,7 +121,7 @@ def page() -> str:
   <p class="lede">The old SVG on the site was a loose redraw: black outlines, small stars, rounded corners. The new one matches the original to within a pixel, and scales to any size.</p>
   <div class="compare">
     <div><img src="/graah-coa.png" alt="The original Graah arms" style="image-rendering:auto"/><h4>Original · PNG, 156×192</h4><p>The family's image. Blurry when enlarged.</p></div>
-    <div><img src="/theme-lab/v5-old-coa.svg" alt="The previous SVG redraw"/><h4>Old SVG redraw</h4><p>What the site used until now.</p></div>
+    <div><img src="/theme-lab/v5/old-coa.svg" alt="The previous SVG redraw"/><h4>Old SVG redraw</h4><p>What the site used until now.</p></div>
     <div>{arms(300, "shaded", "", "t1")}<h4>New trace · SVG</h4><p>Same shapes and shading as the original, now sharp at any size.</p></div>
   </div>
 </div></section>
