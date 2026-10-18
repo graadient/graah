@@ -8,20 +8,22 @@ Forum capitals and glowing runes.
 - **Plain HTML example:** [`examples/plain.html`](examples/plain.html) (open it straight from disk)
 - **Rules:** [`GUIDELINES.md`](GUIDELINES.md). **For AI coding agents:** [`AGENTS.md`](AGENTS.md)
 
-Version 1.0.0. Dark only, by design.
+Version 1.0.1. Dark only, by design.
 
 ## Get it
 
-Copy this directory into your project (recommended; then it is yours to pin and update):
+The theme lives at `theme/` in the [graah repo](https://github.com/graadient/graah/tree/main/theme).
+Copy it into your project as `graah-theme/` (recommended; then it is yours to pin and update).
+The examples below assume that folder name:
 
 ```sh
-npx degit graadient/graah/graah-theme graah-theme
+npx degit graadient/graah/theme graah-theme
 ```
 
 Or link straight from the CDN, pinned to a release tag (no copy):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/graadient/graah@theme-v1.0.0/graah-theme/graah.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/graadient/graah@theme-v1.0.1/theme/graah.css" />
 ```
 
 ## Use it
@@ -126,8 +128,8 @@ Full list with roles: [`tokens/tokens.css`](tokens/tokens.css).
 Edit the values in `build.py` (colours, fonts, radii, effects), then:
 
 ```sh
-python3 graah-theme/build.py          # pip install fonttools first to re-outline the seal's runes
-npx biome format --write graah-theme  # in the graah repo
+python3 theme/build.py                # pip install fonttools first to re-outline the seal's runes
+npx biome format --write theme        # in the graah repo
 ```
 
 `heroui.css`, `graah.css` and `css/*.css` are hand-written and read the tokens, so they follow.

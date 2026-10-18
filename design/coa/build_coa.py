@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Writes the site's copies of the arms (public/graah-coa*.svg).
 
-The geometry lives in graah-theme/tools/arms.py. The theme's own copies are
-written by graah-theme/build.py.
+The geometry lives in theme/tools/arms.py. The theme's own copies are
+written by theme/build.py.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "graah-theme" / "tools"))
+sys.path.insert(0, str(ROOT / "theme" / "tools"))
 from arms import *  # noqa: E402,F403
 from arms import TIP_Y, doc, flat, mono, shaded  # noqa: E402
 

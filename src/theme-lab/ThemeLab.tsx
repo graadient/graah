@@ -20,7 +20,7 @@ import {
     Tooltip,
 } from '@heroui/react'
 
-import { Arms, NightHero, Runes, Seal } from '../../graah-theme/react'
+import { Arms, NightHero, Runes, Seal } from '../../theme/react'
 import type { Locale } from '../i18n'
 import { getHistoryContent, localeOptions } from '../i18n'
 
@@ -125,7 +125,7 @@ export function ThemeLab() {
                 </div>
             </div>
 
-            {/* Hero: Graah brand art from graah-theme/react + HeroUI controls */}
+            {/* Hero: Graah brand art from theme/react + HeroUI controls */}
             <NightHero
                 top={
                     <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-5">
@@ -228,8 +228,8 @@ export function ThemeLab() {
                 <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">
                     Every control on this page is a stock HeroUI v3 component.
                     The look comes from the{' '}
-                    <Link href="https://github.com/graadient/graah/tree/main/graah-theme">
-                        graah-theme
+                    <Link href="https://github.com/graadient/graah/tree/main/theme">
+                        theme
                     </Link>{' '}
                     directory, which any product can use. Use the switch at the
                     top to see the same components in HeroUI's default dark
@@ -513,8 +513,8 @@ export function ThemeLab() {
                         <Runes className="mt-2 block text-sm" />
                     </div>
                     <p className="m-0 ml-auto max-w-sm text-sm text-muted">
-                        The theme lives in graah-theme/ in the graah repo.
-                        graah.se itself still uses the template theme.
+                        The theme lives in theme/ in the graah repo. graah.se
+                        itself still uses the template theme.
                     </p>
                 </div>
             </footer>

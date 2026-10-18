@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 @import "@heroui/styles";
-@import "../../graah-theme/heroui.css";
+@import "../../theme/heroui.css";
 
 /* Page chrome for the lab. The custom Graah pieces (sky, arc, runes, seal)
    are brand art and stay the same in both themes; only HeroUI components switch. */

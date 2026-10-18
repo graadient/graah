@@ -9,11 +9,12 @@ See it working: https://www.graah.se/theme-lab/ and `examples/plain.html`.
 If this directory isn't in the project yet, copy it in. Don't link to it from another repo:
 
 ```sh
-npx degit graadient/graah/graah-theme graah-theme
+npx degit graadient/graah/theme graah-theme
 ```
 
+The theme's source is `theme/` in the graah repo; in your project it lives in `graah-theme/`.
 Don't edit files inside `graah-theme/`. Put product-specific CSS in the product's own files.
-If the theme itself must change, change `build.py` upstream in the graah repo.
+If the theme itself must change, change `theme/build.py` upstream in the graah repo.
 
 ## 2. Wire it up for the stack
 
