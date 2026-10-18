@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+  The social card (og:image) for graah.se: 1200×630.
+  Render: design/social/render.sh  →  public/og-card.png
+  Everything important sits in the centre 630×630, because WhatsApp and some
+  others crop the preview to a square.
+-->
+<html lang="en" data-theme="graah">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../../theme/graah.css" />
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  .card { position: relative; width: 1200px; height: 630px; overflow: hidden; isolation: isolate;
+    background: radial-gradient(110% 95% at 50% 125%, #1B2C52 0%, #0F1830 40%, #0B0F1A 72%); }
+  #sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+  .arc { position: absolute; left: -4%; bottom: 0; width: 108%; height: 190px; z-index: -1; }
+  .copy { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: 70px; text-align: center; }
+  .arms { height: 196px; filter: drop-shadow(0 0 30px rgba(62, 98, 184, .38)); }
+  h1 { margin: 26px 0 0; font-size: 112px; }
+  .graah-runes { margin-top: 18px; font-size: 26px; animation: none; }
+  .tag { margin: 26px 0 0; font: 400 19px/1 var(--graah-font-mono); letter-spacing: .22em; text-transform: uppercase; color: var(--graah-mist); }
+  .tag b { font-weight: 400; color: var(--graah-brass); }
+  .url { position: absolute; right: 44px; top: 34px; font: 400 15px/1 var(--graah-font-mono); letter-spacing: .2em; color: var(--graah-smoke); text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="card">
+  <svg id="sky" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+  <img class="arc" src="../../theme/assets/aurora-arc.svg" alt="" />
+  <div class="copy">
+    <img class="arms" src="../../theme/assets/arms/graah-arms.svg" alt="" />
+    <h1 class="graah-wordmark">GRAAH</h1>
+    <span class="graah-runes">ᚴᚱᛅᛅᚼ</span>
+    <p class="tag">The family chronicle · <b>1462 → today</b></p>
+  </div>
+  <div class="url">graah.se</div>
+</div>
+<script>
+  // Same seeded sky as graah.se; denser near the top, clear around the text.
+  let state = 7
+  const random = () => { state = (state * 16807) % 2147483647; return state / 2147483647 }
+  const sky = document.getElementById('sky')
+  for (let i = 0; i < 230; i++) {
+    const x = random() * 1200, y = random() * 500, r = random() * 1.2 + 0.25, o = random() * 0.6 + 0.2
+    // fade stars near the centre so the text stays clean, without a visible hole
+    const d = Math.hypot((x - 600) / 300, (y - 280) / 230)
+    if (d < 1 && random() > d * d) continue
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+    c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', r)
+    c.setAttribute('opacity', o); c.setAttribute('fill', '#DCE6EE'); sky.append(c)
+  }
+</script>
+</body>
+</html>
