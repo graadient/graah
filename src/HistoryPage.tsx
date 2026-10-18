@@ -1,8 +1,9 @@
-import type { ReactNode } from 'react'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
-import { Chip, Link } from '@heroui/react'
+import { Button, Card, Chip, Dropdown, Label } from '@heroui/react'
 
+import { Arms, NightHero, Runes, Seal } from '../theme/react'
 import type { Locale } from './i18n'
 import {
     getHistoryContent,
@@ -11,7 +12,7 @@ import {
     resolveInitialLocale,
     storeLocale,
 } from './i18n'
-import type { Bearer, Chapter, HistoryContent, Mood } from './i18n/types'
+import type { Bearer, Chapter, HistoryContent } from './i18n/types'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
     Anchor,
@@ -23,125 +24,30 @@ import {
     Snowflake,
 } from 'lucide-react'
 
-const themeStyles: Record<Chapter['theme'], string> = {
-    paper: 'bg-paper text-ink',
-    grid: 'bg-paper bg-grid text-ink',
-    blue: 'bg-blue text-ink',
-    ink: 'bg-ink text-paper',
-    mint: 'bg-mint text-ink',
-}
-
 const bearerIcons = {
     radio: Radio,
     snowflake: Snowflake,
 } satisfies Record<Bearer['icon'], typeof Radio>
 
-function LocaleSwitcher({
-    content,
-    locale,
-    onLocaleChange,
-}: {
-    content: HistoryContent['languageSwitcher']
-    locale: Locale
-    onLocaleChange: (locale: Locale) => void
-}) {
-    const [open, setOpen] = useState(false)
-    const switcherRef = useRef<HTMLDivElement>(null)
-    const activeOption = getLocaleOption(locale)
-    const activeCopy = content.options[locale]
-    const menuOptions = localeOptions.filter(
-        (option) => option.locale !== locale
-    )
-
-    useEffect(() => {
-        function closeOnOutsideInteraction(event: MouseEvent): void {
-            const target = event.target
-
-            if (
-                target instanceof Node &&
-                !switcherRef.current?.contains(target)
-            ) {
-                setOpen(false)
-            }
+/** Chapter grounds: the night, a shade deeper, the abyss for the darkest
+ * chapters, and the sky for the sea crossing. */
+function chapterGround(chapter: Chapter, index: number): string {
+    switch (chapter.theme) {
+        case 'ink': {
+            return 'bg-graah-abyss'
         }
-
-        function closeOnEscape(event: KeyboardEvent): void {
-            if (event.key === 'Escape') {
-                setOpen(false)
-            }
+        case 'blue': {
+            return 'graah-sky'
         }
-
-        globalThis.document.addEventListener(
-            'mousedown',
-            closeOnOutsideInteraction
-        )
-        globalThis.document.addEventListener('keydown', closeOnEscape)
-
-        return () => {
-            globalThis.document.removeEventListener(
-                'mousedown',
-                closeOnOutsideInteraction
-            )
-            globalThis.document.removeEventListener('keydown', closeOnEscape)
+        case 'grid':
+        case 'mint':
+        case 'paper': {
+            return index % 2 === 0 ? 'bg-graah-night' : 'bg-[#0D1220]'
         }
-    }, [])
-
-    return (
-        <div className="relative shrink-0" ref={switcherRef}>
-            <button
-                aria-expanded={open}
-                aria-label={content.legend}
-                className="flex h-10 items-center gap-2 rounded-md border-2 border-ink bg-ink px-3 font-mono text-xs font-bold uppercase tracking-normal text-paper shadow-hard hover:bg-mint hover:text-ink"
-                onClick={() => {
-                    setOpen((currentOpen) => !currentOpen)
-                }}
-                type="button"
-            >
-                <span aria-hidden="true">{activeOption.flag}</span>
-                <span>{activeCopy.label}</span>
-                <ChevronDown
-                    aria-hidden="true"
-                    className={`transition-transform ${open ? 'rotate-180' : ''}`}
-                    size={14}
-                    strokeWidth={3}
-                />
-            </button>
-            {open ? (
-                <div className="absolute right-0 top-12 z-50 min-w-full overflow-hidden rounded-md border-2 border-ink bg-paper shadow-hard">
-                    <div className="sr-only">{content.legend}</div>
-                    {menuOptions.map((option) => {
-                        const copy = content.options[option.locale]
-                        return (
-                            <button
-                                aria-label={copy.ariaLabel}
-                                className="flex h-10 w-full items-center gap-2 border-t-2 border-ink px-3 text-left font-mono text-xs font-bold uppercase tracking-normal text-ink first:border-t-0 hover:bg-mint"
-                                key={option.locale}
-                                onClick={() => {
-                                    onLocaleChange(option.locale)
-                                    setOpen(false)
-                                }}
-                                type="button"
-                            >
-                                <span aria-hidden="true">{option.flag}</span>
-                                <span>{copy.label}</span>
-                            </button>
-                        )
-                    })}
-                </div>
-            ) : null}
-        </div>
-    )
-}
-
-function MoodChip({ mood }: { mood: Mood }) {
-    return (
-        <span
-            className={`inline-flex items-center gap-2 border-2 border-ink ${mood.bg} px-3 py-1 font-mono text-xs font-bold uppercase tracking-normal text-ink`}
-        >
-            <span className="size-2 rounded-full bg-ink" />
-            {mood.label}
-        </span>
-    )
+        default: {
+            return 'bg-graah-night'
+        }
+    }
 }
 
 function Reveal({
@@ -155,13 +61,120 @@ function Reveal({
     return (
         <motion.div
             className={className}
-            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-            transition={{ duration: 0.55, ease: 'easeOut' }}
+            initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+            transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}
             viewport={{ once: true, margin: '-80px' }}
             whileInView={{ opacity: 1, y: 0 }}
         >
             {children}
         </motion.div>
+    )
+}
+
+function LocaleSwitcher({
+    content,
+    locale,
+    onLocaleChange,
+}: {
+    content: HistoryContent['languageSwitcher']
+    locale: Locale
+    onLocaleChange: (locale: Locale) => void
+}) {
+    const active = getLocaleOption(locale)
+
+    return (
+        <Dropdown>
+            <Dropdown.Trigger>
+                <Button
+                    aria-label={content.legend}
+                    size="sm"
+                    variant="tertiary"
+                >
+                    <span aria-hidden="true">{active.flag}</span>
+                    {content.options[locale].label}
+                    <ChevronDown aria-hidden="true" size={14} />
+                </Button>
+            </Dropdown.Trigger>
+            <Dropdown.Popover placement="bottom end">
+                <Dropdown.Menu
+                    aria-label={content.legend}
+                    onAction={(key) => {
+                        const next = localeOptions.find(
+                            (option) => option.locale === key
+                        )
+                        if (next) {
+                            onLocaleChange(next.locale)
+                        }
+                    }}
+                    selectedKeys={[locale]}
+                    selectionMode="single"
+                >
+                    {localeOptions.map((option) => {
+                        const copy = content.options[option.locale]
+                        return (
+                            <Dropdown.Item
+                                aria-label={copy.ariaLabel}
+                                id={option.locale}
+                                key={option.locale}
+                                textValue={copy.label}
+                            >
+                                <Label>
+                                    <span aria-hidden="true">
+                                        {option.flag}
+                                    </span>{' '}
+                                    {copy.label}
+                                </Label>
+                                <Dropdown.ItemIndicator />
+                            </Dropdown.Item>
+                        )
+                    })}
+                </Dropdown.Menu>
+            </Dropdown.Popover>
+        </Dropdown>
+    )
+}
+
+function ExternalLink({ href, label }: { href: string; label: string }) {
+    return (
+        <a
+            className="graah-link inline-flex items-center gap-1 text-sm"
+            href={href}
+            rel="noreferrer"
+            target="_blank"
+        >
+            {label}
+            <ArrowUpRight aria-hidden="true" className="shrink-0" size={14} />
+        </a>
+    )
+}
+
+function Figure({
+    src,
+    alt,
+    caption,
+    className = '',
+}: {
+    src: string
+    alt: string
+    caption?: string
+    className?: string
+}) {
+    return (
+        <figure
+            className={`m-0 border border-graah-line bg-graah-fjord p-2.5 ${className}`}
+        >
+            <img
+                alt={alt}
+                className="block h-auto w-full saturate-[.8]"
+                loading="lazy"
+                src={src}
+            />
+            {caption ? (
+                <figcaption className="px-0.5 pt-2.5 font-graah-mono text-[11px] leading-relaxed tracking-[0.04em] text-graah-smoke">
+                    {caption}
+                </figcaption>
+            ) : null}
+        </figure>
     )
 }
 
@@ -176,122 +189,89 @@ function ChapterSection({
     recordHeading: string
     sourcesHeading: string
 }) {
-    const dark = chapter.theme === 'ink'
-    const borderColor = dark ? 'border-paper' : 'border-ink'
-    const shadow = dark ? 'shadow-paper' : 'shadow-hard'
-    const tilt = index % 2 === 0 ? 'rotate-1' : '-rotate-1'
-
     return (
         <section
-            className={`border-b-2 border-ink px-4 py-16 sm:px-6 sm:py-24 lg:px-8 ${themeStyles[chapter.theme]}`}
+            className={`scroll-mt-16 border-t border-graah-line px-5 py-20 sm:px-8 sm:py-28 ${chapterGround(chapter, index)}`}
             id={chapter.id}
         >
-            <div className="mx-auto w-full max-w-7xl">
+            <div className="mx-auto w-full max-w-6xl">
                 <Reveal>
-                    <div className="flex flex-wrap items-end justify-between gap-6">
-                        <div className="flex items-end gap-5">
-                            <span
-                                aria-hidden="true"
-                                className="font-serif text-7xl font-medium leading-none text-coral sm:text-9xl"
-                            >
-                                {chapter.numeral}
-                            </span>
-                            <div className="pb-1">
-                                <p className="font-mono text-sm font-bold uppercase tracking-normal">
-                                    {chapter.years} · {chapter.place}
-                                </p>
-                                <h2 className="mt-2 font-display text-4xl font-black uppercase leading-none tracking-normal sm:text-6xl lg:text-7xl">
-                                    {chapter.title}
-                                </h2>
-                            </div>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-8">
+                        <span
+                            aria-hidden="true"
+                            className="graah-numeral text-[clamp(84px,14vw,160px)]"
+                        >
+                            {chapter.numeral}
+                        </span>
+                        <div className="sm:pb-2">
+                            <p className="graah-label m-0">
+                                {chapter.years} · {chapter.place}
+                            </p>
+                            <h2 className="mt-3 mb-0 text-[clamp(38px,5.6vw,68px)] leading-[1.02] break-words hyphens-auto">
+                                {chapter.title}
+                            </h2>
                         </div>
-                        <MoodChip mood={chapter.mood} />
                     </div>
+                    <Chip className="mt-6" color="accent" variant="soft">
+                        <span
+                            aria-hidden="true"
+                            className="mr-1 inline-block size-1.5 rounded-full bg-graah-red"
+                        />
+                        {chapter.mood.label}
+                    </Chip>
                 </Reveal>
 
-                <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,0.62fr)_minmax(280px,0.38fr)]">
+                <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,1fr)]">
                     <Reveal>
-                        <p
-                            className={`font-serif text-2xl italic leading-9 sm:text-3xl sm:leading-11 ${
-                                dark ? 'text-blue' : ''
-                            }`}
-                        >
+                        <p className="m-0 font-graah-display text-[clamp(23px,2.4vw,30px)] leading-[1.35] text-graah-rime">
                             {chapter.kicker}.
                         </p>
-                        <div className="mt-6 space-y-5 font-serif text-lg leading-8 sm:text-xl sm:leading-9">
+                        <div className="mt-8 space-y-5 text-[17px] font-light leading-[1.75] text-[#C5D0DC]">
                             {chapter.paragraphs.map((paragraph) => (
                                 <p key={paragraph.slice(0, 24)}>{paragraph}</p>
                             ))}
                         </div>
                     </Reveal>
-                    <Reveal>
+
+                    <Reveal className="flex flex-col gap-6">
                         {chapter.image ? (
-                            <figure
-                                className={`mb-6 border-2 ${borderColor} ${shadow} ${
-                                    dark ? 'bg-ink' : 'bg-paper'
-                                } p-2 ${tilt}`}
-                            >
-                                <img
-                                    alt={chapter.image.alt}
-                                    className={`w-full border-2 ${borderColor} object-cover`}
-                                    loading="lazy"
-                                    src={chapter.image.src}
-                                />
-                                {chapter.image.caption ? (
-                                    <figcaption className="px-1 pb-1 pt-2 font-mono text-xs font-bold uppercase tracking-normal">
-                                        {chapter.image.caption}
-                                    </figcaption>
-                                ) : null}
-                            </figure>
+                            <Figure
+                                alt={chapter.image.alt}
+                                caption={chapter.image.caption}
+                                src={chapter.image.src}
+                            />
                         ) : null}
-                        <div
-                            className={`border-2 ${borderColor} ${shadow} ${
-                                dark ? 'bg-ink' : 'bg-paper'
-                            } p-5`}
-                        >
-                            <p className="font-mono text-xs font-bold uppercase tracking-normal">
-                                {recordHeading}
-                            </p>
-                            <ul className="mt-4 space-y-3">
+
+                        <div className="graah-panel p-5 sm:p-6">
+                            <p className="graah-label m-0">{recordHeading}</p>
+                            <ul className="m-0 mt-4 list-none p-0">
                                 {chapter.record.map((entry) => (
                                     <li
-                                        className={`flex gap-4 border-t-2 ${borderColor} pt-3 first:border-t-0 first:pt-0`}
+                                        className="grid grid-cols-[60px_1fr] gap-3 border-t border-graah-line py-2.5 text-[14px] leading-[1.5] font-light text-[#C5D0DC]"
                                         key={entry.year + entry.text}
                                     >
-                                        <span className="w-14 shrink-0 font-display text-lg font-black">
+                                        <span className="font-graah-mono text-[13px] text-graah-brass">
                                             {entry.year}
                                         </span>
-                                        <span className="text-sm font-semibold leading-6">
-                                            {entry.text}
-                                        </span>
+                                        <span>{entry.text}</span>
                                     </li>
                                 ))}
                             </ul>
                             {chapter.sources?.length ? (
-                                <div
-                                    className={`mt-4 border-t-2 ${borderColor} pt-3`}
-                                >
-                                    <p className="font-mono text-xs font-bold uppercase tracking-normal">
+                                <div className="mt-3 border-t border-graah-line pt-4">
+                                    <p className="graah-label m-0">
                                         {sourcesHeading}
                                     </p>
-                                    <ul className="mt-2 space-y-1.5">
+                                    <ul className="m-0 mt-3 list-none space-y-2 p-0">
                                         {chapter.sources.map((source) => (
                                             <li key={source.label}>
                                                 {source.href ? (
-                                                    <a
-                                                        className="inline-flex items-center gap-1 text-sm font-bold underline decoration-2 underline-offset-2 hover:decoration-coral"
+                                                    <ExternalLink
                                                         href={source.href}
-                                                        rel="noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        {source.label}
-                                                        <ArrowUpRight
-                                                            aria-hidden="true"
-                                                            size={14}
-                                                        />
-                                                    </a>
+                                                        label={source.label}
+                                                    />
                                                 ) : (
-                                                    <span className="text-sm font-semibold">
+                                                    <span className="text-sm text-graah-mist">
                                                         {source.label}
                                                     </span>
                                                 )}
@@ -301,18 +281,17 @@ function ChapterSection({
                                 </div>
                             ) : null}
                         </div>
+
                         {chapter.aside ? (
-                            <div
-                                className={`mt-4 border-2 ${borderColor} ${shadow} bg-signal p-5 text-ink`}
-                            >
-                                <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-normal">
+                            <aside className="rounded-graah-surface border border-graah-brass/45 bg-graah-brass/[0.06] p-5 sm:p-6">
+                                <p className="graah-label m-0 flex items-center gap-2">
                                     <Anchor aria-hidden="true" size={14} />
                                     {chapter.aside.title}
                                 </p>
-                                <p className="mt-2 font-serif text-base leading-7">
+                                <p className="mt-3 mb-0 text-[15px] leading-[1.65] text-graah-glacier">
                                     {chapter.aside.text}
                                 </p>
-                            </div>
+                            </aside>
                         ) : null}
                     </Reveal>
                 </div>
@@ -321,50 +300,50 @@ function ChapterSection({
     )
 }
 
+const emberGround: CSSProperties = {
+    background:
+        'radial-gradient(90% 75% at 50% 115%, rgba(200, 40, 58, 0.38) 0%, rgba(110, 20, 20, 0.22) 38%, transparent 70%), #080B14',
+}
+
 function FireInterstitial({
     content,
 }: {
     content: HistoryContent['fireInterstitial']
 }) {
     return (
-        <section className="border-b-2 border-ink bg-ink bg-stripes-coral px-4 py-20 text-paper sm:px-6 sm:py-28 lg:px-8">
-            <div className="mx-auto w-full max-w-7xl">
-                <Reveal>
-                    <p className="flex items-center gap-3 font-mono text-sm font-bold uppercase tracking-normal text-coral">
-                        <Flame aria-hidden="true" size={18} />
-                        {content.label}
-                    </p>
-                    <p className="mt-6 max-w-6xl font-display text-[clamp(3rem,10vw,8.5rem)] font-black uppercase leading-[0.85] tracking-normal">
-                        {content.titlePrefix}{' '}
-                        <span className="text-coral">
-                            {content.titleEmphasis}
-                        </span>
-                    </p>
-                    <p className="mt-8 max-w-2xl font-serif text-xl italic leading-9 text-paper/85 sm:text-2xl sm:leading-10">
-                        {content.body}
-                    </p>
-                    {content.sources?.length ? (
-                        <ul className="mt-6 flex flex-wrap gap-3">
-                            {content.sources.map((source) => (
+        <section
+            className="border-t border-graah-line px-5 py-24 sm:px-8 sm:py-32"
+            style={emberGround}
+        >
+            <Reveal className="mx-auto w-full max-w-6xl">
+                <p className="m-0 flex items-center gap-3 font-graah-mono text-xs uppercase tracking-[0.2em] text-[#F0B44C]">
+                    <Flame aria-hidden="true" size={16} />
+                    {content.label}
+                </p>
+                <p className="mt-8 mb-0 font-graah-display text-[clamp(52px,10vw,136px)] leading-[0.95] text-graah-rime">
+                    {content.titlePrefix}{' '}
+                    <span className="text-[#E5484D] [text-shadow:0_0_28px_rgba(240,110,60,0.55),0_0_6px_rgba(240,180,76,0.35)]">
+                        {content.titleEmphasis}
+                    </span>
+                </p>
+                <p className="mt-10 mb-0 max-w-2xl text-lg leading-[1.7] font-light text-[#C5D0DC] sm:text-xl">
+                    {content.body}
+                </p>
+                {content.sources?.length ? (
+                    <ul className="m-0 mt-8 flex list-none flex-wrap gap-x-6 gap-y-3 p-0">
+                        {content.sources.map((source) =>
+                            source.href ? (
                                 <li key={source.label}>
-                                    <a
-                                        className="inline-flex items-center gap-1 border-2 border-paper bg-paper px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-normal text-ink hover:bg-mint"
+                                    <ExternalLink
                                         href={source.href}
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        {source.label}
-                                        <ArrowUpRight
-                                            aria-hidden="true"
-                                            size={14}
-                                        />
-                                    </a>
+                                        label={source.label}
+                                    />
                                 </li>
-                            ))}
-                        </ul>
-                    ) : null}
-                </Reveal>
-            </div>
+                            ) : null
+                        )}
+                    </ul>
+                ) : null}
+            </Reveal>
         </section>
     )
 }
@@ -374,16 +353,16 @@ function NameTicker({ nameForms }: { nameForms: string[] }) {
     return (
         <div
             aria-hidden="true"
-            className="ticker border-b-2 border-ink bg-signal py-4"
+            className="ticker border-t border-graah-line bg-graah-abyss py-5"
         >
             <div className="ticker-track">
                 {sequence.map((form, index) => (
                     <span
-                        className="flex items-center gap-6 pr-6 font-display text-2xl font-black tracking-normal text-ink sm:text-3xl"
+                        className="flex items-center gap-8 pr-8 font-graah-display text-[28px] tracking-[0.12em] text-graah-mist sm:text-[34px]"
                         key={`${form}-${index}`}
                     >
                         {form}
-                        <span className="text-coral">→</span>
+                        <span className="text-[18px] text-graah-brass">→</span>
                     </span>
                 ))}
             </div>
@@ -399,6 +378,7 @@ function updateMetaTag(selector: string, content: string): void {
 export function HistoryPage() {
     const [locale, setLocale] = useState<Locale>(resolveInitialLocale)
     const content = getHistoryContent(locale)
+    const firstChapter = content.chapters[0]
 
     function handleLocaleChange(nextLocale: Locale): void {
         setLocale(nextLocale)
@@ -428,15 +408,19 @@ export function HistoryPage() {
     ])
 
     return (
-        <div className="min-h-screen bg-paper text-ink">
-            <header className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper/92 px-4 backdrop-blur sm:px-6 lg:px-8">
-                <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between">
-                    <Link
-                        className="font-display text-xl font-black tracking-normal text-ink"
-                        href="/"
+        <div className="min-h-screen bg-graah-night text-graah-glacier">
+            <header className="fixed inset-x-0 top-0 z-40 border-b border-graah-line bg-graah-night/80 px-5 backdrop-blur-md sm:px-8">
+                <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4">
+                    <a
+                        className="graah-signature flex items-center gap-3 text-[13px] no-underline"
+                        href="#top"
                     >
+                        <Arms
+                            className="h-7 w-auto"
+                            title={content.nav.logoAlt}
+                        />
                         {content.nav.brand}
-                    </Link>
+                    </a>
                     <LocaleSwitcher
                         content={content.languageSwitcher}
                         locale={locale}
@@ -445,62 +429,63 @@ export function HistoryPage() {
                 </nav>
             </header>
 
-            <main>
-                <section className="relative isolate overflow-hidden border-b-2 border-ink bg-grid px-4 pb-14 pt-28 sm:px-6 sm:pb-20 sm:pt-36 lg:px-8">
-                    <div className="absolute right-[-16rem] top-24 -z-10 h-[70vmin] max-h-[680px] min-h-[320px] w-[70vmin] min-w-[320px] max-w-[680px] -rotate-6 opacity-15 sm:right-[-6rem]">
-                        <img
-                            alt={content.hero.crestAlt}
-                            className="h-full w-full object-contain"
-                            src="/graah-coa.svg"
+            <main id="top">
+                <NightHero style={{ minHeight: 'max(100svh, 640px)' }}>
+                    <div className="flex flex-col items-center pt-20">
+                        <Arms
+                            className="mb-7 h-auto w-[clamp(88px,12vw,150px)] drop-shadow-[0_0_28px_rgba(62,98,184,0.3)]"
+                            title={content.nav.logoAlt}
                         />
-                    </div>
-                    <div className="mx-auto w-full max-w-7xl">
-                        <Chip className="mb-6 rounded-md border-2 border-ink bg-coral px-3 font-bold text-ink">
-                            {content.hero.chip}
-                        </Chip>
-                        <h1 className="max-w-6xl font-display text-[clamp(3.2rem,11vw,9.5rem)] font-black uppercase leading-[0.82] tracking-normal">
-                            {content.hero.titleLines.map((line) => (
-                                <span key={line}>
-                                    {line}
-                                    <br />
-                                </span>
-                            ))}
+                        <h1 className="graah-wordmark mt-0 mb-0 text-[clamp(60px,15vw,176px)]">
+                            {content.nav.brand}
                         </h1>
-                        <p className="mt-8 max-w-3xl font-serif text-xl leading-9 sm:text-2xl sm:leading-10">
-                            {content.hero.intro}{' '}
-                            <em>{content.hero.introEmphasis}</em>
+                        <Runes className="mt-4 inline-block text-[clamp(16px,2vw,26px)]" />
+                        <p className="mt-8 mb-0 font-graah-mono text-[clamp(11px,1.1vw,14px)] uppercase tracking-[0.2em] text-graah-mist">
+                            {content.hero.titleLines.join(' ')}
                         </p>
-                        <div className="mt-10 flex flex-wrap items-center gap-3">
-                            <span className="border-2 border-ink bg-ink px-4 py-2 font-display text-2xl font-black text-paper shadow-hard sm:text-3xl">
-                                {content.hero.startYear}
-                            </span>
-                            <ArrowDown
-                                aria-hidden="true"
-                                className="-rotate-90"
-                                size={26}
-                            />
-                            <span className="border-2 border-ink bg-mint px-4 py-2 font-display text-2xl font-black text-ink shadow-hard sm:text-3xl">
-                                {content.hero.endYear}
-                            </span>
-                        </div>
-                        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                            {content.chronicleStats.map(
-                                ({ bg, label, value }) => (
-                                    <div
-                                        className={`border-2 border-ink ${bg} p-4 text-ink shadow-hard`}
-                                        key={label}
-                                    >
-                                        <p className="font-display text-4xl font-black tracking-normal">
-                                            {value}
-                                        </p>
-                                        <p className="mt-2 text-sm font-bold uppercase leading-6">
-                                            {label}
-                                        </p>
-                                    </div>
-                                )
-                            )}
-                        </div>
+                        <p className="mt-3 mb-0 font-graah-mono text-[clamp(11px,1.1vw,14px)] uppercase tracking-[0.2em] text-graah-brass">
+                            {content.hero.startYear} → {content.hero.endYear}
+                        </p>
+                        <a
+                            className="mt-12 inline-flex items-center gap-2 font-graah-mono text-[11px] uppercase tracking-[0.2em] text-graah-smoke no-underline hover:text-graah-glow"
+                            href="#intro"
+                        >
+                            {firstChapter.numeral} · {firstChapter.title}
+                            <ArrowDown aria-hidden="true" size={14} />
+                        </a>
                     </div>
+                </NightHero>
+
+                <section
+                    className="scroll-mt-16 px-5 py-24 text-center sm:px-8 sm:py-32"
+                    id="intro"
+                >
+                    <Reveal className="mx-auto max-w-3xl">
+                        <p className="graah-label m-0">{content.hero.chip}</p>
+                        <p className="mt-8 mb-0 font-graah-display text-[clamp(26px,3.2vw,40px)] leading-[1.3] text-graah-rime">
+                            {content.hero.intro}
+                        </p>
+                        <p className="mt-8 mb-0 font-graah-mono text-[12px] uppercase leading-relaxed tracking-[0.18em] text-graah-brass">
+                            {content.hero.introEmphasis}
+                        </p>
+                    </Reveal>
+                    <Reveal className="mx-auto mt-16 max-w-6xl">
+                        <dl className="m-0 grid grid-cols-2 overflow-hidden rounded-graah-surface border border-graah-line bg-graah-line gap-px text-left lg:grid-cols-4">
+                            {content.chronicleStats.map(({ label, value }) => (
+                                <div
+                                    className="bg-graah-fjord p-5 sm:p-6"
+                                    key={label}
+                                >
+                                    <dd className="m-0 font-graah-display text-[clamp(40px,5vw,60px)] leading-[0.95] text-graah-glow">
+                                        {value}
+                                    </dd>
+                                    <dt className="mt-3 font-graah-mono text-[11px] uppercase leading-[1.4] tracking-[0.14em] text-graah-smoke">
+                                        {label}
+                                    </dt>
+                                </div>
+                            ))}
+                        </dl>
+                    </Reveal>
                 </section>
 
                 <NameTicker nameForms={content.nameForms} />
@@ -527,80 +512,75 @@ export function HistoryPage() {
                     />
                 ))}
 
-                <section className="border-b-2 border-ink bg-ink py-16 text-paper sm:py-24">
-                    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <section className="border-t border-graah-line bg-graah-abyss px-5 py-20 sm:px-8 sm:py-28">
+                    <div className="mx-auto w-full max-w-6xl">
                         <Reveal>
-                            <p className="font-mono text-sm font-bold uppercase tracking-normal text-blue">
+                            <p className="graah-label m-0">
                                 {content.bearersSection.eyebrow}
                             </p>
-                            <h2 className="mt-2 max-w-4xl font-display text-4xl font-black uppercase tracking-normal sm:text-6xl">
+                            <h2 className="mt-3 mb-0 max-w-4xl text-[clamp(38px,5.6vw,68px)] leading-[1.02] break-words hyphens-auto">
                                 {content.bearersSection.title}
                             </h2>
-                            <p className="mt-4 max-w-2xl font-serif text-lg italic leading-8 text-paper/80">
+                            <p className="mt-5 mb-0 max-w-2xl text-lg leading-[1.65] font-light text-graah-mist">
                                 {content.bearersSection.intro}
                             </p>
                         </Reveal>
-                        <Reveal>
-                            <figure className="mt-10 -rotate-1 border-2 border-paper bg-paper p-2 text-ink shadow-paper">
-                                <img
-                                    alt={content.bearersSection.figure.alt}
-                                    className="w-full border-2 border-ink object-cover"
-                                    loading="lazy"
-                                    src={content.bearersSection.figure.src}
-                                />
-                                <figcaption className="px-1 pb-1 pt-2 font-mono text-xs font-bold uppercase tracking-normal">
-                                    {content.bearersSection.figure.caption}
-                                </figcaption>
-                            </figure>
+                        <Reveal className="mt-12">
+                            <Figure
+                                alt={content.bearersSection.figure.alt}
+                                caption={content.bearersSection.figure.caption}
+                                src={content.bearersSection.figure.src}
+                            />
                         </Reveal>
-                        <div className="mt-6 grid gap-4 md:grid-cols-2">
+                        <div className="mt-6 grid gap-6 md:grid-cols-2">
                             {content.bearersSection.bearers.map((bearer) => {
                                 const Icon = bearerIcons[bearer.icon]
                                 return (
                                     <Reveal key={bearer.name}>
-                                        <div className="h-full border-2 border-paper bg-paper p-6 text-ink shadow-paper">
-                                            <div className="flex items-center justify-between">
-                                                <span className="font-mono text-sm font-bold uppercase tracking-normal">
-                                                    {bearer.years}
-                                                </span>
+                                        <Card className="h-full p-6">
+                                            <Card.Header className="flex flex-row items-start justify-between gap-4">
+                                                <div className="flex flex-col gap-2">
+                                                    <Card.Description>
+                                                        {bearer.years}
+                                                    </Card.Description>
+                                                    <Card.Title>
+                                                        {bearer.name}
+                                                    </Card.Title>
+                                                </div>
                                                 {bearer.img ? (
                                                     <img
                                                         alt={bearer.img.alt}
-                                                        className="w-20 border-2 border-ink object-cover"
+                                                        className="w-20 shrink-0 border border-graah-line object-cover saturate-[.8]"
                                                         loading="lazy"
                                                         src={bearer.img.src}
                                                     />
                                                 ) : (
-                                                    <span className="grid size-11 place-items-center border-2 border-ink bg-blue">
+                                                    <span className="grid size-12 shrink-0 place-items-center rounded-full border border-graah-brass/50 text-graah-brass">
                                                         <Icon
                                                             aria-hidden="true"
-                                                            size={22}
-                                                            strokeWidth={2.4}
+                                                            size={20}
                                                         />
                                                     </span>
                                                 )}
-                                            </div>
-                                            <h3 className="mt-5 font-display text-2xl font-black leading-8 tracking-normal">
-                                                {bearer.name}
-                                            </h3>
-                                            <p className="mt-3 font-serif text-base leading-7">
-                                                {bearer.deed}
-                                            </p>
+                                            </Card.Header>
+                                            <Card.Content>
+                                                <p className="m-0 text-[16px] leading-[1.7] font-light text-[#C5D0DC]">
+                                                    {bearer.deed}
+                                                </p>
+                                            </Card.Content>
                                             {bearer.source?.href ? (
-                                                <a
-                                                    className="mt-4 inline-flex items-center gap-1 text-sm font-bold underline decoration-2 underline-offset-2 hover:decoration-coral"
-                                                    href={bearer.source.href}
-                                                    rel="noreferrer"
-                                                    target="_blank"
-                                                >
-                                                    {bearer.source.label}
-                                                    <ArrowUpRight
-                                                        aria-hidden="true"
-                                                        size={14}
+                                                <Card.Footer>
+                                                    <ExternalLink
+                                                        href={
+                                                            bearer.source.href
+                                                        }
+                                                        label={
+                                                            bearer.source.label
+                                                        }
                                                     />
-                                                </a>
+                                                </Card.Footer>
                                             ) : null}
-                                        </div>
+                                        </Card>
                                     </Reveal>
                                 )
                             })}
@@ -608,55 +588,90 @@ export function HistoryPage() {
                     </div>
                 </section>
 
-                <section className="border-b-2 border-ink bg-paper py-16 sm:py-20">
-                    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <Reveal>
-                            <p className="font-mono text-sm font-bold uppercase tracking-normal">
-                                {content.timelineSection.eyebrow}
-                            </p>
-                            <h2 className="mt-2 font-display text-4xl font-black uppercase tracking-normal sm:text-6xl">
-                                {content.timelineSection.title}
-                            </h2>
-                        </Reveal>
-                    </div>
-                    <div className="mt-8 overflow-x-auto pb-6">
-                        <div className="mx-auto flex w-max gap-4 px-4 sm:px-6 lg:px-8">
-                            {content.timelineSection.stops.map((stop) => (
-                                <div
-                                    className="w-52 shrink-0 border-2 border-ink bg-paper p-4 shadow-hard"
-                                    key={stop.year + stop.text}
-                                >
-                                    <p className="font-display text-3xl font-black">
-                                        {stop.year}
-                                    </p>
-                                    <p className="mt-2 text-sm font-semibold leading-6">
-                                        {stop.text}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                <section className="border-t border-graah-line bg-graah-night py-20 sm:py-28">
+                    <Reveal className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+                        <p className="graah-label m-0">
+                            {content.timelineSection.eyebrow}
+                        </p>
+                        <h2 className="mt-3 mb-0 text-[clamp(38px,5.6vw,68px)] leading-[1.02] break-words hyphens-auto">
+                            {content.timelineSection.title}
+                        </h2>
+                    </Reveal>
+                    <div className="mt-12 overflow-x-auto pb-6 [scrollbar-width:thin]">
+                        <ol className="relative m-0 flex w-max list-none gap-0 p-0 pr-5 pl-[max(20px,calc((100vw-72rem)/2+2rem))] sm:pr-8">
+                            {content.timelineSection.stops.map(
+                                (stop, index, stops) => {
+                                    const last = index === stops.length - 1
+                                    return (
+                                        <li
+                                            className="relative w-56 shrink-0 pr-6"
+                                            key={stop.year + stop.text}
+                                        >
+                                            <span
+                                                aria-hidden="true"
+                                                className="absolute top-[5px] right-0 left-0 h-px"
+                                                style={{
+                                                    background:
+                                                        'var(--graah-aurora)',
+                                                    backgroundSize: `${stops.length * 100}% 100%`,
+                                                    backgroundPosition: `${(index / Math.max(stops.length - 1, 1)) * 100}% 0`,
+                                                }}
+                                            />
+                                            <span
+                                                aria-hidden="true"
+                                                className={`relative block size-[11px] rounded-full border border-graah-brass ${
+                                                    last
+                                                        ? 'bg-graah-brass shadow-[0_0_12px_rgba(233,201,138,0.7)]'
+                                                        : 'bg-graah-night'
+                                                }`}
+                                            />
+                                            <p className="mt-5 mb-0 font-graah-display text-[30px] leading-none text-graah-rime">
+                                                {stop.year}
+                                            </p>
+                                            <p className="mt-3 mb-0 text-[14px] leading-[1.5] font-light text-graah-mist">
+                                                {stop.text}
+                                            </p>
+                                        </li>
+                                    )
+                                }
+                            )}
+                        </ol>
                     </div>
                 </section>
 
-                <section className="bg-coral px-4 py-16 text-ink sm:px-6 sm:py-24 lg:px-8">
-                    <div className="mx-auto w-full max-w-7xl">
-                        <Reveal>
-                            <p className="font-mono text-sm font-bold uppercase tracking-normal">
-                                {content.closing.eyebrow}
-                            </p>
-                            <h2 className="mt-3 max-w-6xl font-display text-[clamp(2.6rem,7.5vw,6.5rem)] font-black uppercase leading-[0.88] tracking-normal">
-                                {content.closing.title}
-                            </h2>
-                            <p className="mt-8 max-w-3xl font-serif text-xl leading-9">
-                                {content.closing.body}
-                            </p>
-                            <p className="mt-10 max-w-3xl border-t-2 border-ink pt-5 text-sm font-semibold leading-6">
-                                {content.closing.note}
-                            </p>
-                        </Reveal>
-                    </div>
+                <section className="graah-sky border-t border-graah-line px-5 py-24 text-center sm:px-8 sm:py-32">
+                    <Reveal className="mx-auto max-w-4xl">
+                        <p className="graah-label m-0">
+                            {content.closing.eyebrow}
+                        </p>
+                        <h2 className="mx-auto mt-5 mb-0 max-w-4xl text-[clamp(40px,6.4vw,84px)] leading-[1.02]">
+                            {content.closing.title}
+                        </h2>
+                        <p className="mx-auto mt-8 mb-0 max-w-2xl text-lg leading-[1.7] font-light text-[#C5D0DC] sm:text-xl">
+                            {content.closing.body}
+                        </p>
+                        <p className="mx-auto mt-12 mb-0 max-w-2xl border-t border-graah-line pt-6 text-[13px] leading-[1.65] text-graah-smoke">
+                            {content.closing.note}
+                        </p>
+                    </Reveal>
                 </section>
             </main>
+
+            <hr className="graah-aurora m-0" />
+            <footer className="bg-graah-abyss px-5 py-12 sm:px-8">
+                <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-8">
+                    <Seal size={96} />
+                    <div className="flex flex-col gap-3">
+                        <span className="graah-signature text-2xl">
+                            {content.nav.brand}
+                        </span>
+                        <Runes className="block text-sm" label="" />
+                    </div>
+                    <p className="m-0 font-graah-mono text-[11px] uppercase tracking-[0.18em] text-graah-smoke sm:ml-auto">
+                        {content.hero.startYear} → {content.hero.endYear}
+                    </p>
+                </div>
+            </footer>
         </div>
     )
 }

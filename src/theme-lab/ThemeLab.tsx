@@ -514,7 +514,7 @@ export function ThemeLab() {
                     </div>
                     <p className="m-0 ml-auto max-w-sm text-sm text-muted">
                         The theme lives in theme/ in the graah repo. graah.se
-                        itself still uses the template theme.
+                        uses it too.
                     </p>
                 </div>
             </footer>
