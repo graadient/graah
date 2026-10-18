@@ -1,54 +1,32 @@
 /*
- * Graah theme for HeroUI v3 — "Night Smithy".
+ * Graah theme for HeroUI v3 ("Night Smithy").
  *
- * Polar night ground, glacier text, brass as the accent, star red for danger,
- * Forum for headings, Geist (or Newsreader) for body, Geist Mono for labels.
- *
- * Usage:
  *   @import "tailwindcss";
  *   @import "@heroui/styles";
- *   @import "./theme/graah.css";   (unlayered: its own @layer base/components
- *                                   blocks merge into HeroUI's layers and win)
+ *   @import "./graah-theme/heroui.css";
  *
  *   <html data-theme="graah">
  *
- * Everything is scoped to [data-theme="graah"], so HeroUI's own light/dark
- * themes keep working side by side.
+ * Import it unlayered, as above. Its own @layer base / @layer components
+ * blocks merge into HeroUI's layers and come after them, so they win.
+ * Scoped to [data-theme="graah"]; HeroUI's light/dark themes still work.
+ * Includes ./tailwind.css (tokens, fonts, base, brand classes, Tailwind bridge).
  */
+@import "./tailwind.css";
 
 @layer base {
     [data-theme="graah"] {
         color-scheme: dark;
 
-        /* == Graah palette (brand tokens, not used by HeroUI directly) == */
-        --graah-night: #0b0f1a;
-        --graah-fjord: #111829;
-        --graah-fjord-deep: #0e1424;
-        --graah-line: #26304a;
-        --graah-glacier: #dce6ee;
-        --graah-rime: #f2f6f9;
-        --graah-smoke: #8ea0b8;
-        --graah-brass: #c9a15e;
-        --graah-glow: #e9c98a;
-        --graah-red: #c8283a;
-        --graah-wax: #6e1414;
-        --graah-steel: #3e62b8;
-
-        /* Fonts */
-        --graah-font-display: "Forum", "Cormorant Garamond", Georgia, serif;
-        --graah-font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
-        --graah-font-mono: "Geist Mono", ui-monospace, monospace;
-        --graah-font-runes: "Noto Sans Runic", sans-serif;
-
-        /* == HeroUI semantic tokens == */
+        /* == HeroUI semantic tokens, mapped to Graah tokens == */
         --background: var(--graah-night);
         --foreground: var(--graah-glacier);
 
         --surface: var(--graah-fjord);
         --surface-foreground: var(--graah-glacier);
-        --surface-secondary: #16203a;
+        --surface-secondary: var(--graah-fjord-2);
         --surface-secondary-foreground: var(--graah-glacier);
-        --surface-tertiary: #1b2642;
+        --surface-tertiary: var(--graah-fjord-3);
         --surface-tertiary-foreground: var(--graah-glacier);
 
         --overlay: #121a2d;
@@ -79,20 +57,18 @@
         --segment-foreground: var(--graah-glacier);
 
         --border: var(--graah-line);
-        --separator: #1d2640;
+        --separator: var(--graah-separator);
         --focus: var(--graah-brass);
         --link: var(--graah-glow);
 
         --backdrop: rgba(5, 8, 15, 0.72);
 
         /* Shape: square-ish surfaces, pill-shaped controls */
-        --radius: 0.25rem;
-        --field-radius: 0.25rem;
+        --radius: var(--graah-radius-field);
+        --field-radius: var(--graah-radius-field);
 
         --surface-shadow: 0 0 0 1px var(--graah-line) inset;
-        --overlay-shadow:
-            0 0 0 1px var(--graah-line) inset,
-            0 18px 40px -12px rgba(0, 0, 0, 0.6);
+        --overlay-shadow: var(--graah-shadow-overlay);
         --field-shadow: 0 0 0 0 transparent inset;
 
         /* Soft colours, tuned for the dark ground */
@@ -104,7 +80,7 @@
             transparent
         );
         --danger-soft: color-mix(in oklab, var(--danger) 18%, transparent);
-        --danger-soft-foreground: #ff8c99;
+        --danger-soft-foreground: var(--graah-red-soft);
         --danger-soft-hover: color-mix(
             in oklab,
             var(--danger) 24%,
@@ -121,43 +97,13 @@
             transparent
         );
     }
-
-    [data-theme="graah"] body {
-        background: var(--background);
-        color: var(--foreground);
-        font-family: var(--graah-font-body);
-        font-variant-numeric: lining-nums;
-    }
-
-    [data-theme="graah"] ::selection {
-        background: var(--graah-brass);
-        color: var(--graah-night);
-    }
-
-    /* Optional bookish body text: <html data-theme="graah" data-body="newsreader"> */
-    [data-theme="graah"][data-body="newsreader"] {
-        --graah-font-body: "Newsreader", Georgia, serif;
-    }
-}
-
-@theme inline {
-    --font-graah-display: var(--graah-font-display);
-    --font-graah-body: var(--graah-font-body);
-    --font-graah-mono: var(--graah-font-mono);
-    --font-graah-runes: var(--graah-font-runes);
-    --color-graah-brass: var(--graah-brass);
-    --color-graah-glow: var(--graah-glow);
-    --color-graah-red: var(--graah-red);
-    --color-graah-wax: var(--graah-wax);
-    --color-graah-steel: var(--graah-steel);
-    --color-graah-line: var(--graah-line);
 }
 
 /* == Component customisations == */
 @layer components {
     /* Buttons: pill controls, tracked caps, a brass glow on the primary */
     [data-theme="graah"] .button {
-        border-radius: 999px;
+        border-radius: var(--graah-radius-control);
         font-family: var(--graah-font-body);
         font-weight: 500;
         letter-spacing: 0.04em;
@@ -172,13 +118,13 @@
 
     @media (hover: hover) {
         [data-theme="graah"] .button--primary:hover {
-            box-shadow: 0 0 22px -4px rgba(233, 201, 138, 0.55);
+            box-shadow: var(--graah-glow-brass);
         }
     }
 
     [data-theme="graah"] .button--secondary {
-        --button-bg: #1a2338;
-        --button-bg-hover: #222c45;
+        --button-bg: var(--graah-fjord-2);
+        --button-bg-hover: var(--graah-fjord-3);
         --button-fg: var(--graah-glacier);
     }
 
@@ -209,7 +155,7 @@
 
     /* Cards: fjord panels with a hairline, Forum titles */
     [data-theme="graah"] .card {
-        border-radius: 0.125rem;
+        border-radius: var(--graah-radius-surface);
         box-shadow: 0 0 0 1px var(--graah-line) inset;
     }
 
@@ -268,7 +214,7 @@
     }
 
     [data-theme="graah"] .alert {
-        border-radius: 0.125rem;
+        border-radius: var(--graah-radius-surface);
         box-shadow: 0 0 0 1px var(--graah-line) inset;
     }
 
@@ -285,12 +231,7 @@
     }
 
     [data-theme="graah"] .progress-bar__fill {
-        background: linear-gradient(
-            90deg,
-            var(--graah-steel),
-            var(--graah-brass) 55%,
-            var(--graah-red)
-        );
+        background: var(--graah-aurora);
     }
 
     /* Links: brass underline that lights up like the runes */

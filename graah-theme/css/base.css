@@ -1,0 +1,49 @@
+/*
+ * Base element styles. Active only under <html data-theme="graah">, so the
+ * theme can sit next to other themes. Uses the --graah-* tokens.
+ */
+
+/* Optional bookish body text: <html data-theme="graah" data-body="newsreader"> */
+[data-theme="graah"][data-body="newsreader"] {
+    --graah-font-body: var(--graah-font-body-alt);
+}
+
+@layer base {
+    [data-theme="graah"] {
+        color-scheme: dark;
+        background: var(--graah-night);
+        color: var(--graah-glacier);
+    }
+
+    [data-theme="graah"] body {
+        margin: 0;
+        background: var(--graah-night);
+        color: var(--graah-glacier);
+        font-family: var(--graah-font-body);
+        font-variant-numeric: lining-nums;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    [data-theme="graah"] :is(h1, h2, h3) {
+        font-family: var(--graah-font-display);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: var(--graah-rime);
+    }
+
+    [data-theme="graah"] ::selection {
+        background: var(--graah-brass);
+        color: var(--graah-night);
+    }
+
+    [data-theme="graah"] :focus-visible {
+        outline: 2px solid var(--graah-brass);
+        outline-offset: 3px;
+    }
+
+    [data-theme="graah"] hr {
+        border: 0;
+        border-top: var(--graah-hairline) solid var(--graah-line);
+    }
+}

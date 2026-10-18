@@ -1,0 +1,127 @@
+/*
+ * Brand classes. Framework-free; work with or without Tailwind.
+ *
+ *   .graah-wordmark   GRAAH in Forum, tracked, for heroes
+ *   .graah-signature  GRAAH small and wide, for nav, footer, signatures
+ *   .graah-runes      ᚴᚱᛅᛅᚼ glowing in brass, breathing slowly
+ *   .graah-label      Geist Mono caps label in brass (eyebrows, dates, places)
+ *   .graah-numeral    outlined brass Forum numerals (chapter numbers)
+ *   .graah-panel      deep-fjord panel with a hairline
+ *   .graah-sky        the night-sky gradient behind heroes
+ *   .graah-aurora     1px rule in the colours of the bend
+ *   .graah-link       brass link that glows on hover
+ *   .graah-twinkle    star twinkle animation (for starfield dots)
+ *
+ * The wordmark, signature and runes cancel their trailing letter-spacing with a
+ * negative margin-right, so they centre exactly. Don't override their
+ * horizontal margins (e.g. Tailwind m-0 or mx-*); use mt-/mb- instead.
+ */
+
+@layer components {
+    .graah-wordmark {
+        font-family: var(--graah-font-display);
+        font-weight: 400;
+        line-height: 0.9;
+        text-transform: uppercase;
+        letter-spacing: var(--graah-tracking-wordmark);
+        /* tracking adds space after the last letter; cancel it so GRAAH centres
+           and still aligns flush left */
+        margin-right: calc(-1 * var(--graah-tracking-wordmark));
+        color: var(--graah-rime);
+    }
+
+    .graah-signature {
+        font-family: var(--graah-font-display);
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: var(--graah-tracking-signature);
+        margin-right: calc(-1 * var(--graah-tracking-signature));
+        color: var(--graah-rime);
+    }
+
+    .graah-runes {
+        font-family: var(--graah-font-runes);
+        color: var(--graah-glow);
+        letter-spacing: var(--graah-tracking-runes);
+        margin-right: calc(-1 * var(--graah-tracking-runes));
+        text-shadow: var(--graah-glow-text);
+        animation: graah-breathe var(--graah-duration-breathe) ease-in-out
+            infinite;
+    }
+
+    .graah-label {
+        font-family: var(--graah-font-mono);
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: var(--graah-tracking-label);
+        text-transform: uppercase;
+        color: var(--graah-brass);
+    }
+
+    .graah-numeral {
+        font-family: var(--graah-font-display);
+        font-weight: 400;
+        line-height: 0.8;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--graah-brass);
+    }
+
+    .graah-panel {
+        background: var(--graah-fjord);
+        border: var(--graah-hairline) solid var(--graah-line);
+        border-radius: var(--graah-radius-surface);
+    }
+
+    .graah-sky {
+        background: var(--graah-sky);
+    }
+
+    .graah-aurora {
+        height: 1px;
+        border: 0;
+        background: var(--graah-aurora);
+    }
+
+    .graah-link {
+        color: var(--graah-glow);
+        text-decoration: underline;
+        text-decoration-color: color-mix(
+            in oklab,
+            var(--graah-brass) 60%,
+            transparent
+        );
+        text-underline-offset: 0.25em;
+        transition: text-shadow 200ms var(--graah-ease);
+    }
+
+    @media (hover: hover) {
+        .graah-link:hover {
+            text-shadow: 0 0 12px rgba(233, 201, 138, 0.6);
+        }
+    }
+
+    .graah-twinkle {
+        animation: graah-twinkle var(--graah-duration-twinkle) ease-in-out
+            infinite;
+    }
+}
+
+@keyframes graah-breathe {
+    50% {
+        text-shadow: var(--graah-glow-text-dim);
+    }
+}
+
+@keyframes graah-twinkle {
+    50% {
+        opacity: 0.08;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .graah-runes,
+    .graah-twinkle {
+        animation: none;
+    }
+}

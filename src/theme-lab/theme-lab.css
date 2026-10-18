@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 @import "@heroui/styles";
-@import "../theme/graah.css";
+@import "../../graah-theme/heroui.css";
 
 /* Page chrome for the lab. The custom Graah pieces (sky, arc, runes, seal)
    are brand art and stay the same in both themes; only HeroUI components switch. */
@@ -21,49 +21,6 @@
     }
 }
 
-.lab-runes {
-    font-family: "Noto Sans Runic", sans-serif;
-    color: #e9c98a;
-    text-shadow:
-        0 0 6px rgba(233, 201, 138, 0.55),
-        0 0 22px rgba(201, 161, 94, 0.45);
-    animation: lab-breathe 5s ease-in-out infinite;
-}
-
-@keyframes lab-breathe {
-    50% {
-        text-shadow:
-            0 0 3px rgba(233, 201, 138, 0.35),
-            0 0 12px rgba(201, 161, 94, 0.25);
-    }
-}
-
-.lab-twinkle {
-    animation: lab-twinkle 4.5s ease-in-out infinite;
-}
-
-@keyframes lab-twinkle {
-    50% {
-        opacity: 0.08;
-    }
-}
-
-.lab-hero {
-    background: radial-gradient(
-        120% 90% at 50% 120%,
-        #1b2c52 0%,
-        #0f1830 38%,
-        #0b0f1a 70%
-    );
-}
-
-.lab-wordmark {
-    font-family: "Forum", serif;
-    letter-spacing: 0.16em;
-    padding-left: 0.16em;
-    color: #f2f6f9;
-}
-
 .lab-panel {
     background: #0e1424;
     border: 1px solid #26304a;
@@ -80,11 +37,4 @@
 html:not([data-theme="graah"]) .lab-label {
     color: inherit;
     opacity: 0.6;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .lab-runes,
-    .lab-twinkle {
-        animation: none;
-    }
 }

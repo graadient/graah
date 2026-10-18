@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import type { Key } from '@heroui/react'
 import {
@@ -20,13 +20,12 @@ import {
     Tooltip,
 } from '@heroui/react'
 
+import { Arms, NightHero, Runes, Seal } from '../../graah-theme/react'
 import type { Locale } from '../i18n'
 import { getHistoryContent, localeOptions } from '../i18n'
 
 type LabTheme = 'graah' | 'dark'
 
-const RUNES = 'ᚴᚱᛅᛅᚼ'
-const SEAL_TEXT = 'ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬ ᚴᚱᛅᛅᚼ ᛬ ᛋᚢᛚᛁᛋᛏᛁᛏ ᛬'
 const SHOWCASE_CHAPTERS = [0, 3, 6] as const
 
 const TOKENS: ReadonlyArray<[string, string, string]> = [
@@ -51,147 +50,6 @@ const LOCALE_NAMES: Record<Locale, string> = {
     en: 'English',
 }
 
-function seeded(seed: number): () => number {
-    let state = seed
-    return () => {
-        state = (state * 16_807) % 2_147_483_647
-        return state / 2_147_483_647
-    }
-}
-
-function Sky() {
-    const stars = useMemo(() => {
-        const random = seeded(7)
-        return Array.from({ length: 170 }, (_, index) => ({
-            cx: random() * 1200,
-            cy: random() * 520,
-            r: random() * 1.1 + 0.2,
-            opacity: random() * 0.6 + 0.15,
-            twinkle: index % 9 === 0,
-            delay: random() * 6,
-        }))
-    }, [])
-
-    return (
-        <svg
-            aria-hidden="true"
-            className="absolute inset-0 size-full"
-            preserveAspectRatio="xMidYMid slice"
-            viewBox="0 0 1200 700"
-        >
-            {stars.map((star) => (
-                <circle
-                    className={star.twinkle ? 'lab-twinkle' : undefined}
-                    cx={star.cx}
-                    cy={star.cy}
-                    fill="#DCE6EE"
-                    key={`${star.cx}-${star.cy}`}
-                    opacity={star.opacity}
-                    r={star.r}
-                    style={
-                        star.twinkle
-                            ? { animationDelay: `${star.delay}s` }
-                            : undefined
-                    }
-                />
-            ))}
-        </svg>
-    )
-}
-
-function Arc() {
-    return (
-        <svg
-            aria-hidden="true"
-            className="absolute bottom-0 left-[-4%] z-[1] h-[clamp(140px,26vw,330px)] w-[108%]"
-            preserveAspectRatio="none"
-            viewBox="0 0 1200 300"
-        >
-            <defs>
-                <linearGradient id="lab-planet" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0" stopColor="#101a33" />
-                    <stop offset="1" stopColor="#0B0F1A" />
-                </linearGradient>
-            </defs>
-            <path
-                d="M-20 300 Q600 40 1220 300"
-                fill="none"
-                opacity=".13"
-                stroke="#3E62B8"
-                strokeWidth="46"
-            />
-            <path d="M-20 300 Q600 40 1220 300 Z" fill="url(#lab-planet)" />
-            {[
-                ['#3E62B8', 0],
-                ['#C9A15E', 15],
-                ['#C8283A', 30],
-            ].map(([color, offset]) => (
-                <path
-                    d={`M-20 ${300 + Number(offset)} Q600 ${40 + Number(offset)} 1220 ${300 + Number(offset)}`}
-                    fill="none"
-                    key={String(color)}
-                    stroke={String(color)}
-                    strokeWidth="1.2"
-                    vectorEffect="non-scaling-stroke"
-                />
-            ))}
-        </svg>
-    )
-}
-
-function Seal({ size = 160 }: { size?: number }) {
-    return (
-        <svg
-            aria-label="The Graah seal"
-            height={size}
-            role="img"
-            viewBox="0 0 200 200"
-            width={size}
-        >
-            <defs>
-                <path
-                    d="M100 100 m-75 0 a75 75 0 1 1 150 0 a75 75 0 1 1 -150 0"
-                    id="lab-seal-ring"
-                />
-            </defs>
-            <circle cx="100" cy="100" fill="#6E1414" r="97" />
-            <circle
-                cx="100"
-                cy="100"
-                fill="none"
-                r="92"
-                stroke="#9A2A2A"
-                strokeWidth="2"
-            />
-            <circle
-                cx="100"
-                cy="100"
-                fill="none"
-                r="60"
-                stroke="#C9A15E"
-                strokeWidth="1"
-            />
-            <text
-                fill="#C9A15E"
-                fontFamily="Noto Sans Runic"
-                fontSize="14.5"
-                letterSpacing="5.2"
-            >
-                <textPath href="#lab-seal-ring">{SEAL_TEXT}</textPath>
-            </text>
-            {/* Optically centred: a shield's weight sits in its wide top, so it is
-                placed 2.5 units below its geometric centre. */}
-            <image
-                height="79"
-                href="/graah-coa-brass.svg"
-                width="64"
-                x="68"
-                y="63.5"
-            />
-        </svg>
-    )
-}
-
 function Panel({
     label,
     children,
@@ -205,7 +63,7 @@ function Panel({
         <section
             className={`lab-panel flex flex-col gap-5 rounded-sm p-6 ${className}`}
         >
-            <span className="lab-label">{label}</span>
+            <span className="graah-label">{label}</span>
             {children}
         </section>
     )
@@ -267,84 +125,77 @@ export function ThemeLab() {
                 </div>
             </div>
 
-            {/* Hero: custom Graah art + HeroUI controls */}
-            <header className="lab-hero relative isolate flex min-h-[min(92svh,860px)] flex-col overflow-hidden border-b border-border">
-                <Sky />
-                <Arc />
-                <nav className="relative z-[2] mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-5">
-                    <a
-                        className="flex items-center gap-3 font-[Forum] text-sm tracking-[0.32em] text-[#DCE6EE] no-underline"
-                        href="#top"
-                    >
-                        <img
-                            alt=""
-                            className="h-6 w-auto"
-                            src="/graah-coa.svg"
-                        />
-                        GRAAH
-                    </a>
-                    <div className="hidden items-center gap-6 md:flex">
-                        <Link href="#components">Chronicle</Link>
-                        <Link href="#receipts">Receipts</Link>
-                        <Link href="#tokens">Tokens</Link>
-                    </div>
-                    <Dropdown>
-                        <Dropdown.Trigger>
-                            <Button size="sm" variant="tertiary">
-                                {localeOptions.find((o) => o.locale === locale)
-                                    ?.flag ?? ''}{' '}
-                                {LOCALE_NAMES[locale]}
-                            </Button>
-                        </Dropdown.Trigger>
-                        <Dropdown.Popover placement="bottom end">
-                            <Dropdown.Menu
-                                aria-label="Language"
-                                onAction={(key) => {
-                                    const next = localeOptions.find(
-                                        (o) => o.locale === key
-                                    )
-                                    if (next) {
-                                        setLocale(next.locale)
-                                    }
-                                }}
-                                selectedKeys={[locale]}
-                                selectionMode="single"
-                            >
-                                {localeOptions.map((option) => (
-                                    <Dropdown.Item
-                                        id={option.locale}
-                                        key={option.locale}
-                                        textValue={LOCALE_NAMES[option.locale]}
-                                    >
-                                        <Label>
-                                            {option.flag}{' '}
-                                            {LOCALE_NAMES[option.locale]}
-                                        </Label>
-                                        <Dropdown.ItemIndicator />
-                                    </Dropdown.Item>
-                                ))}
-                            </Dropdown.Menu>
-                        </Dropdown.Popover>
-                    </Dropdown>
-                </nav>
-
-                <div
-                    className="relative z-[2] mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center px-5 pb-[clamp(140px,22vw,300px)] text-center"
-                    id="top"
-                >
-                    <img
-                        alt={content.hero.crestAlt}
+            {/* Hero: Graah brand art from graah-theme/react + HeroUI controls */}
+            <NightHero
+                top={
+                    <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-5">
+                        <a
+                            className="graah-signature flex items-center gap-3 text-sm no-underline"
+                            href="#top"
+                        >
+                            <Arms className="h-6 w-auto" title="" />
+                            GRAAH
+                        </a>
+                        <div className="hidden items-center gap-6 md:flex">
+                            <Link href="#components">Chronicle</Link>
+                            <Link href="#receipts">Receipts</Link>
+                            <Link href="#tokens">Tokens</Link>
+                        </div>
+                        <Dropdown>
+                            <Dropdown.Trigger>
+                                <Button size="sm" variant="tertiary">
+                                    {localeOptions.find(
+                                        (o) => o.locale === locale
+                                    )?.flag ?? ''}{' '}
+                                    {LOCALE_NAMES[locale]}
+                                </Button>
+                            </Dropdown.Trigger>
+                            <Dropdown.Popover placement="bottom end">
+                                <Dropdown.Menu
+                                    aria-label="Language"
+                                    onAction={(key) => {
+                                        const next = localeOptions.find(
+                                            (o) => o.locale === key
+                                        )
+                                        if (next) {
+                                            setLocale(next.locale)
+                                        }
+                                    }}
+                                    selectedKeys={[locale]}
+                                    selectionMode="single"
+                                >
+                                    {localeOptions.map((option) => (
+                                        <Dropdown.Item
+                                            id={option.locale}
+                                            key={option.locale}
+                                            textValue={
+                                                LOCALE_NAMES[option.locale]
+                                            }
+                                        >
+                                            <Label>
+                                                {option.flag}{' '}
+                                                {LOCALE_NAMES[option.locale]}
+                                            </Label>
+                                            <Dropdown.ItemIndicator />
+                                        </Dropdown.Item>
+                                    ))}
+                                </Dropdown.Menu>
+                            </Dropdown.Popover>
+                        </Dropdown>
+                    </nav>
+                }
+            >
+                <div className="flex max-w-4xl flex-col items-center" id="top">
+                    <Arms
                         className="mb-6 h-auto w-[clamp(84px,12vw,150px)] drop-shadow-[0_0_28px_rgba(62,98,184,0.3)]"
-                        src="/graah-coa.svg"
+                        title={content.hero.crestAlt}
                     />
-                    <h1 className="lab-wordmark m-0 text-[clamp(56px,13vw,176px)] leading-[0.9] font-normal">
+                    <h1 className="graah-wordmark mt-0 mb-0 text-[clamp(56px,13vw,176px)]">
                         GRAAH
                     </h1>
                     <Tooltip delay={200}>
                         <Tooltip.Trigger>
-                            <span className="lab-runes mt-3 inline-block text-[clamp(16px,2vw,26px)] tracking-[1em] pl-[1em]">
-                                {RUNES}
-                            </span>
+                            <Runes className="mt-3 inline-block text-[clamp(16px,2vw,26px)]" />
                         </Tooltip.Trigger>
                         <Tooltip.Content showArrow>
                             <Tooltip.Arrow />
@@ -367,21 +218,22 @@ export function ThemeLab() {
                         <Button variant="tertiary">The arms</Button>
                     </div>
                 </div>
-            </header>
+            </NightHero>
 
             <main className="mx-auto max-w-6xl px-5 py-20">
-                <p className="lab-label mb-3">HeroUI × Graah</p>
+                <p className="graah-label mb-3">HeroUI × Graah</p>
                 <h2 className="m-0 font-graah-display text-[clamp(40px,6vw,76px)] leading-none font-normal">
                     Real HeroUI components, wearing the Graah theme
                 </h2>
                 <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">
                     Every control on this page is a stock HeroUI v3 component.
-                    The look comes from one theme file,{' '}
-                    <code className="font-graah-mono text-sm text-link">
-                        src/theme/graah.css
-                    </code>
-                    . Use the switch at the top to see the same components in
-                    HeroUI's default dark theme.
+                    The look comes from the{' '}
+                    <Link href="https://github.com/graadient/graah/tree/main/graah-theme">
+                        graah-theme
+                    </Link>{' '}
+                    directory, which any product can use. Use the switch at the
+                    top to see the same components in HeroUI's default dark
+                    theme.
                 </p>
 
                 <div
@@ -586,11 +438,7 @@ export function ThemeLab() {
                     <Panel label="Brand pieces (custom, not HeroUI)">
                         <div className="flex flex-wrap items-center justify-center gap-8 py-2">
                             <Seal size={150} />
-                            <img
-                                alt="The Graah arms"
-                                className="h-36 w-auto"
-                                src="/graah-coa.svg"
-                            />
+                            <Arms className="h-36 w-auto" />
                         </div>
                         <p className="m-0 text-sm leading-relaxed text-muted">
                             The sky, aurora arc, glowing runes, arms and seal
@@ -601,7 +449,7 @@ export function ThemeLab() {
                 </div>
 
                 <section className="mt-20" id="tokens">
-                    <p className="lab-label mb-3">Theme tokens</p>
+                    <p className="graah-label mb-3">Theme tokens</p>
                     <h2 className="m-0 font-graah-display text-[clamp(34px,4.6vw,56px)] leading-none font-normal">
                         HeroUI's variables, Graah's values
                     </h2>
@@ -645,7 +493,7 @@ export function ThemeLab() {
                                 className="border-t border-border pt-4"
                                 key={title}
                             >
-                                <h3 className="lab-label m-0 mb-2 font-normal">
+                                <h3 className="graah-label m-0 mb-2 font-normal">
                                     {title}
                                 </h3>
                                 <p className="m-0 text-[15px] leading-relaxed text-muted">
@@ -661,16 +509,12 @@ export function ThemeLab() {
                 <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-8 px-5 py-10">
                     <Seal size={96} />
                     <div>
-                        <div className="font-[Forum] text-2xl tracking-[0.32em] text-[#F2F6F9]">
-                            GRAAH
-                        </div>
-                        <div className="lab-runes mt-2 text-sm tracking-[0.8em]">
-                            {RUNES}
-                        </div>
+                        <div className="graah-signature text-2xl">GRAAH</div>
+                        <Runes className="mt-2 block text-sm" />
                     </div>
                     <p className="m-0 ml-auto max-w-sm text-sm text-muted">
-                        Exploration only. graah.se itself still uses the
-                        template theme.
+                        The theme lives in graah-theme/ in the graah repo.
+                        graah.se itself still uses the template theme.
                     </p>
                 </div>
             </footer>

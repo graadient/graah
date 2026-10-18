@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+  <defs><linearGradient id="planet" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#101A33"/><stop offset="1" stop-color="#0B0F1A"/></linearGradient></defs>
+  <path d="M-20 300 Q600 40 1220 300" fill="none" opacity=".13" stroke="#3E62B8" stroke-width="46"/>
+  <path d="M-20 300 Q600 40 1220 300 Z" fill="url(#planet)"/>
+  <path d="M-20 300 Q600 40 1220 300" fill="none" stroke="#3E62B8" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+  <path d="M-20 315 Q600 55 1220 315" fill="none" stroke="#C9A15E" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+  <path d="M-20 330 Q600 70 1220 330" fill="none" stroke="#C8283A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+</svg>
